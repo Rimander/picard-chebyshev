@@ -14,7 +14,7 @@
  * @param <r> output parameter, Final position vector in ECI [3 x N]
  * @param <v> output parameter, Final velocity vector in ECI [3 x N]
  *
- * @note keplerUniversal function - file keplerUniversal.m
+ * @note keplerUniversal function - original file keplerUniversal.m
  */
 void keplerUniversal(double **r0, double **v0, double **t, double mu, double **r, double **v) {
 
@@ -26,7 +26,7 @@ void keplerUniversal(double **r0, double **v0, double **t, double mu, double **r
  * @param <c2> output parameter to c2.
  * @param <c3> output parameter to c3.
  *
- * @note c2c3 function - file keplerUniversal.m
+ * @note c2c3 function - original file keplerUniversal.m
  */
 void c2c3(double psi, double *c2, double *c3) {
 
