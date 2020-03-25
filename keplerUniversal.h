@@ -7,7 +7,6 @@
 #define CODIGO_KEPLERUNIVERSAL_H
 
 /**
- * Purpose: Most effecient way to propagate any type of two body orbit using kepler's equations.
  *
  * @param <r0> position Vector in ECI coordinate frame of reference. [3 x N]
  * @param <v0> velocity Vector in ECI coordinate frame of reference. [3 x N]
