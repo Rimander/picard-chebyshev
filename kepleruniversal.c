@@ -1,8 +1,8 @@
 /**
- * @file keplerUniversal.cpp
+ * @file kepleruniversal.c€
  * @author Fermin Jimenez
  */
-#include "keplerUniversal.h"
+#include "kepleruniversal.h"
 
 /**
  * Purpose: Most effecient way to propagate any type of two body orbit using kepler's equations.
@@ -16,7 +16,7 @@
  *
  * @note keplerUniversal function - original file keplerUniversal.m
  */
-void keplerUniversal(double **r0, double **v0, double **t, double mu, double **r, double **v) {
+void KeplerUniversal(double **r0, double **v0, double **t, double mu, double **r, double **v) {
 
 }
 
@@ -28,6 +28,6 @@ void keplerUniversal(double **r0, double **v0, double **t, double mu, double **r
  *
  * @note c2c3 function - original file keplerUniversal.m
  */
-void c2c3(double psi, double *c2, double *c3) {
+void C2c3(double psi, double *c2, double *c3) {
 
 }
