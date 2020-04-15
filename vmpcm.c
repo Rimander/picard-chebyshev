@@ -6,7 +6,7 @@
 #include "vmpcm.h"
 
 //------------------------------------------------------------------------------
-// function VMPCM
+// VMPCM
 //------------------------------------------------------------------------------
 /**
  * Generic Function wrapper for the Vectorized Picard Chebyshev Method
@@ -31,7 +31,7 @@ VMPCM(double *n, double *m, void (*ode)(int, int, double *, double **, double, d
 }
 
 //------------------------------------------------------------------------------
-// function ChebyshevPolynomial
+// ChebyshevPolynomial
 //------------------------------------------------------------------------------
 /**
  * The Chebyshev polynomial,T, corresponding to degree k

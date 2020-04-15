@@ -7,7 +7,7 @@
 
 
 //------------------------------------------------------------------------------
-// function KeplerUniversal
+// KeplerUniversal
 //------------------------------------------------------------------------------
 /**
  * Purpose: Most effecient way to propagate any type of two body orbit using kepler's equations.
@@ -29,7 +29,7 @@ void KeplerUniversal(int m, double **r0, double **v0, double **t, double mu, dou
 }
 
 //------------------------------------------------------------------------------
-// function C2c3
+// C2c3
 //------------------------------------------------------------------------------
 /**
  * @param[in] <m> number of cols

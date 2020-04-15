@@ -7,7 +7,7 @@
 #define CODIGO_PICARDCHEBYSHEVDEMO_H
 
 //------------------------------------------------------------------------------
-// function PicardChebyshevDemo
+// PicardChebyshevDemo
 //------------------------------------------------------------------------------
 /**
  * Demo function used to demonstrate how to use the Picard-Chebyshev method
@@ -20,7 +20,7 @@
 void PicardChebyshevDemo();
 
 //------------------------------------------------------------------------------
-// function TwoBodyForceModel
+// TwoBodyForceModel
 //------------------------------------------------------------------------------
 /**
  * @param[in] <n> number of rows
@@ -35,7 +35,7 @@ void PicardChebyshevDemo();
 void TwoBodyForceModel(int n, int m, double **t, double **posvel, double mu, double *eta, int *nn, int *mm);
 
 //------------------------------------------------------------------------------
-// function PlotPostionAndVelocity
+// PlotPostionAndVelocity
 //------------------------------------------------------------------------------
 /**
  * @param[in] <n> number of rows
@@ -52,7 +52,7 @@ void TwoBodyForceModel(int n, int m, double **t, double **posvel, double mu, dou
 void PlotPostionAndVelocity(int n, int m, double **rvPCM, double **rA, double **vA, double vMag, double a, double **t,
                             double **xg);
 //------------------------------------------------------------------------------
-// function PlotMagnitudeErrors
+// PlotMagnitudeErrors
 //------------------------------------------------------------------------------
 /**
  * @param[in] <n> number of rows
