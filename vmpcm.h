@@ -25,7 +25,7 @@
  */
 //------------------------------------------------------------------------------
 void
-VMPCM(double *n, double *m, void (*ode)(int, int, double *, double **, double, double *, int *, int *), double *tau,
+VMPCM(double *n, double *m, void (*ode)(int, int, double *, double **, double, double *, int *, int *), double **tau,
       double **x_guess,
       double omega1, double omega2,
       double errTol, double varargin);
@@ -44,6 +44,6 @@ VMPCM(double *n, double *m, void (*ode)(int, int, double *, double **, double, d
  * @param[out] <mm> int number of columns
  */
 //------------------------------------------------------------------------------
-void ChebyshevPolynomial(double *n, double *m, double **k, double *tau, int *nn, int *mm);
+void ChebyshevPolynomial(double *n, double *m, double **k, double **tau, int *nn, int *mm);
 
 #endif //CODIGO_VMPCM_H

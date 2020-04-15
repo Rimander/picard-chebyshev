@@ -29,7 +29,7 @@ void fliplr(int *n, int *m, double **mtrx);
 // function repmat
 //------------------------------------------------------------------------------
 /**
- * Turn the columns, left to right
+ * Generate an array containing c copies of A at the row and column levels. The size of B is size(A)*c when A is an array.
  *
  * ~~~
  *   repmat(2, 2, matrix, 2, ...)
@@ -42,14 +42,14 @@ void fliplr(int *n, int *m, double **mtrx);
  *
  * @param[in] <n> int number of rows
  * @param[in] <m> int number of cols
- * @param[in] <mtrx> Vector double [N x M]
+ * @param[in] <mtrx> A Vector double [N x M]
  * @param[in] <c> number of copies
  * @param[out] <nn> int number of rows
  * @param[out] <mm> int number of cols
- * @param[out] <mtrb> Vector double [N x M]
+ * @param[out] <mtrb> B Vector double [N x M]
  */
 //------------------------------------------------------------------------------
-void repmat(int n, int m, double **mtrx, int c, int *nn, int *mm, double **mtrxb);
+void repmat(int n, int m, double **a, int c, int *nn, int *mm, double **b);
 
 
 #endif //CODIGO_MATLAB_H
