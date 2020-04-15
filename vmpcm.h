@@ -4,6 +4,8 @@
 
 /**
  * Generic Function wrapper for the Vectorized Picard Chebyshev Method
+ * @param[in] <n> int the number of rows
+ * @param[in] <m> int the number of columns
  * @param[in] <ode> Reference function TwoBodyForceModel
  * @param[in] <tau> Vector double transformed time domain vector [1 x N]
  * @param[inout] <x_guess> Vector double - Input initial Guess of solution values for the Picard Chebyshev Method [N x M],
@@ -14,7 +16,8 @@
  * @param[in] <varargin> double Additional inputs which are needed to be passed to the evaluation function ode
  */
 void
-VMPCM(void (*ode)(double **, double **, double, double *), double **tau, double **x_guess, double omega1, double omega2,
+VMPCM(double *n, double *m, void (*ode)(double **, double **, double, double *), double **tau, double **x_guess,
+      double omega1, double omega2,
       double errTol, double varargin);
 
 /**
