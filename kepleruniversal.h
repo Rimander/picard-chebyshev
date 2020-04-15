@@ -6,7 +6,14 @@
 #ifndef CODIGO_KEPLERUNIVERSAL_H
 #define CODIGO_KEPLERUNIVERSAL_H
 
+
+
+//------------------------------------------------------------------------------
+// function KeplerUniversal
+//------------------------------------------------------------------------------
 /**
+ * Purpose: Most effecient way to propagate any type of two body orbit using kepler's equations.
+ *
  * @param[in] <m> int the number of cols
  * @param[in] <r0> position Vector in ECI coordinate frame of reference. [3 x M]
  * @param[in] <v0> velocity Vector in ECI coordinate frame of reference. [3 x M]
@@ -18,8 +25,12 @@
  *
  * @note keplerUniversal function - original file keplerUniversal.m
  */
+//------------------------------------------------------------------------------
 void KeplerUniversal(double m, double **r0, double **v0, double **t, double mu, double **r, double **v, double *mm);
 
+//------------------------------------------------------------------------------
+// function C2c3
+//------------------------------------------------------------------------------
 /**
  * @param[in] <m> int the number of cols
  * @param <psi> Vector double [1 X M]
@@ -29,6 +40,7 @@ void KeplerUniversal(double m, double **r0, double **v0, double **t, double mu, 
  *
  * @note c2c3 function - original file keplerUniversal.m
  */
+//------------------------------------------------------------------------------
 void C2c3(double m, double psi, double *c2, double *c3, double *mm);
 
 #endif //CODIGO_KEPLERUNIVERSAL_H
