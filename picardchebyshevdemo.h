@@ -43,10 +43,11 @@ void PlotPostionAndVelocity(int n, int m, double **rvPCM, double **rA, double **
                             double **xg);
 
 /**
+ * @param[in] <n> int the number of rows
  * @param[in] <t> Vector double [1 x N]
  * @param[in] <PosErr> Vector double [N x 1]
  * @param[in] <VelErr> Vector double [N x 1]
  */
-void PlotMagnitudeErrors(double **t, double **PosErr, double **VelErr);
+void PlotMagnitudeErrors(int n, double **t, double **PosErr, double **VelErr);
 
 #endif //CODIGO_PICARDCHEBYSHEVDEMO_H
