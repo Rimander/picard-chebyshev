@@ -24,7 +24,7 @@
  * @note keplerUniversal function - original file keplerUniversal.m
  */
 //------------------------------------------------------------------------------
-void KeplerUniversal(int m, double **r0, double **v0, double *t, double mu, double **r, double **v, int *mm) {
+void KeplerUniversal(int m, double **r0, double **v0, double **t, double mu, double **r, double **v, int *mm) {
 
 }
 
@@ -41,6 +41,6 @@ void KeplerUniversal(int m, double **r0, double **v0, double *t, double mu, doub
  * @note c2c3 function - original file keplerUniversal.m
  */
 //------------------------------------------------------------------------------
-void C2c3(int m, double psi, double *c2, double *c3, int *mm) {
+void C2c3(int m, double **psi, double **c2, double **c3, int *mm) {
 
 }
