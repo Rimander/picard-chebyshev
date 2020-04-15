@@ -3,5 +3,5 @@
  * @author Fermin Jimenez
  */
 
-#include "picardchebyshevdemo.h"
+#include "matlab.h"
 
