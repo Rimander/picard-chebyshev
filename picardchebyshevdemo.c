@@ -1,5 +1,5 @@
 /**
- * @file picardchebyshevdemo.c€
+ * @file picardchebyshevdemo.c
  * @author Fermin Jimenez
  */
 
