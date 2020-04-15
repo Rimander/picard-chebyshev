@@ -1,0 +1,63 @@
+\hypertarget{vmpcm_8c}{}\doxysection{/\+Users/ferminjimenezalfaro/\+Google Drive/\+Clase/\+Uni/\+Tercero/\+Taller Transversal/\+Proyecto/codigo/vmpcm.c File Reference}
+\label{vmpcm_8c}\index{/Users/ferminjimenezalfaro/Google Drive/Clase/Uni/Tercero/Taller  Transversal/Proyecto/codigo/vmpcm.c@{/Users/ferminjimenezalfaro/Google Drive/Clase/Uni/Tercero/Taller  Transversal/Proyecto/codigo/vmpcm.c}}
+{\ttfamily \#include \char`\"{}vmpcm.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{vmpcm_8c_a865e334ad626dfb8ab3089f54ba9dac4}{V\+M\+P\+CM}} (double $\ast$n, double $\ast$m, void($\ast$ode)(int, int, double $\ast$, double $\ast$$\ast$, double, double $\ast$, int $\ast$, int $\ast$), double $\ast$tau, double $\ast$$\ast$x\+\_\+guess, double omega1, double omega2, double err\+Tol, double varargin)
+\item 
+void \mbox{\hyperlink{vmpcm_8c_a285fd4cae66b78ce59ec22e72048fa96}{Chebyshev\+Polynomial}} (double $\ast$n, double $\ast$m, double $\ast$$\ast$k, double $\ast$tau, int $\ast$nn, int $\ast$mm)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Fermin Jimenez 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{vmpcm_8c_a285fd4cae66b78ce59ec22e72048fa96}\label{vmpcm_8c_a285fd4cae66b78ce59ec22e72048fa96}} 
+\index{vmpcm.c@{vmpcm.c}!ChebyshevPolynomial@{ChebyshevPolynomial}}
+\index{ChebyshevPolynomial@{ChebyshevPolynomial}!vmpcm.c@{vmpcm.c}}
+\doxysubsubsection{\texorpdfstring{ChebyshevPolynomial()}{ChebyshevPolynomial()}}
+{\footnotesize\ttfamily void Chebyshev\+Polynomial (\begin{DoxyParamCaption}\item[{double $\ast$}]{n,  }\item[{double $\ast$}]{m,  }\item[{double $\ast$$\ast$}]{k,  }\item[{double $\ast$}]{tau,  }\item[{int $\ast$}]{nn,  }\item[{int $\ast$}]{mm }\end{DoxyParamCaption})}
+
+The Chebyshev polynomial,T, corresponding to degree k 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $<$n$>$} & int number of rows \\
+\hline
+\mbox{\texttt{ in}}  & {\em $<$m$>$} & int number of columns \\
+\hline
+\mbox{\texttt{ in}}  & {\em $<$k$>$} & Vctor double \mbox{[}N x 1\mbox{]} \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vmpcm_8c_a865e334ad626dfb8ab3089f54ba9dac4}\label{vmpcm_8c_a865e334ad626dfb8ab3089f54ba9dac4}} 
+\index{vmpcm.c@{vmpcm.c}!VMPCM@{VMPCM}}
+\index{VMPCM@{VMPCM}!vmpcm.c@{vmpcm.c}}
+\doxysubsubsection{\texorpdfstring{VMPCM()}{VMPCM()}}
+{\footnotesize\ttfamily void V\+M\+P\+CM (\begin{DoxyParamCaption}\item[{double $\ast$}]{n,  }\item[{double $\ast$}]{m,  }\item[{void($\ast$)(int, int, double $\ast$, double $\ast$$\ast$, double, double $\ast$, int $\ast$, int $\ast$)}]{ode,  }\item[{double $\ast$}]{tau,  }\item[{double $\ast$$\ast$}]{x\+\_\+guess,  }\item[{double}]{omega1,  }\item[{double}]{omega2,  }\item[{double}]{err\+Tol,  }\item[{double}]{varargin }\end{DoxyParamCaption})}
+
+Generic Function wrapper for the Vectorized Picard Chebyshev Method 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $<$n$>$} & int number of rows \\
+\hline
+\mbox{\texttt{ in}}  & {\em $<$m$>$} & int number of columns \\
+\hline
+\mbox{\texttt{ in}}  & {\em $<$ode$>$} & Reference function Two\+Body\+Force\+Model \\
+\hline
+\mbox{\texttt{ in}}  & {\em $<$tau$>$} & Vector double transformed time domain vector \mbox{[}1 x N\mbox{]} \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em $<$x\+\_\+guess$>$} & Vector double -\/ Input initial Guess of solution values for the Picard Chebyshev Method \mbox{[}N x M\mbox{]}, Output refined solution meeting the error tolerances defined by err\+Tol \\
+\hline
+\mbox{\texttt{ in}}  & {\em $<$omega1$>$} & double First Omega Term \\
+\hline
+\mbox{\texttt{ in}}  & {\em $<$omega2$>$} & double Second Omega Term \\
+\hline
+\mbox{\texttt{ in}}  & {\em $<$err\+Tol$>$} & double Error Tolerance of solution \\
+\hline
+\mbox{\texttt{ in}}  & {\em $<$varargin$>$} & double Additional inputs which are needed to be passed to the evaluation function ode \\
+\hline
+\end{DoxyParams}

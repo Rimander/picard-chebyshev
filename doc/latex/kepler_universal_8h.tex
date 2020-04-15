@@ -1,0 +1,62 @@
+\hypertarget{kepler_universal_8h}{}\doxysection{/\+Users/ferminjimenezalfaro/\+Google Drive/\+Clase/\+Uni/\+Tercero/\+Taller Transversal/\+Proyecto/codigo/kepler\+Universal.h File Reference}
+\label{kepler_universal_8h}\index{/Users/ferminjimenezalfaro/Google Drive/Clase/Uni/Tercero/Taller  Transversal/Proyecto/codigo/keplerUniversal.h@{/Users/ferminjimenezalfaro/Google Drive/Clase/Uni/Tercero/Taller  Transversal/Proyecto/codigo/keplerUniversal.h}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{kepler_universal_8h_aabd3bf0ac39217b10ac98a4c7237775a}{kepler\+Universal}} (double $\ast$$\ast$r0, double $\ast$$\ast$v0, double $\ast$$\ast$t, double mu, double $\ast$$\ast$r, double $\ast$$\ast$v)
+\item 
+void \mbox{\hyperlink{kepler_universal_8h_aa1b78a54fea542bbb5a62ec1ac1deb19}{c2c3}} (double psi, double $\ast$c2, double $\ast$c3)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Fermin Jimenez 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{kepler_universal_8h_aa1b78a54fea542bbb5a62ec1ac1deb19}\label{kepler_universal_8h_aa1b78a54fea542bbb5a62ec1ac1deb19}} 
+\index{keplerUniversal.h@{keplerUniversal.h}!c2c3@{c2c3}}
+\index{c2c3@{c2c3}!keplerUniversal.h@{keplerUniversal.h}}
+\doxysubsubsection{\texorpdfstring{c2c3()}{c2c3()}}
+{\footnotesize\ttfamily void c2c3 (\begin{DoxyParamCaption}\item[{double}]{psi,  }\item[{double $\ast$}]{c2,  }\item[{double $\ast$}]{c3 }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$psi$>$} & input psi parameter. \\
+\hline
+{\em $<$c2$>$} & output parameter to c2. \\
+\hline
+{\em $<$c3$>$} & output parameter to c3.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+c2c3 function -\/ file kepler\+Universal.\+m 
+\end{DoxyNote}
+\mbox{\Hypertarget{kepler_universal_8h_aabd3bf0ac39217b10ac98a4c7237775a}\label{kepler_universal_8h_aabd3bf0ac39217b10ac98a4c7237775a}} 
+\index{keplerUniversal.h@{keplerUniversal.h}!keplerUniversal@{keplerUniversal}}
+\index{keplerUniversal@{keplerUniversal}!keplerUniversal.h@{keplerUniversal.h}}
+\doxysubsubsection{\texorpdfstring{keplerUniversal()}{keplerUniversal()}}
+{\footnotesize\ttfamily void kepler\+Universal (\begin{DoxyParamCaption}\item[{double $\ast$$\ast$}]{r0,  }\item[{double $\ast$$\ast$}]{v0,  }\item[{double $\ast$$\ast$}]{t,  }\item[{double}]{mu,  }\item[{double $\ast$$\ast$}]{r,  }\item[{double $\ast$$\ast$}]{v }\end{DoxyParamCaption})}
+
+Purpose\+: Most effecient way to propagate any type of two body orbit using kepler\textquotesingle{}s equations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$r0$>$} & position Vector in E\+CI coordinate frame of reference. \mbox{[}3 x N\mbox{]} \\
+\hline
+{\em $<$v0$>$} & velocity Vector in E\+CI coordinate frame of reference. \mbox{[}3 x N\mbox{]} \\
+\hline
+{\em $<$t$>$} & time Vector in seconds \mbox{[}1 x N\mbox{]} \\
+\hline
+{\em $<$mu$>$} & gravitational Constant Defaults to Earth if not specified \\
+\hline
+{\em $<$r$>$} & output parameter, Final position vector in E\+CI \mbox{[}3 x N\mbox{]} \\
+\hline
+{\em $<$v$>$} & output parameter, Final velocity vector in E\+CI \mbox{[}3 x N\mbox{]}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+kepler\+Universal function -\/ file kepler\+Universal.\+m 
+\end{DoxyNote}
