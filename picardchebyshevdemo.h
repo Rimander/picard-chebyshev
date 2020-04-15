@@ -23,14 +23,14 @@ void PicardChebyshevDemo();
 // function TwoBodyForceModel
 //------------------------------------------------------------------------------
 /**
- * @param[in] <n> int number of rows
- * @param[in] <m> int number of columns
- * @param[in] <t> Vector double [1 x N]
- * @param[in] <posvel> Vector double [N x M]
- * @param[in] <mu> double
- * @param[out] <eta> Vector double [N x M]
- * @param[out] <nn> int number of rows
- * @param[out] <mm> int number of columns
+ * @param[in] <n> number of rows
+ * @param[in] <m> number of columns
+ * @param[in] <t> Vector [1 x N]
+ * @param[in] <posvel> Vector [N x M]
+ * @param[in] <mu>
+ * @param[out] <eta> Vector [N x M]
+ * @param[out] <nn> number of rows
+ * @param[out] <mm> number of columns
  */
 void TwoBodyForceModel(int n, int m, double **t, double **posvel, double mu, double *eta, int *nn, int *mm);
 
@@ -38,15 +38,15 @@ void TwoBodyForceModel(int n, int m, double **t, double **posvel, double mu, dou
 // function PlotPostionAndVelocity
 //------------------------------------------------------------------------------
 /**
- * @param[in] <n> int number of rows
- * @param[in] <m> int number of columns
+ * @param[in] <n> number of rows
+ * @param[in] <m> number of columns
  * @param[in] <rvPCM> Vector double [N x M]
- * @param[in] <rA> Vector double [N x M]
- * @param[in] <vA> Vector double [N x M]
- * @param[in] <vMag> double
- * @param[in] <a> double
- * @param[in] <t> Vector double [1 x N]
- * @param[in] <xg> Vector double [N x M]
+ * @param[in] <rA> Vector [N x M]
+ * @param[in] <vA> Vector [N x M]
+ * @param[in] <vMag>
+ * @param[in] <a>
+ * @param[in] <t> Vector [1 x N]
+ * @param[in] <xg> Vector [N x M]
  */
 //------------------------------------------------------------------------------
 void PlotPostionAndVelocity(int n, int m, double **rvPCM, double **rA, double **vA, double vMag, double a, double **t,
@@ -55,10 +55,10 @@ void PlotPostionAndVelocity(int n, int m, double **rvPCM, double **rA, double **
 // function PlotMagnitudeErrors
 //------------------------------------------------------------------------------
 /**
- * @param[in] <n> int number of rows
- * @param[in] <t> Vector double [1 x N]
- * @param[in] <PosErr> Vector double [N x 1]
- * @param[in] <VelErr> Vector double [N x 1]
+ * @param[in] <n> number of rows
+ * @param[in] <t> Vector [1 x N]
+ * @param[in] <PosErr> Vector [N x 1]
+ * @param[in] <VelErr> Vector [N x 1]
  */
 //------------------------------------------------------------------------------
 void PlotMagnitudeErrors(int n, double **t, double **PosErr, double **VelErr);
