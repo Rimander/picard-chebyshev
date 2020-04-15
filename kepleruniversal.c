@@ -24,7 +24,7 @@
  * @note keplerUniversal function - original file keplerUniversal.m
  */
 //------------------------------------------------------------------------------
-void KeplerUniversal(double m, double **r0, double **v0, double **t, double mu, double **r, double **v, double *mm) {
+void KeplerUniversal(double m, double **r0, double **v0, double *t, double mu, double **r, double **v, double *mm) {
 
 }
 
@@ -33,7 +33,7 @@ void KeplerUniversal(double m, double **r0, double **v0, double **t, double mu, 
 //------------------------------------------------------------------------------
 /**
  * @param[in] <m> int the number of cols
- * @param <psi> Vector double [1 X M]
+ * @param[in] <psi> Vector double [1 X M]
  * @param[out] <c2> Vector double [1 X M]
  * @param[out] <c3> Vector double [1 X M]
  * @param[out] <mm> int the number of cols

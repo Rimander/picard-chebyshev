@@ -34,7 +34,7 @@ void PicardChebyshevDemo() {
  * @param[out] <nn> int the number of rows
  * @param[out] <mm> int the number of columns
  */
-void TwoBodyForceModel(int n, int m, double **t, double **posvel, double mu, double *eta, int *nn, int *mm) {
+void TwoBodyForceModel(int n, int m, double *t, double **posvel, double mu, double *eta, int *nn, int *mm) {
 
 }
 
@@ -53,7 +53,7 @@ void TwoBodyForceModel(int n, int m, double **t, double **posvel, double mu, dou
  * @param[in] <xg> Vector double [N x M]
  */
 //------------------------------------------------------------------------------
-void PlotPostionAndVelocity(int n, int m, double **rvPCM, double **rA, double **vA, double vMag, double a, double **t,
+void PlotPostionAndVelocity(int n, int m, double **rvPCM, double **rA, double **vA, double vMag, double a, double *t,
                             double **xg) {
 
 }
@@ -67,6 +67,6 @@ void PlotPostionAndVelocity(int n, int m, double **rvPCM, double **rA, double **
  * @param[in] <VelErr> Vector double [N x 1]
  */
 //------------------------------------------------------------------------------
-void PlotMagnitudeErrors(int n, double **t, double **PosErr, double **VelErr) {
+void PlotMagnitudeErrors(int n, double *t, double **PosErr, double **VelErr) {
 
 }
