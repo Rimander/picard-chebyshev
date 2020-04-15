@@ -9,7 +9,7 @@
 
 
 //------------------------------------------------------------------------------
-// function fliplr
+// fliplr
 //------------------------------------------------------------------------------
 /**
  * Turn the columns, left to right
@@ -26,10 +26,10 @@ void fliplr(int *n, int *m, double **mtrx);
 
 
 //------------------------------------------------------------------------------
-// function repmat
+// repmat
 //------------------------------------------------------------------------------
 /**
- * Generate an array containing c copies of A at the row and column levels.
+ * Generate a Vector containing c copies of A at the row and column levels.
  *
  * ~~~
  *   repmat(2, 2, matrix, 2, ...)
@@ -50,6 +50,41 @@ void fliplr(int *n, int *m, double **mtrx);
  */
 //------------------------------------------------------------------------------
 void repmat(int n, int m, double **a, int c, int *nn, int *mm, double **b);
+
+
+//------------------------------------------------------------------------------
+// sum
+//------------------------------------------------------------------------------
+/**
+ * Sum of Vector elements
+ *
+ * ~~~
+ *  sum(3,3, matrix, ...)
+ *
+ *  1     3     2        11     6     11
+ *  4     2     5
+ *  6     1     4
+ * ~~~
+ *
+ * @param[in] <n> number of rows
+ * @param[in] <m> number of cols
+ * @param[in] <mtrx> A Vector [N x M]
+ * @param[out] <nn> number of rows
+ * @param[out] <mm> number of cols
+ * @param[out] <mtrb> B Vector [N x M]
+ */
+//------------------------------------------------------------------------------
+void sum(int n, int m, double **a, int *nn, int *mm, double **b);
+
+//------------------------------------------------------------------------------
+// any
+//------------------------------------------------------------------------------
+/**
+ * Determine if any elements are nonzero
+ *
+ */
+//------------------------------------------------------------------------------
+void any();
 
 
 #endif //CODIGO_MATLAB_H
