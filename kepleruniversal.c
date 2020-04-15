@@ -12,14 +12,14 @@
 /**
  * Purpose: Most effecient way to propagate any type of two body orbit using kepler's equations.
  *
- * @param[in] <m> int the number of cols
+ * @param[in] <m> int number of cols
  * @param[in] <r0> position Vector in ECI coordinate frame of reference. [3 x M]
  * @param[in] <v0> velocity Vector in ECI coordinate frame of reference. [3 x M]
  * @param[in] <t> time Vector in seconds [1 x M]
  * @param[in] <mu> gravitational Constant Defaults to Earth if not specified
  * @param[out] <r> Final position vector in ECI [3 x M]
  * @param[out] <v> Final velocity vector in ECI [3 x M]
- * @param[out] <mm> int the number of cols
+ * @param[out] <mm> int number of cols
  *
  * @note keplerUniversal function - original file keplerUniversal.m
  */
@@ -32,11 +32,11 @@ void KeplerUniversal(int m, double **r0, double **v0, double *t, double mu, doub
 // function C2c3
 //------------------------------------------------------------------------------
 /**
- * @param[in] <m> int the number of cols
+ * @param[in] <m> int number of cols
  * @param[in] <psi> Vector double [1 X M]
  * @param[out] <c2> Vector double [1 X M]
  * @param[out] <c3> Vector double [1 X M]
- * @param[out] <mm> int the number of cols
+ * @param[out] <mm> int number of cols
  *
  * @note c2c3 function - original file keplerUniversal.m
  */
