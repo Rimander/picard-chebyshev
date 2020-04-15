@@ -16,28 +16,36 @@
 void PicardChebyshevDemo();
 
 /**
- * @param <t> Vector double [1 x N]
- * @param <posvel> Vector double [N x M]
- * @param <mu> double
+ * @param[in] <n> int the number of rows
+ * @param[in] <m> int the number of columns
+ * @param[in] <t> Vector double [1 x N]
+ * @param[in] <posvel> Vector double [N x M]
+ * @param[in] <mu> double
+ * @param[out] <eta> Vector double [N x M]
+ * @param[out] <nn> int the number of rows
+ * @param[out] <mm> int the number of columns
  */
-void TwoBodyForceModel(double **t, double **posvel, double mu);
+void TwoBodyForceModel(int n, int m, double **t, double **posvel, double mu, double *eta, int *nn, int *mm);
 
 /**
- * @param <rvPCM> Vector double [N x M]
- * @param <rA> Vector double [N x M]
- * @param <vA> Vector double [N x M]
- * @param <vMag> double
- * @param <a> double
- * @param <t> Vector double [1 x N]
- * @param <xg> Vector double [N x M]
+ * @param[in] <n> int the number of rows
+ * @param[in] <m> int the number of columns
+ * @param[in] <rvPCM> Vector double [N x M]
+ * @param[in] <rA> Vector double [N x M]
+ * @param[in] <vA> Vector double [N x M]
+ * @param[in] <vMag> double
+ * @param[in] <a> double
+ * @param[in] <t> Vector double [1 x N]
+ * @param[in] <xg> Vector double [N x M]
  *
  */
-void PlotPostionAndVelocity(double **rvPCM, double **rA, double **vA, double vMag, double a, double **t, double **xg);
+void PlotPostionAndVelocity(int n, int m, double **rvPCM, double **rA, double **vA, double vMag, double a, double **t,
+                            double **xg);
 
 /**
- * @param <t> Vector double [1 x N]
- * @param <PosErr> Vector double [N x 1]
- * @param <VelErr> Vector double [N x 1]
+ * @param[in] <t> Vector double [1 x N]
+ * @param[in] <PosErr> Vector double [N x 1]
+ * @param[in] <VelErr> Vector double [N x 1]
  */
 void PlotMagnitudeErrors(double **t, double **PosErr, double **VelErr);
 
