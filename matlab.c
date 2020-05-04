@@ -101,8 +101,8 @@ void freearray(double *vec) {
  * @param[in] <n> number of rows
  * @param[in] <m> number of cols
  * @param[in] <mtrx> A  [N x M]
- * @param[in] <cr> number of row copies
- * @param[in] <cc> number of column copies
+ * @param[in] <cr> number multiply row copies
+ * @param[in] <cc> number multiply column copies
  * @param[out] <mtrb> B  [N x M]
  */
 //------------------------------------------------------------------------------
