@@ -40,7 +40,7 @@ int main() {
 
 
     double b = 0;
-    sum(colum, mat[0], &b);
+    sumarray(colum, mat[0], &b);
     printf("\n");
     printf(" %f ", b);
     printf("\n");
@@ -53,6 +53,24 @@ int main() {
     printf("\n");
     for (i = 0; i < colum; i++) {
         printf(" %f ", bb[i]);
+    }
+    printf("\n");
+    printf("\n");
+
+
+    int cr = 2;
+    int cc = 2;
+    double **bbb = (double **) calloc(filas * cr, sizeof(double *));
+    for (i = 0; i < filas * cr; i++)
+        bbb[i] = (double *) calloc(colum * cr, sizeof(double));
+
+    repmat(filas, colum, mat, cr, cc, &bbb);
+
+    for (i = 0; i < filas * cr; i++) {
+        for (j = 0; j < colum * cc; j++) {
+            printf(" %f ", bbb[i][j]);
+        }
+        printf("\n");
     }
     printf("\n");
     printf("\n");

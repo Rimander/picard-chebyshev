@@ -56,7 +56,7 @@ void fliplr(int n, int m, double **mtrx, double ***matrix) {
  * @param[inout] <vec>
  */
 //------------------------------------------------------------------------------
-void createvector(int n, double **vec) {
+void createarray(int n, double **vec) {
     *vec = (double *) calloc(n, sizeof(double));
     if (*vec == NULL) {
         printf("ERROR: no queda memoria dinamica\n");
@@ -76,10 +76,54 @@ void createvector(int n, double **vec) {
  * @param[in] <vec>
  */
 //------------------------------------------------------------------------------
-void freevector(double *vec) {
+void freearray(double *vec) {
     free(vec);
 }
 
+
+//------------------------------------------------------------------------------
+// repmat
+//------------------------------------------------------------------------------
+/**
+ * Generate a  containing c copies of A at the row and column levels.
+ *
+ * ~~~
+ *   repmat(2, 2, matrix, 2, 2, ...)
+ *
+ *   100  0         100  0    100  0
+ *   0    200         0  200  0    200
+ *                  100  0    100  0
+ *                    0  200  0    200
+ * ~~~
+ *
+ * @param[in] <n> number of rows
+ * @param[in] <m> number of cols
+ * @param[in] <mtrx> A  [N x M]
+ * @param[in] <cr> number of row copies
+ * @param[in] <cc> number of column copies
+ * @param[out] <mtrb> B  [N x M]
+ */
+//------------------------------------------------------------------------------
+void repmat(int n, int m, double **a, int cr, int cc, double ***b) {
+
+    int i, j, row, col;
+    double **bMatrix = *b;
+
+    // Number of row copies
+    for (i = 0; i < cr; i++) {
+        for (row = 0; row < n; row++) {
+            double *rowMatrix = a[row];
+            double *rowBMatrix = bMatrix[i * n + row];
+
+            // Number of column copies
+            for (j = 0; j < cc; j++) {
+                for (col = 0; col < m; col++) {
+                    rowBMatrix[j * m + col] = rowMatrix[col];
+                }
+            }
+        }
+    }
+}
 
 //------------------------------------------------------------------------------
 // summatrix
@@ -134,12 +178,11 @@ void summatrix(int n, int m, double **a, double **b) {
  * @param[out] <mtrb> B [1 x M]
  */
 //------------------------------------------------------------------------------
-void sumvector(int n, double *a, double *b) {
+void sumarray(int n, double *a, double *b) {
 
     int row;
     *b = 0;
     for (row = 0; row < n; row++) {
         *b += a[row];
     }
-
 }

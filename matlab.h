@@ -72,13 +72,12 @@ void freearray(double *vec);
  * @param[in] <n> number of rows
  * @param[in] <m> number of cols
  * @param[in] <mtrx> A  [N x M]
- * @param[in] <c> number of copies
- * @param[out] <nn> number of rows
- * @param[out] <mm> number of cols
+ * @param[in] <cr> number of row copies
+ * @param[in] <cc> number of column copies
  * @param[out] <mtrb> B  [N x M]
  */
 //------------------------------------------------------------------------------
-void repmat(int n, int m, double **a, int c, int *nn, int *mm, double ***b);
+void repmat(int n, int m, double **a, int cr, int cc, double ***b);
 
 
 
@@ -125,7 +124,7 @@ void summatrix(int n, int m, double **a, double **b);
  * @param[out] <mtrb> B [1 x M]
  */
 //------------------------------------------------------------------------------
-void sumvector(int n, double *a, double *b);
+void sumarray(int n, double *a, double *b);
 
 
 
