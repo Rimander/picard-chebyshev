@@ -9,12 +9,12 @@
 // VMPCM
 //------------------------------------------------------------------------------
 /**
- * Generic Function wrapper for the Vectorized Picard Chebyshev Method
+ * Generic Function wrapper for the ized Picard Chebyshev Method
  * @param[in] <n> number of rows
  * @param[in] <m> number of columns
  * @param[in] <ode> Reference function TwoBodyForceModel
- * @param[in] <tau> Vector transformed time domain vector [1 x N]
- * @param[inout] <x_guess> Vector - Input initial Guess of solution values for the Picard Chebyshev Method [N x M],
+ * @param[in] <tau>  transformed time domain  [1 x N]
+ * @param[inout] <x_guess>  - Input initial Guess of solution values for the Picard Chebyshev Method [N x M],
  * Output refined solution meeting the error tolerances defined by errTol
  * @param[in] <omega1> First Omega Term
  * @param[in] <omega2> Second Omega Term
@@ -37,9 +37,9 @@ VMPCM(double *n, double *m, void (*ode)(int, int, double *, double **, double, d
  * The Chebyshev polynomial,T, corresponding to degree k
  * @param[in] <n> number of rows
  * @param[in] <m> number of columns
- * @param[in] <k> Vector [N x 1]
- * @param[in]<tau> Vector transformed time domain vector [1 x M]
- * @param[out] <Tk> Vector [N x M]
+ * @param[in] <k>  [N x 1]
+ * @param[in]<tau>  transformed time domain  [1 x M]
+ * @param[out] <Tk>  [N x M]
  * @param[out] <nn> number of rows
  * @param[out] <mm> number of columns
  */

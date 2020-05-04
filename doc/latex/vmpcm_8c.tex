@@ -40,7 +40,7 @@ The Chebyshev polynomial,T, corresponding to degree k
 \doxysubsubsection{\texorpdfstring{VMPCM()}{VMPCM()}}
 {\footnotesize\ttfamily void V\+M\+P\+CM (\begin{DoxyParamCaption}\item[{double $\ast$}]{n,  }\item[{double $\ast$}]{m,  }\item[{void($\ast$)(int, int, double $\ast$, double $\ast$$\ast$, double, double $\ast$, int $\ast$, int $\ast$)}]{ode,  }\item[{double $\ast$}]{tau,  }\item[{double $\ast$$\ast$}]{x\+\_\+guess,  }\item[{double}]{omega1,  }\item[{double}]{omega2,  }\item[{double}]{err\+Tol,  }\item[{double}]{varargin }\end{DoxyParamCaption})}
 
-Generic Function wrapper for the Vectorized Picard Chebyshev Method 
+Generic Function wrapper for the ized Picard Chebyshev Method
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em $<$n$>$} & int number of rows \\
 \hline
@@ -48,9 +48,9 @@ Generic Function wrapper for the Vectorized Picard Chebyshev Method
 \hline
 \mbox{\texttt{ in}}  & {\em $<$ode$>$} & Reference function Two\+Body\+Force\+Model \\
 \hline
-\mbox{\texttt{ in}}  & {\em $<$tau$>$} & Vector double transformed time domain vector \mbox{[}1 x N\mbox{]} \\
+\mbox{\texttt{ in}}  & {\em $<$tau$>$} &  double transformed time domain  \mbox{[}1 x N\mbox{]} \\
 \hline
-\mbox{\texttt{ in,out}}  & {\em $<$x\+\_\+guess$>$} & Vector double -\/ Input initial Guess of solution values for the Picard Chebyshev Method \mbox{[}N x M\mbox{]}, Output refined solution meeting the error tolerances defined by err\+Tol \\
+\mbox{\texttt{ in,out}}  & {\em $<$x\+\_\+guess$>$} &  double -\/ Input initial Guess of solution values for the Picard Chebyshev Method \mbox{[}N x M\mbox{]}, Output refined solution meeting the error tolerances defined by err\+Tol \\
 \hline
 \mbox{\texttt{ in}}  & {\em $<$omega1$>$} & double First Omega Term \\
 \hline
