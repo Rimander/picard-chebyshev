@@ -16,13 +16,12 @@
  *
  *  [1,3,4,2,5] -> [5,2,4,3,1]
  *
- * @param[in] <n> number of rows
- * @param[in] <m> number of cols
- * @param[in] <mtrx>  [N x M]
- * @param[inout] <matrix>  [N x M]
+ * @param[in] <m> number of items
+ * @param[in] <in>
+ * @param[out] <out>
  */
 //------------------------------------------------------------------------------
-void fliplr(int n, int m, double **mtrx, double ***matrix);
+void fliplr(int m, double *in, double **out);
 
 
 
@@ -150,10 +149,10 @@ void summatrix(int n, int m, double **in, double **out);
  *
  * @param[in] <n> number of items
  * @param[in] <mtrx> A [N x M]
- * @param[out] <mtrb> B [1 x M]
+ * @return double sum
  */
 //------------------------------------------------------------------------------
-void sumarray(int n, double *in, double *out);
+double sumarray(int n, double *in);
 
 
 //------------------------------------------------------------------------------

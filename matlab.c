@@ -15,33 +15,24 @@
  *
  *  [1,3,4,2,5] -> [5,2,4,3,1]
  *
- * @param[in] <n> number of rows
- * @param[in] <m> number of cols
- * @param[in] <mtrx>  [N x M]
- * @param[inout] <matrix>  [N x M]
+ * @param[in] <m> number of items
+ * @param[in] <in>
+ * @param[out] <out>
  */
 //------------------------------------------------------------------------------
-void fliplr(int n, int m, double **mtrx, double ***matrix) {
+void fliplr(int m, double *in, double **out) {
 
-    // Matrix
-    double **outMatrix = *matrix;
 
-    int row;
-    for (row = 0; row < n; row++) {
-        // Row array
-        double *rowMatrix = mtrx[row];
-        double *rowOutMatrix = outMatrix[row];
+    double *elementsOut = *out;
+    // Start and end position of array
+    int start = 0;
+    int end = m - 1;
 
-        // Start and end position of array
-        int start = 0;
-        int end = m - 1;
-
-        while (start < end) {
-            rowOutMatrix[start] = rowMatrix[end];
-            rowOutMatrix[end] = rowMatrix[start];
-            start++;
-            end--;
-        }
+    while (start < end) {
+        elementsOut[start] = in[end];
+        elementsOut[end] = in[start];
+        start++;
+        end--;
     }
 
 }
@@ -116,7 +107,8 @@ void creatematrix(int n, int m, double ***out) {
 void freematrix(int n, double **in) {
     int i;
     for (i = 0; i < n; i++) {
-        free(in[i]);
+        double *rowIn = in[i];
+        free(rowIn);
     }
     free(in);
 }
@@ -221,16 +213,16 @@ void summatrix(int n, int m, double **in, double **out) {
  *
  * @param[in] <n> number of items
  * @param[in] <mtrx> A [N x M]
- * @param[out] <mtrb> B [1 x M]
+ * @return double sum
  */
 //------------------------------------------------------------------------------
-void sumarray(int n, double *in, double *out) {
-
+double sumarray(int n, double *in) {
+    double out = 0;
     int row;
-    *out = 0;
     for (row = 0; row < n; row++) {
-        *out += out[row];
+        out += in[row];
     }
+    return out;
 }
 
 
@@ -252,7 +244,7 @@ void applyfunonearg(double (*fp)(double), double *in, int m, double **out) {
     int i;
     double *outValues = *out;
     for (i = 0; i < m; i++) {
-        double value = (*fp)(in[i];
+        double value = (*fp)(in[i]);
         outValues[i] = value;
     }
 }
