@@ -88,10 +88,12 @@ void freearray(double *vec) {
  * Generate a  containing c copies of A at the row and column levels.
  *
  * ~~~
- *   repmat(2, 2, matrix, 2, 2, ...)
+ *   repmat(2, 2, matrix, 3, 2, ...)
  *
  *   100  0         100  0    100  0
  *   0    200         0  200  0    200
+ *                  100  0    100  0
+ *                    0  200  0    200
  *                  100  0    100  0
  *                    0  200  0    200
  * ~~~
