@@ -56,7 +56,7 @@ void fliplr(int n, int m, double **mtrx, double ***matrix) {
  * @param[inout] <vec>
  */
 //------------------------------------------------------------------------------
-void create(int n, double **vec) {
+void createvector(int n, double **vec) {
     *vec = (double *) calloc(n, sizeof(double));
     if (*vec == NULL) {
         printf("ERROR: no queda memoria dinamica\n");
@@ -76,7 +76,7 @@ void create(int n, double **vec) {
  * @param[in] <vec>
  */
 //------------------------------------------------------------------------------
-void free(double *vec) {
+void freevector(double *vec) {
     free(vec);
 }
 
@@ -134,7 +134,7 @@ void summatrix(int n, int m, double **a, double **b) {
  * @param[out] <mtrb> B [1 x M]
  */
 //------------------------------------------------------------------------------
-void sum(int n, double *a, double *b) {
+void sumvector(int n, double *a, double *b) {
 
     int row;
     *b = 0;
