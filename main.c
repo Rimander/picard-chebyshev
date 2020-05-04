@@ -1,7 +1,7 @@
 #include "matlab.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <math.h>
 
 int main() {
 
@@ -58,6 +58,7 @@ int main() {
     printf("\n");
 
 
+
     int cr = 2;
     int cc = 2;
     double **bbb = (double **) calloc(filas * cr, sizeof(double *));
@@ -71,6 +72,18 @@ int main() {
             printf(" %f ", bbb[i][j]);
         }
         printf("\n");
+    }
+    printf("\n");
+    printf("\n");
+
+
+    double *bbbb = (double *) calloc(colum, sizeof(double));
+
+    applyfuntwoargs(pow, 2, mat[1], colum, &bbbb);
+
+    printf("\n");
+    for (i = 0; i < colum; i++) {
+        printf(" %f ", bbbb[i]);
     }
     printf("\n");
     printf("\n");

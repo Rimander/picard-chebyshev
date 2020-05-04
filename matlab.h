@@ -32,11 +32,11 @@ void fliplr(int n, int m, double **mtrx, double ***matrix);
 /**
  * Create
  *
- * @param[inout] <n> number of rows
- * @param[inout] <vec>
+ * @param[in <n> number of rows
+ * @param[out] <out>
  */
 //------------------------------------------------------------------------------
-void createarray(int n, double **vec);
+void createarray(int n, double **out);
 
 
 
@@ -44,13 +44,42 @@ void createarray(int n, double **vec);
 // free
 //------------------------------------------------------------------------------
 /**
- * Create
+ * Free
  *
- * @param[inout] <n> number of rows
- * @param[inout] <vec>
+ * @param[in] <in>
  */
 //------------------------------------------------------------------------------
-void freearray(double *vec);
+void freearray(double *in);
+
+
+
+//------------------------------------------------------------------------------
+// create
+//------------------------------------------------------------------------------
+/**
+ * Create
+ *
+ * @param[in] <n> number of rows
+ * @param[in] <n> number of columns
+ * @param[out] <out>
+ */
+//------------------------------------------------------------------------------
+void creatematrix(int n, int m, double ***out);
+
+
+
+//------------------------------------------------------------------------------
+// free
+//------------------------------------------------------------------------------
+/**
+ * Free
+ *
+ * @param[in] <n> number of rows
+ * @param[in] <in>
+ */
+//------------------------------------------------------------------------------
+void freematrix(int n, double **in);
+
 
 
 
@@ -77,7 +106,7 @@ void freearray(double *vec);
  * @param[out] <mtrb> B  [N x M]
  */
 //------------------------------------------------------------------------------
-void repmat(int n, int m, double **a, int cr, int cc, double ***b);
+void repmat(int n, int m, double **in, int cr, int cc, double ***out);
 
 
 
@@ -101,7 +130,7 @@ void repmat(int n, int m, double **a, int cr, int cc, double ***b);
  * @param[out] <mtrb> B [1 x M]
  */
 //------------------------------------------------------------------------------
-void summatrix(int n, int m, double **a, double **b);
+void summatrix(int n, int m, double **in, double **out);
 
 
 
@@ -124,8 +153,39 @@ void summatrix(int n, int m, double **a, double **b);
  * @param[out] <mtrb> B [1 x M]
  */
 //------------------------------------------------------------------------------
-void sumarray(int n, double *a, double *b);
+void sumarray(int n, double *in, double *out);
 
+
+//------------------------------------------------------------------------------
+// applyfunonearg
+//------------------------------------------------------------------------------
+/**
+ * Apply a function with one argument
+ *
+ *
+ * @param[in] <fp> function
+ * @param[in] <in>  [1 x M]
+ * @param[in] <m>  number of items
+ * @param[out] <out> [1 x M]
+ */
+//------------------------------------------------------------------------------
+void applyfunonearg(double (*fp)(double), double *in, int m, double **out);
+
+
+//------------------------------------------------------------------------------
+// applyfuntwoargs
+//------------------------------------------------------------------------------
+/**
+ * Apply a function with one argument
+ *
+ *
+ * @param[in] <fp> function
+ * @param[in] <in>  [1 x M]
+ * @param[in] <m>  number of items
+ * @param[out] <out> [1 x M]
+ */
+//------------------------------------------------------------------------------
+void applyfuntwoargs(double (*fp)(double, double), double c, double *in, int m, double **out);
 
 
 //------------------------------------------------------------------------------

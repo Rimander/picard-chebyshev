@@ -53,12 +53,12 @@ void fliplr(int n, int m, double **mtrx, double ***matrix) {
  * Create
  *
  * @param[in] <n> number of rows
- * @param[inout] <vec>
+ * @param[out] <out>
  */
 //------------------------------------------------------------------------------
-void createarray(int n, double **vec) {
-    *vec = (double *) calloc(n, sizeof(double));
-    if (*vec == NULL) {
+void createarray(int n, double **out) {
+    *out = (double *) calloc(n, sizeof(double));
+    if (*out == NULL) {
         printf("ERROR: no queda memoria dinamica\n");
         exit(1);
     }
@@ -73,12 +73,55 @@ void createarray(int n, double **vec) {
 /**
  * Liberate
  *
- * @param[in] <vec>
+ * @param[in] <in>
  */
 //------------------------------------------------------------------------------
-void freearray(double *vec) {
-    free(vec);
+void freearray(double *in) {
+    free(in);
 }
+
+//------------------------------------------------------------------------------
+// create
+//------------------------------------------------------------------------------
+/**
+ * Create
+ *
+ * @param[in] <n> number of rows
+ * @param[in] <n> number of columns
+ * @param[out] <out>
+ */
+//------------------------------------------------------------------------------
+void creatematrix(int n, int m, double ***out) {
+    int i;
+    double **arr = *out;
+
+    arr = (double **) calloc(n, sizeof(double *));
+    for (i = 0; i < n; i++) {
+        arr[i] = (double *) calloc(m, sizeof(double));
+    }
+}
+
+
+
+//------------------------------------------------------------------------------
+// free
+//------------------------------------------------------------------------------
+/**
+ * Free
+ *
+ * @param[in] <n> number of rows
+ * @param[in] <in>
+ */
+//------------------------------------------------------------------------------
+void freematrix(int n, double **in) {
+    int i;
+    for (i = 0; i < n; i++) {
+        free(in[i]);
+    }
+    free(in);
+}
+
+
 
 
 //------------------------------------------------------------------------------
@@ -106,15 +149,15 @@ void freearray(double *vec) {
  * @param[out] <mtrb> B  [N x M]
  */
 //------------------------------------------------------------------------------
-void repmat(int n, int m, double **a, int cr, int cc, double ***b) {
+void repmat(int n, int m, double **in, int cr, int cc, double ***out) {
 
     int i, j, row, col;
-    double **bMatrix = *b;
+    double **bMatrix = *out;
 
     // Number of row copies
     for (i = 0; i < cr; i++) {
         for (row = 0; row < n; row++) {
-            double *rowMatrix = a[row];
+            double *rowMatrix = in[row];
             double *rowBMatrix = bMatrix[i * n + row];
 
             // Number of column copies
@@ -147,17 +190,18 @@ void repmat(int n, int m, double **a, int cr, int cc, double ***b) {
  * @param[out] <mtrb> B [1 x M]
  */
 //------------------------------------------------------------------------------
-void summatrix(int n, int m, double **a, double **b) {
+void summatrix(int n, int m, double **in, double **out) {
     int row;
     int col;
-    double *vec = *b;
+    double *vec = *out;
     for (row = 0; row < n; row++) {
-        double *rowMatrix = a[row];
+        double *rowMatrix = in[row];
         for (col = 0; col < m; col++) {
             vec[col] += rowMatrix[col];
         }
     }
 }
+
 
 
 
@@ -180,11 +224,60 @@ void summatrix(int n, int m, double **a, double **b) {
  * @param[out] <mtrb> B [1 x M]
  */
 //------------------------------------------------------------------------------
-void sumarray(int n, double *a, double *b) {
+void sumarray(int n, double *in, double *out) {
 
     int row;
-    *b = 0;
+    *out = 0;
     for (row = 0; row < n; row++) {
-        *b += a[row];
+        *out += out[row];
+    }
+}
+
+
+
+//------------------------------------------------------------------------------
+// applyfunonearg
+//------------------------------------------------------------------------------
+/**
+ * Apply a function with one argument
+ *
+ *
+ * @param[in] <fp> function
+ * @param[in] <in>  [1 x M]
+ * @param[in] <m>  number of items
+ * @param[out] <out> [1 x M]
+ */
+//------------------------------------------------------------------------------
+void applyfunonearg(double (*fp)(double), double *in, int m, double **out) {
+    int i;
+    double *outValues = *out;
+    for (i = 0; i < m; i++) {
+        double value = (*fp)(in[i];
+        outValues[i] = value;
+    }
+}
+
+
+
+//------------------------------------------------------------------------------
+// applyfuntwoargs
+//------------------------------------------------------------------------------
+/**
+ * Apply a function with one argument
+ *
+ *
+ * @param[in] <fp> function
+ * @param[in] <in>  [1 x M]
+ * @param[in] <m>  number of items
+ * @param[out] <out> [1 x M]
+ */
+//------------------------------------------------------------------------------
+void applyfuntwoargs(double (*fp)(double, double), double c, double *in, int m, double **out) {
+    int i;
+    double *outValues = *out;
+
+    for (i = 0; i < m; i++) {
+        double value = (*fp)(in[i], c);
+        outValues[i] = value;
     }
 }
