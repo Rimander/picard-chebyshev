@@ -57,7 +57,6 @@ void createarray(int n, double **out) {
 
 
 
-
 //------------------------------------------------------------------------------
 // free
 //------------------------------------------------------------------------------
@@ -70,6 +69,7 @@ void createarray(int n, double **out) {
 void freearray(double *in) {
     free(in);
 }
+
 
 //------------------------------------------------------------------------------
 // create
@@ -84,9 +84,8 @@ void freearray(double *in) {
 //------------------------------------------------------------------------------
 void creatematrix(int n, int m, double ***out) {
     int i;
+    *out = (double **) calloc(n, sizeof(double *));
     double **arr = *out;
-
-    arr = (double **) calloc(n, sizeof(double *));
     for (i = 0; i < n; i++) {
         arr[i] = (double *) calloc(m, sizeof(double));
     }
@@ -114,7 +113,71 @@ void freematrix(int n, double **in) {
 }
 
 
+//------------------------------------------------------------------------------
+// arrtocolum
+//------------------------------------------------------------------------------
+/**
+ * Transform array to matrix column
+ *
+ * @param[in] <n> items
+ * @param[in] <in>
+ * @param[out] <out>
+ */
+//------------------------------------------------------------------------------
+void arrtocolum(int n, double *in, double ***out) {
+    int i;
+    double **matrix = *out;
+    for (i = 0; i < n; i++) {
+        matrix[i][0] = in[i];
+    }
+}
 
+
+
+//------------------------------------------------------------------------------
+// repmatarr
+//------------------------------------------------------------------------------
+/**
+ * Generate a  containing c copies of A at the row and column levels.
+ *
+ * ~~~
+ *   repmat(2, 2, matrix, 3, 2, ...)
+ *
+ *   100  0         100  0    100  0
+ *   0    200         0  200  0    200
+ *                  100  0    100  0
+ *                    0  200  0    200
+ *                  100  0    100  0
+ *                    0  200  0    200
+ * ~~~
+ *
+ * @param[in] <n> number of rows
+ * @param[in] <m> number of cols
+ * @param[in] <mtrx> A [M]
+ * @param[in] <cr> number multiply row copies
+ * @param[in] <cc> number multiply column copies
+ * @param[out] <mtrb> B  [N x M]
+ */
+//------------------------------------------------------------------------------
+void repmatarr(int n, int m, double *in, int cr, int cc, double ***out) {
+
+    int i, j, row, col;
+    double **bMatrix = *out;
+
+    // Number of row copies
+    for (i = 0; i < cr; i++) {
+        for (row = 0; row < n; row++) {
+            double *rowBMatrix = bMatrix[i * n + row];
+
+            // Number of column copies
+            for (j = 0; j < cc; j++) {
+                for (col = 0; col < m; col++) {
+                    rowBMatrix[j * m + col] = in[col];
+                }
+            }
+        }
+    }
+}
 
 //------------------------------------------------------------------------------
 // repmat
@@ -192,6 +255,55 @@ void summatrix(int n, int m, double **in, double **out) {
             vec[col] += rowMatrix[col];
         }
     }
+}
+
+
+
+//------------------------------------------------------------------------------
+// printmatrix
+//------------------------------------------------------------------------------
+/**
+ * print elements
+
+ * @param[in] <n> rows
+ * @param[in] <m> columns
+ * @param[in] <mtrx> A [N x M]
+ */
+//------------------------------------------------------------------------------
+double printmatrix(int n, int m, double **mtrx) {
+    int i, j;
+
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < m; j++) {
+            printf("%5.15lf ", mtrx[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\n");
+}
+
+
+
+//------------------------------------------------------------------------------
+// printarray
+//------------------------------------------------------------------------------
+/**
+ * print elements
+
+ * @param[in] <n> items
+ * @param[in] <arr> A [N]
+ */
+//------------------------------------------------------------------------------
+double printarray(int n, double *arr) {
+    int i, j;
+
+    for (i = 0; i < n; i++) {
+        printf("%5.15lf ", arr[i]);
+        printf("\n");
+    }
+
+    printf("\n");
 }
 
 

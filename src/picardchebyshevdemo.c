@@ -5,6 +5,7 @@
 
 #include "picardchebyshevdemo.h"
 #include "matlab.h"
+#include "kepleruniversal.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,9 +23,12 @@
  */
 //------------------------------------------------------------------------------
 void PicardChebyshevDemo() {
+    double **v, **r, **r0m, **v0m;
     double *r0, *v0, *aux, *aux1, *tSpan, *tau, *t;
     double mu, a, vMag, P, NoisePrct, omega1, omega2, errTol;
+    int *mm;
     int i, N;
+
 
     createarray(3, &aux);
 
@@ -54,6 +58,7 @@ void PicardChebyshevDemo() {
     P = 2 * M_PI * sqrt(pow(a, 3) / mu);
 
     // tSpan = [0 P*2];
+
     createarray(2, &tSpan);
     tSpan[0] = 0;
     tSpan[1] = P * 2;
@@ -70,13 +75,49 @@ void PicardChebyshevDemo() {
     createarray(N + 1, &aux);
     createarray(N + 1, &tau);
 
-    for (i = 0; i <= N; i++) {
+    for (i = 0; i < N + 1; i++) {
         aux[i] = i * (M_PI / N);
     }
 
-    applyfunonearg(cos, aux, 3, &aux);
+    applyfunonearg(cos, aux, N + 1, &aux);
     fliplr(N + 1, aux, &tau);
 
+
+    // omega1 = (tSpan(end)+tSpan(1))/2;
+    // omega2 = (tSpan(end)-tSpan(1))/2;
+
+    omega1 = (tSpan[1] + tSpan[0]) / 2;
+    omega2 = (tSpan[1] - tSpan[0]) / 2;
+
+
+    // t = omega2.*tau + omega1;
+
+    createarray(N + 1, &t);
+    for (i = 0; i < N + 1; i++) {
+        t[i] = (omega2 * tau[i]) + omega1;
+    }
+
+    errTol = 1e-6;
+
+    // Run the analytic orbit propagator routine
+    // [rA,vA] = keplerUniversal(repmat(r0',[1 length(t)]),repmat(v0',[1 length(t)]),t,mu);
+
+    creatematrix(3, 1, &r);
+    creatematrix(3, 1, &v);
+    creatematrix(3, N + 1, &r0m);
+    creatematrix(3, N + 1, &v0m);
+
+    // Fill r0m
+    arrtocolum(3, r0, &r);
+    repmat(3, 1, r, 1, N + 1, &r0m);
+
+    // Fill v0m
+    arrtocolum(3, v0, &v);
+    repmat(3, 1, v, 1, N + 1, &v0m);
+    printmatrix(3, N + 1, v0m);
+
+    mm = 0;
+    KeplerUniversal(N + 1, r0m, v0m, t, mu, r, v, mm);
 
     printf("%s", "Fin");
 }

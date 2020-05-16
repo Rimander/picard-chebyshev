@@ -3,4 +3,4 @@ project(codigo C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(codigo main.c kepleruniversal.c kepleruniversal.h picardchebyshevdemo.c picardchebyshevdemo.h vmpcm.c vmpcm.h matlab.c matlab.h)
+add_executable(codigo main.c src/kepleruniversal.c src/kepleruniversal.h src/picardchebyshevdemo.c src/picardchebyshevdemo.h src/vmpcm.c src/vmpcm.h src/matlab.c src/matlab.h)

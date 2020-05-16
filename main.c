@@ -1,5 +1,5 @@
-#include "matlab.h"
-#include "picardchebyshevdemo.h"
+#include "src/matlab.h"
+#include "src/picardchebyshevdemo.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

@@ -79,7 +79,42 @@ void creatematrix(int n, int m, double ***out);
 //------------------------------------------------------------------------------
 void freematrix(int n, double **in);
 
+//------------------------------------------------------------------------------
+// arrtocolum
+//------------------------------------------------------------------------------
+/**
+ * Transform array to matrix column
+ *
+ * @param[in] <n> items
+ * @param[in] <in>
+ * @param[out] <out>
+ */
+void arrtocolum(int n, double *in, double ***out);
 
+//------------------------------------------------------------------------------
+// repmat
+//------------------------------------------------------------------------------
+/**
+ * Generate a  containing c copies of A at the row and column levels.
+ *
+ * ~~~
+ *   repmat(2, 2, matrix, 2, ...)
+ *
+ *   100  0         100  0    100  0
+ *   0    200         0  200  0    200
+ *                  100  0    100  0
+ *                    0  200  0    200
+ * ~~~
+ *
+ * @param[in] <n> number of rows
+ * @param[in] <m> number of cols
+ * @param[in] <mtrx> A  [M]
+ * @param[in] <cr> number of row copies
+ * @param[in] <cc> number of column copies
+ * @param[out] <mtrb> B  [N x M]
+ */
+//------------------------------------------------------------------------------
+void repmatarr(int n, int m, double *in, int cr, int cc, double ***out);
 
 
 //------------------------------------------------------------------------------
@@ -131,6 +166,32 @@ void repmat(int n, int m, double **in, int cr, int cc, double ***out);
 //------------------------------------------------------------------------------
 void summatrix(int n, int m, double **in, double **out);
 
+
+//------------------------------------------------------------------------------
+// printmatrix
+//------------------------------------------------------------------------------
+/**
+ * print elements
+
+ * @param[in] <n> rows
+ * @param[in] <m> columns
+ * @param[in] <mtrx> A [N x M]
+ */
+//------------------------------------------------------------------------------
+double printmatrix(int n, int m, double **mtrx);
+
+
+//------------------------------------------------------------------------------
+// printarray
+//------------------------------------------------------------------------------
+/**
+ * print elements
+
+ * @param[in] <n> items
+ * @param[in] <arr> A [N]
+ */
+//------------------------------------------------------------------------------
+double printarray(int n, double *arr);
 
 
 //------------------------------------------------------------------------------
