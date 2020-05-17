@@ -6,6 +6,7 @@
 #include "matlab.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 //------------------------------------------------------------------------------
 // fliplr
@@ -275,11 +276,10 @@ double printmatrix(int n, int m, double **mtrx) {
 
     for (i = 0; i < n; i++) {
         for (j = 0; j < m; j++) {
-            printf("%5.15lf ", mtrx[i][j]);
+            printf("%f\t", mtrx[i][j]);
         }
         printf("\n");
     }
-
     printf("\n");
 }
 
@@ -299,8 +299,7 @@ double printarray(int n, double *arr) {
     int i, j;
 
     for (i = 0; i < n; i++) {
-        printf("%5.15lf ", arr[i]);
-        printf("\n");
+        printf("%5.15lf \t", arr[i]);
     }
 
     printf("\n");
@@ -384,4 +383,140 @@ void applyfuntwoargs(double (*fp)(double, double), double c, double *in, int m, 
         double value = (*fp)(in[i], c);
         outValues[i] = value;
     }
+}
+
+
+//------------------------------------------------------------------------------
+// applyfuntwoargsmatrix
+//------------------------------------------------------------------------------
+/**
+ * Apply a function with one argument matrix
+ *
+ *
+ * @param[in] <fp> function
+ * @param[in] <in>  [N x M]
+ * @param[in] <n>  number of rows
+ * @param[in] <m>  number of columns
+ * @param[out] <out> [N x M]
+ */
+//------------------------------------------------------------------------------
+void applyfuntwoargsmatrix(double (*fp)(double, double), double c, double **in, int n, int m, double ***out) {
+    int i, j;
+    double **aux = *out;
+
+    for (i = 0; i < n; i++) {
+        double *row = in[i];
+        double *outRow = aux[i];
+        for (j = 0; j < m; j++) {
+            outRow[j] = (*fp)(row[j], c);
+        }
+    }
+}
+
+
+
+//------------------------------------------------------------------------------
+// elementgtvalue
+//------------------------------------------------------------------------------
+/**
+ * Element greater than value
+ *
+ *
+ * @param[in] <n>  number of items
+ * @param[in] <in>  [N]
+ * @param[in] <value>  value
+ * @param[out] <out> [N]
+ */
+//------------------------------------------------------------------------------
+void elementgtvalue(int n, double *in, double value, double **out) {
+    double *o = *out;
+    for (int i = 0; i < n; i++) {
+        o[i] = in[i] > value ? 1 : 0;
+    }
+}
+
+
+
+//------------------------------------------------------------------------------
+// elementltvalueabs
+//------------------------------------------------------------------------------
+/**
+ * Element less than value with abs
+ *
+ *
+ * @param[in] <n>  number of items
+ * @param[in] <in>  [N]
+ * @param[in] <value>  value
+ * @param[out] <out> [N]
+ */
+//------------------------------------------------------------------------------
+void elementltvalueabs(int n, double *in, double value, double **out) {
+    double *o = *out;
+    for (int i = 0; i < n; i++) {
+        o[i] = abs(in[i]) > value ? 1 : 0;
+    }
+}
+
+
+
+//------------------------------------------------------------------------------
+// cross
+//------------------------------------------------------------------------------
+/**
+ * Cross product
+ *
+ *
+ * @param[in] <n>  number of rows
+ * @param[in] <b>  number of columns
+ * @param[in] <a>  [3 x M]
+ * @param[in] <b>  [3 x M]
+ * @param[out] <out> [3 x M]
+ */
+//------------------------------------------------------------------------------
+void cross(int n, int m, double **a, double **b, double ***out) {
+    double **matrix;
+    double *arrA, *arrB;
+
+    matrix = *out;
+    createarray(m, &arrA);
+    createarray(m, &arrB);
+
+    for (int j = 0; j < m; j++) {
+
+        // Columns
+        for (int i = 0; i < n; i++) {
+            arrA[i] = a[i][j];
+        }
+
+        for (int i = 0; i < n; i++) {
+            arrB[i] = b[i][j];
+        }
+
+        // Cross Product
+        matrix[0][j] = arrA[1] * arrB[2] - arrA[2] * arrB[1];
+        matrix[1][j] = arrA[2] * arrB[0] - arrA[0] * arrB[2];
+        matrix[2][j] = arrA[0] * arrB[1] - arrA[1] * arrB[0];
+    }
+}
+
+//------------------------------------------------------------------------------
+// any
+//------------------------------------------------------------------------------
+/**
+ * Determine if any array elements are nonzero
+ *
+ *
+ * @param[in] <n>  number of items
+ * @param[in] <in>  [N]
+ * @return 1 if any element are nonzero, other case 0;
+ */
+//------------------------------------------------------------------------------
+int any(int n, double *in) {
+    int anyValue = 0;
+    for (int i = 0; i < n; i++) {
+        if (in[i] == 1) {
+            anyValue = 1;
+        }
+    }
+    return anyValue;
 }

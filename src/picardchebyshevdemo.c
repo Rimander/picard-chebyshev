@@ -26,7 +26,7 @@ void PicardChebyshevDemo() {
     double **v, **r, **r0m, **v0m;
     double *r0, *v0, *aux, *aux1, *tSpan, *tau, *t;
     double mu, a, vMag, P, NoisePrct, omega1, omega2, errTol;
-    int *mm;
+    int mm;
     int i, N;
 
 
@@ -102,22 +102,22 @@ void PicardChebyshevDemo() {
     // Run the analytic orbit propagator routine
     // [rA,vA] = keplerUniversal(repmat(r0',[1 length(t)]),repmat(v0',[1 length(t)]),t,mu);
 
-    creatematrix(3, 1, &r);
-    creatematrix(3, 1, &v);
+    creatematrix(3, N + 1, &r);
+    creatematrix(3, N + 1, &v);
     creatematrix(3, N + 1, &r0m);
     creatematrix(3, N + 1, &v0m);
 
     // Fill r0m
-    arrtocolum(3, r0, &r);
-    repmat(3, 1, r, 1, N + 1, &r0m);
+    arrtocolum(3, r0, &r0m);
+    repmat(3, 1, r0m, 1, N + 1, &r0m);
 
     // Fill v0m
-    arrtocolum(3, v0, &v);
-    repmat(3, 1, v, 1, N + 1, &v0m);
-    printmatrix(3, N + 1, v0m);
+    arrtocolum(3, v0, &v0m);
+    repmat(3, 1, v0m, 1, N + 1, &v0m);
 
     mm = 0;
-    KeplerUniversal(N + 1, r0m, v0m, t, mu, r, v, mm);
+    KeplerUniversal(N, r0m, v0m, t, mu, &r, &v, &mm);
+
 
     printf("%s", "Fin");
 }

@@ -20,6 +20,8 @@
  * @param[in] <in>
  * @param[out] <out>
  */
+#include <stdbool.h>
+
 //------------------------------------------------------------------------------
 void fliplr(int m, double *in, double **out);
 
@@ -248,14 +250,88 @@ void applyfunonearg(double (*fp)(double), double *in, int m, double **out);
 void applyfuntwoargs(double (*fp)(double, double), double c, double *in, int m, double **out);
 
 
+
+//------------------------------------------------------------------------------
+// applyfuntwoargsmatrix
+//------------------------------------------------------------------------------
+/**
+ * Apply a function with one argument matrix
+ *
+ *
+ * @param[in] <fp> function
+ * @param[in] <in>  [N x M]
+ * @param[in] <n>  number of rows
+ * @param[in] <m>  number of columns
+ * @param[out] <out> [N x M]
+ */
+//------------------------------------------------------------------------------
+void applyfuntwoargsmatrix(double (*fp)(double, double), double c, double **in, int n, int m, double ***out);
+
+
+
+//------------------------------------------------------------------------------
+// elementgtvalue
+//------------------------------------------------------------------------------
+/**
+ * Element greater than value
+ *
+ *
+ * @param[in] <n>  number of items
+ * @param[in] <in>  [N]
+ * @param[in] <value>  value
+ * @param[out] <out> [N]
+ */
+//------------------------------------------------------------------------------
+void elementgtvalue(int n, double *in, double value, double **out);
+
+
+//------------------------------------------------------------------------------
+// elementltvalueabs
+//------------------------------------------------------------------------------
+/**
+ * Element less than value with abs
+ *
+ *
+ * @param[in] <n>  number of items
+ * @param[in] <in>  [N]
+ * @param[in] <value>  value
+ * @param[out] <out> [N]
+ */
+//------------------------------------------------------------------------------
+void elementltvalueabs(int n, double *in, double value, double **out);
+
+
+//------------------------------------------------------------------------------
+// cross
+//------------------------------------------------------------------------------
+/**
+ * Cross product
+ *
+ *
+ * @param[in] <n>  number of rows
+ * @param[in] <b>  number of columns
+ * @param[in] <a>  [N x M]
+ * @param[in] <b>  [N x M]
+ * @param[out] <out> [N x M]
+ */
+//------------------------------------------------------------------------------
+void cross(int n, int m, double **a, double **b, double ***out);
+
+
+
 //------------------------------------------------------------------------------
 // any
 //------------------------------------------------------------------------------
 /**
- * Determine if any elements are nonzero
+ * Determine if any array elements are nonzero
  *
+ *
+ * @param[in] <n>  number of items
+ * @param[in] <in>  [N]
+ * @return 1 if any element are nonzero, other case 0;
  */
 //------------------------------------------------------------------------------
-void any();
+int any(int n, double *in);
+
 // TODO: Hacer 3 any, any, any < , any >
 #endif //CODIGO_MATLAB_H
