@@ -458,6 +458,36 @@ void elementltvalueabs(int n, double *in, double value, double **out) {
 }
 
 
+//------------------------------------------------------------------------------
+// truevalues
+//------------------------------------------------------------------------------
+/**
+ * Element less than value with abs
+ *
+ *
+ * @param[in] <n>  number of rows
+ * @param[in] <m>  number of columns
+ * @param[in] <in>  [N * M]
+ * @param[in] <compare>  [M]
+ * @param[out] <out>  [N * M]
+ */
+//------------------------------------------------------------------------------
+void truevalues(int n, int m, double **in, double *compare, double ***out) {
+    double **o = *out;
+    for (int i = 0; i < n; i++) {
+        double *rowIn = in[i];
+        double *rowOut = o[i];
+        for (int j = 0; j < m; ++j) {
+            if (compare[j] == 1) {
+                rowOut[j] = rowIn[j];
+            } else {
+                rowOut[j] = 0;
+            }
+        }
+    }
+}
+
+
 
 //------------------------------------------------------------------------------
 // cross
@@ -486,9 +516,6 @@ void cross(int n, int m, double **a, double **b, double ***out) {
         // Columns
         for (int i = 0; i < n; i++) {
             arrA[i] = a[i][j];
-        }
-
-        for (int i = 0; i < n; i++) {
             arrB[i] = b[i][j];
         }
 
@@ -498,6 +525,56 @@ void cross(int n, int m, double **a, double **b, double ***out) {
         matrix[2][j] = arrA[0] * arrB[1] - arrA[1] * arrB[0];
     }
 }
+
+
+//------------------------------------------------------------------------------
+// dot
+//------------------------------------------------------------------------------
+/**
+ *
+ * @param[in] <n>  number of rows
+ * @param[in] <b>  number of columns
+ * @param[in] <a>  [3 x M]
+ * @param[in] <b>  [3 x M]
+ * @param[out] <out> [3 x M]
+ */
+//------------------------------------------------------------------------------
+void dot(int n, int m, double **a, double **b, double **out) {
+    double *o;
+    double *arrA, *arrB;
+
+    o = *out;
+    createarray(m, &arrA);
+    createarray(m, &arrB);
+
+    for (int j = 0; j < m; j++) {
+        for (int i = 0; i < n; i++) {
+            o[j] += a[i][j] * b[i][j];
+        }
+    }
+}
+
+
+//------------------------------------------------------------------------------
+// sign
+//------------------------------------------------------------------------------
+/**
+ *
+ * @param[in] <in>  number
+ * @return result
+ */
+//------------------------------------------------------------------------------
+int sign(double in) {
+    int r = 0;
+    if (in > 0) {
+        r = 1;
+    } else if (in < 0) {
+        r = -1;
+    }
+    return r;
+}
+
+
 
 //------------------------------------------------------------------------------
 // any
