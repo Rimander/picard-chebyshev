@@ -286,6 +286,38 @@ void elementgtvalue(int n, double *in, double value, double **out);
 
 
 //------------------------------------------------------------------------------
+// elementltvalue
+//------------------------------------------------------------------------------
+/**
+ * Element less than value
+ *
+ *
+ * @param[in] <n>  number of items
+ * @param[in] <in>  [N]
+ * @param[in] <value>  value
+ * @param[out] <out> [N]
+ */
+//------------------------------------------------------------------------------
+void elementltvalue(int n, double *in, double value, double **out);
+
+
+//------------------------------------------------------------------------------
+// elementgtvalueabs
+//------------------------------------------------------------------------------
+/**
+ * Element greater than value with abs
+ *
+ *
+ * @param[in] <n>  number of items
+ * @param[in] <in>  [N]
+ * @param[in] <value>  value
+ * @param[out] <out> [N]
+ */
+//------------------------------------------------------------------------------
+void elementgtvalueabs(int n, double *in, double value, double **out);
+
+
+//------------------------------------------------------------------------------
 // elementltvalueabs
 //------------------------------------------------------------------------------
 /**

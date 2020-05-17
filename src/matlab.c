@@ -7,6 +7,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <float.h>
+#include <math.h>
 
 //------------------------------------------------------------------------------
 // fliplr
@@ -436,6 +438,49 @@ void elementgtvalue(int n, double *in, double value, double **out) {
 }
 
 
+//------------------------------------------------------------------------------
+// elementltvalue
+//------------------------------------------------------------------------------
+/**
+ * Element less than value
+ *
+ *
+ * @param[in] <n>  number of items
+ * @param[in] <in>  [N]
+ * @param[in] <value>  value
+ * @param[out] <out> [N]
+ */
+//------------------------------------------------------------------------------
+void elementltvalue(int n, double *in, double value, double **out) {
+    double *o = *out;
+    for (int i = 0; i < n; i++) {
+        o[i] = in[i] < value ? 1 : 0;
+    }
+}
+
+
+
+//------------------------------------------------------------------------------
+// elementgtvalueabs
+//------------------------------------------------------------------------------
+/**
+ * Element greater than value with abs
+ *
+ *
+ * @param[in] <n>  number of items
+ * @param[in] <in>  [N]
+ * @param[in] <value>  value
+ * @param[out] <out> [N]
+ */
+//------------------------------------------------------------------------------
+void elementgtvalueabs(int n, double *in, double value, double **out) {
+    double *o = *out;
+    for (int i = 0; i < n; i++) {
+        double v = in[i];
+        o[i] = fabs(v) > value ? 1 : 0;
+    }
+}
+
 
 //------------------------------------------------------------------------------
 // elementltvalueabs
@@ -453,7 +498,8 @@ void elementgtvalue(int n, double *in, double value, double **out) {
 void elementltvalueabs(int n, double *in, double value, double **out) {
     double *o = *out;
     for (int i = 0; i < n; i++) {
-        o[i] = abs(in[i]) > value ? 1 : 0;
+        double v = in[i];
+        o[i] = fabs(v) < value ? 1 : 0;
     }
 }
 

@@ -6,6 +6,7 @@
 #include "matlab.h"
 #include <math.h>
 #include <stdbool.h>
+#include <float.h>
 
 
 
@@ -30,6 +31,8 @@
 void KeplerUniversal(int N, double **r0, double **v0, double *t, double mu, double ***r, double ***v, int *mm) {
     double **h, **aux, **aux1;
     double *v0Mag, *r0Mag, *alpha, *X0, *idx, *hMag, *p, *s, *w, *a, *auxarr;
+    double *dr0v0Smu, *Smut, *err, *X02, *X03, *psi, *c2, *c3, *Xn, *X0tOmPsiC3, *X02tC2, *rTmp;
+
     int i, j;
 
     double tol = 1e-9;
@@ -134,7 +137,7 @@ void KeplerUniversal(int N, double **r0, double **v0, double *t, double mu, doub
 
     //%Check if there are any Parabolic orbits
     //idx = abs(alpha) < 0.000001;
-    elementltvalueabs(N + 1, alpha, -0.000001, &idx);
+    elementltvalue(N + 1, alpha, -0.000001, &idx);
 
     //if any(idx)
     if (any(N + 1, idx) == 1) {
@@ -174,12 +177,67 @@ void KeplerUniversal(int N, double **r0, double **v0, double *t, double mu, doub
                 X0[i] = sign(t[i]) * sqrt(-a[i]) * log(-2 * mu * alphaidx * tidx / (auxarr[i] +
                                                                                     sign(tidx) * sqrt(-mu * a[i]) *
                                                                                     (1 - r0Magidx * alphaidx)));
-
             }
         }
 
-        printarray(N + 1, X0);
         freearray(a);
+    }
+
+
+    // err = Inf;
+    createarray(N + 1, &err);
+    for (i = 0; i < N + 1; i++) {
+        err[i] = DBL_MAX;
+    }
+
+    //dr0v0Smu = dot(r0,v0)./sqrt(mu);
+    createarray(N + 1, &dr0v0Smu);
+    dot(3, N + 1, r0, v0, &dr0v0Smu);
+    for (i = 0; i < N + 1; i++) {
+        dr0v0Smu[i] = dr0v0Smu[i] / sqrt(mu);
+    }
+
+    //Smut = sqrt(mu).*t;
+    createarray(N + 1, &Smut);
+    for (i = 0; i < N + 1; i++) {
+        Smut[i] = sqrt(mu) * t[i];
+    }
+
+    //while any(abs(err) > tol)
+    createarray(N + 1, &X02);
+    createarray(N + 1, &X03);
+    createarray(N + 1, &psi);
+    createarray(N + 1, &c2);
+    createarray(N + 1, &c3);
+    createarray(N + 1, &X0tOmPsiC3);
+    createarray(N + 1, &X02tC2);
+    createarray(N + 1, &rTmp);
+    createarray(N + 1, &Xn);
+
+    elementgtvalueabs(N + 1, err, tol, &auxarr);
+    while (any(N + 1, auxarr) == 1) {
+        //X02 = X0.^2;
+        //X03 = X02.*X0;
+        //psi = X02.*alpha;
+        //[c2,c3] = c2c3(psi);
+        //X0tOmPsiC3 = X0.*(1-psi.*c3);
+        //X02tC2 = X02.*c2;
+        //r = X02tC2 + dr0v0Smu.*X0tOmPsiC3 + r0Mag.*(1-psi.*c2);
+        //Xn = X0 + (Smut-X03.*c3-dr0v0Smu.*X02tC2-r0Mag.*X0tOmPsiC3)./r;
+        //err = Xn-X0; X0 = Xn;
+        for (i = 0; i < N + 1; i++) {
+            X02[i] = pow(X0[i], 2);
+            X03[i] = X02[i] * X0[i];
+            psi[i] = X02[i] * alpha[i];
+            C2c3(psi[i], &c2[i], &c3[i]);
+            X0tOmPsiC3[i] = X0[i] * (1 - psi[i] * c3[i]);
+            X02tC2[i] = X02[i] * c2[i];
+            rTmp[i] = X02tC2[i] + dr0v0Smu[i] * X0tOmPsiC3[i] + r0Mag[i] * (1 - psi[i] * c2[i]);
+            Xn[i] = X0[i] + (Smut[i] - X03[i] * c3[i] - dr0v0Smu[i] * X02tC2[i] - r0Mag[i] * X0tOmPsiC3[i]) / rTmp[i];
+            err[i] = Xn[i] - X0[i];
+            X0[i] = Xn[i];
+        }
+        elementgtvalueabs(N + 1, err, tol, &auxarr);
     }
 
 
@@ -189,15 +247,23 @@ void KeplerUniversal(int N, double **r0, double **v0, double *t, double mu, doub
 // C2c3
 //------------------------------------------------------------------------------
 /**
- * @param[in] <m> number of cols
- * @param[in] <psi>  [1 X M]
- * @param[out] <c2>  [1 X M]
- * @param[out] <c3>  [1 X M]
- * @param[out] <mm> number of cols
+ * @param[in] <psi>
+ * @param[out] <c2>
+ * @param[out] <c3>
  *
- * @note c2c3 function - original file keplerUniversal.m
  */
 //------------------------------------------------------------------------------
-void C2c3(int m, double *psi, double *c2, double *c3, int *mm) {
-
+void C2c3(double psi, double *c2, double *c3) {
+    if (psi > 1e-6) {
+        *c2 = (1 - cos(sqrt(psi))) / psi;
+        *c3 = (sqrt(psi) - sin(sqrt(psi))) / sqrt(pow(psi, 3));
+    }
+    if (psi < -1e-6) {
+        *c2 = (1 - cosh(sqrt(-psi))) / psi;
+        *c3 = (sinh(sqrt(-psi)) - sqrt(-psi)) / sqrt(pow(-psi, 3));
+    }
+    if (fabs(psi) <= 1e-6) {
+        *c2 = 0.5;
+        *c3 = 1 / 6.0;
+    }
 }

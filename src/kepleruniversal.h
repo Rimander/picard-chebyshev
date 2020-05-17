@@ -32,15 +32,12 @@ void KeplerUniversal(int N, double **r0, double **v0, double *t, double mu, doub
 // C2c3
 //------------------------------------------------------------------------------
 /**
- * @param[in] <m> number of cols
- * @param <psi> [1 X M]
- * @param[out] <c2> [1 X M]
- * @param[out] <c3> [1 X M]
- * @param[out] <mm> number of cols
+ * @param[in] <psi>
+ * @param[out] <c2>
+ * @param[out] <c3>
  *
- * @note c2c3 function - original file keplerUniversal.m
  */
 //------------------------------------------------------------------------------
-void C2c3(int m, double *psi, double *c2, double *c3, int *mm);
+void C2c3(double psi, double *c2, double *c3);
 
 #endif //CODIGO_KEPLERUNIVERSAL_H
