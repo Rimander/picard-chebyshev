@@ -31,7 +31,7 @@
 void KeplerUniversal(int N, double **r0, double **v0, double *t, double mu, double ***r, double ***v, int *mm) {
     double **h, **aux, **aux1;
     double *v0Mag, *r0Mag, *alpha, *X0, *idx, *hMag, *p, *s, *w, *a, *auxarr;
-    double *dr0v0Smu, *Smut, *err, *X02, *X03, *psi, *c2, *c3, *Xn, *X0tOmPsiC3, *X02tC2, *rTmp;
+    double *dr0v0Smu, *Smut, *err, *X02, *X03, *psi, *c2, *c3, *Xn, *X0tOmPsiC3, *X02tC2, *rTmp, *f, *g, *fdot, *gdot;
 
     int i, j;
 
@@ -241,6 +241,28 @@ void KeplerUniversal(int N, double **r0, double **v0, double *t, double mu, doub
     }
 
 
+    //f = 1 - (Xn.^2).*c2./r0Mag;
+    //g = t - (Xn.^3).*c3./sqrt(mu);
+    //gdot = 1 - c2.*(Xn.^2)./r;
+    //fdot = Xn.*(psi.*c3-1).*sqrt(mu)./(r.*r0Mag);
+    createarray(N + 1, &f);
+    createarray(N + 1, &fdot);
+    createarray(N + 1, &g);
+    createarray(N + 1, &gdot);
+    for (i = 0; i < N + 1; i++) {
+        f[i] = 1 - pow(Xn[i], 2) * c2[i] / r0Mag[i];
+        g[i] = t[i] - pow(Xn[i], 3) * c3[i] / sqrt(mu);
+        gdot[i] = 1 - c2[i] * pow(Xn[i], 2) / rTmp[i];
+        fdot[i] = Xn[i] * (psi[i] * c3[i] - 1) * sqrt(mu) / (rTmp[i] * r0Mag[i]);
+    }
+
+    //a = bsxfun(@times,f,r0);
+    //r = bsxfun(@times,f,r0) + bsxfun(@times,g,v0);
+    // v = bsxfun(@times,fdot,r0) + bsxfun(@times,gdot,v0);
+
+
+    //%% Ensure Solution Integrity
+    //%idx = round((f.*gdot - fdot.*g)./tol).*tol ~= 1; r(:,idx) = NaN; v(:,idx) = NaN;
 }
 
 //------------------------------------------------------------------------------
