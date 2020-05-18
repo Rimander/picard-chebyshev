@@ -37,6 +37,9 @@ void KeplerUniversal(int N, double **r0, double **v0, double *t, double mu, doub
 
     double tol = 1e-9;
 
+    double **rReturn = *r;
+    double **vReturn = *v;
+
     creatematrix(3, N + 1, &aux);
     creatematrix(3, N + 1, &aux1);
 
@@ -256,10 +259,21 @@ void KeplerUniversal(int N, double **r0, double **v0, double *t, double mu, doub
         fdot[i] = Xn[i] * (psi[i] * c3[i] - 1) * sqrt(mu) / (rTmp[i] * r0Mag[i]);
     }
 
-    //a = bsxfun(@times,f,r0);
-    //r = bsxfun(@times,f,r0) + bsxfun(@times,g,v0);
-    // v = bsxfun(@times,fdot,r0) + bsxfun(@times,gdot,v0);
 
+    //a = bsxfun(@times,f,r0);
+    times(3, N + 1, f, r0, &aux);
+
+    //r = bsxfun(@times,f,r0) + bsxfun(@times,g,v0);
+    times(3, N + 1, g, v0, &aux1);
+    sum(3, N + 1, aux, aux1, &rReturn);
+
+    //v = bsxfun(@times,fdot,r0) + bsxfun(@times,gdot,v0);
+    times(3, N + 1, fdot, r0, &aux);
+    times(3, N + 1, gdot, v0, &aux1);
+    sum(3, N + 1, aux, aux1, &vReturn);
+
+
+    //TODO: Free memory
 
     //%% Ensure Solution Integrity
     //%idx = round((f.*gdot - fdot.*g)./tol).*tol ~= 1; r(:,idx) = NaN; v(:,idx) = NaN;

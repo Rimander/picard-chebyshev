@@ -261,6 +261,34 @@ void summatrix(int n, int m, double **in, double **out) {
 }
 
 
+//------------------------------------------------------------------------------
+// sum
+//------------------------------------------------------------------------------
+/**
+ * Sum
+ *
+ * @param[in] <n> number of rows
+ * @param[in] <m> number of cols
+ * @param[in] <a> A [N x M]
+ * @param[in] <b> B [N x M]
+ * @param[out] <mtrb> C [N x M]
+ */
+//------------------------------------------------------------------------------
+void sum(int n, int m, double **a, double **b, double ***out) {
+    double **o = *out;
+
+    for (int i = 0; i < n; i++) {
+
+        double *rowOut = o[i];
+        double *rowA = a[i];
+        double *rowB = b[i];
+
+        for (int j = 0; j < m; j++) {
+            rowOut[j] = rowA[j] + rowB[j];
+        }
+    }
+}
+
 
 //------------------------------------------------------------------------------
 // printmatrix
@@ -619,6 +647,34 @@ int sign(double in) {
     }
     return r;
 }
+
+
+//------------------------------------------------------------------------------
+// times
+//------------------------------------------------------------------------------
+/**
+ *
+ * @param[in] <n>  number of rows
+ * @param[in] <b>  number of columns
+ * @param[in] <in>  [1 x M]
+ * @param[in] <matrix>  [N x M]
+ * @param[out] <out> [N x M]
+ */
+//------------------------------------------------------------------------------
+void times(int n, int m, double *in, double **matrix, double ***out) {
+
+    double **o = *out;
+
+    for (int i = 0; i < n; i++) {
+        double *rowOut = o[i];
+        double *rowMatrix = matrix[i];
+
+        for (int j = 0; j < m; j++) {
+            rowOut[j] = rowMatrix[j] * in[j];
+        }
+    }
+}
+
 
 
 
