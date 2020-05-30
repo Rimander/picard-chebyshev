@@ -9,6 +9,8 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+#include <sys/time.h>
 
 //------------------------------------------------------------------------------
 // PicardChebyshevDemo
@@ -23,7 +25,7 @@
  */
 //------------------------------------------------------------------------------
 void PicardChebyshevDemo() {
-    double **v, **r, **r0m, **v0m;
+    double **v, **r, **r0m, **v0m, **r_guess, **v_guess, **x_guess;
     double *r0, *v0, *aux, *aux1, *tSpan, *tau, *t;
     double mu, a, vMag, P, NoisePrct, omega1, omega2, errTol;
     int mm;
@@ -116,10 +118,56 @@ void PicardChebyshevDemo() {
     repmat(3, 1, v0m, 1, N + 1, &v0m);
 
     mm = 0;
+    // r - rA , v - vA
     KeplerUniversal(N, r0m, v0m, t, mu, &r, &v, &mm);
 
+    //%Noise up the position and velocity estimates
+    //r_guess = rA + rand(size(rA)) .* (a.*NoisePrct*2)  - (a.*NoisePrct);
+    creatematrix(3, N + 1, &r_guess);
+    for (i = 0; i < 3; i++) {
+        double *rowRGuess = r_guess[i];
+        for (int j = 0; j < N + 1; j++) {
+            rowRGuess[j] = r[i][j] + drand48() * ((a * NoisePrct * 2) - (a * NoisePrct));
+        }
+    }
+
+    //v_guess = vA + rand(size(vA)).*(vMag.*NoisePrct*2) - (vMag.*NoisePrct);
+    creatematrix(3, N + 1, &v_guess);
+    for (i = 0; i < 3; i++) {
+        double *rowRGuess = v_guess[i];
+        for (int j = 0; j < N + 1; j++) {
+            rowRGuess[j] = v[i][j] + drand48() * ((vMag * NoisePrct * 2) - (vMag * NoisePrct));
+        }
+    }
+
+    //x_guess = [r_guess',v_guess'];
+    creatematrix(N + 1, 6, &x_guess);
+    for (i = 0; i < N + 1; i++) {
+        for (int j = 0; j < 3; ++j) {
+            int tmp = j + 3;
+            x_guess[i][j] = r_guess[j][i];
+            x_guess[i][tmp] = v_guess[j][i];
+        }
+    }
+
+    //x_guess(1,:) = [rA(:,1)',vA(:,1)'];
+    for (i = 0; i < 3; i++) {
+        int tmp = i + 3;
+        x_guess[0][i] = r[i][0];
+        x_guess[0][tmp] = v[i][0];
+    }
+
+
+    //%Run the Picard-Chebyshev Method
+    //rvPCM  = VMPCM(@TwoBodyForceModel,tau',x_guess,omega1,omega2,errTol,mu);
+
+
+
+    printmatrix(N + 1, 6, x_guess);
 
     printf("%s", "Fin");
+
+    //TODO: Free matrix and arrays
 }
 
 //------------------------------------------------------------------------------
@@ -132,11 +180,42 @@ void PicardChebyshevDemo() {
  * @param[in] <posvel>  [N x M]
  * @param[in] <mu>
  * @param[out] <eta>  [N x M]
- * @param[out] <nn> number of rows
- * @param[out] <mm> number of columns
  */
-void TwoBodyForceModel(int n, int m, double **t, double **posvel, double mu, double *eta, int *nn, int *mm) {
+void TwoBodyForceModel(int n, int m, double **t, double **posvel, double mu, double ***eta) {
 
+    int N = 50;
+    double *rMag, *nuR3;
+    createarray(N + 1, &rMag);
+    createarray(N + 1, &nuR3);
+
+    double **matrixEta = *eta;
+
+    for (int i = 0; i < n; i++) {
+        double *rowEta = matrixEta[i];
+        rMag[i] = 0.0;
+
+        //rMag = sqrt(sum(posvel(:,1:3).^2,2));
+        for (int j = 0; j < 3; j++) {
+            rMag[i] += pow(posvel[i][j], 2);
+        }
+        rMag[i] = sqrt(rMag[i]);
+
+        //nuR3 = -mu./rMag.^3;
+        nuR3[i] = -mu / pow(rMag[i], 3);
+
+        //eta(:,1) = posvel(:,4);
+        //eta(:,2) = posvel(:,5);
+        //eta(:,3) = posvel(:,6);
+        //eta(:,4) = nuR3.*posvel(:,1);
+        //eta(:,5) = nuR3.*posvel(:,2);
+        //eta(:,6) = nuR3.*posvel(:,3);
+        rowEta[0] = posvel[i][3];
+        rowEta[1] = posvel[i][4];
+        rowEta[2] = posvel[i][5];
+        rowEta[3] = nuR3[i] * posvel[i][0];
+        rowEta[4] = nuR3[i] * posvel[i][1];
+        rowEta[5] = nuR3[i] * posvel[i][2];
+    }
 }
 
 //------------------------------------------------------------------------------
