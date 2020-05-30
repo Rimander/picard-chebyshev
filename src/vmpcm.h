@@ -26,7 +26,7 @@
  */
 //------------------------------------------------------------------------------
 void
-VMPCM(void (*ode)(int, int, double **, double **, double, double ***), double n, double m, double *tau,
+VMPCM(void (*ode)(int, int, double **, double **, double, double ***), int n, int m, double *tau,
       double **x_guess,
       double omega1, double omega2,
       double errTol, double varargin, double ***rvPCM);
@@ -38,13 +38,11 @@ VMPCM(void (*ode)(int, int, double **, double **, double, double ***), double n,
  * The Chebyshev polynomial,T, corresponding to degree k
  * @param[in] <n> number of rows
  * @param[in] <m> number of columns
- * @param[in] <k>  [N x 1]
- * @param[in] <tau>  transformed time domain  [1 x M]
+ * @param[in] <k>  [N]
+ * @param[in] <tau>  transformed time domain  [M]
  * @param[out] <Tk>  [N x M]
- * @param[out] <nn> number of rows
- * @param[out] <mm> number of columns
  */
 //------------------------------------------------------------------------------
-void ChebyshevPolynomial(double *n, double *m, double **k, double **tau, int *nn, int *mm);
+void ChebyshevPolynomial(int n, int m, double *k, double *tau, double ***tK);
 
 #endif //CODIGO_VMPCM_H

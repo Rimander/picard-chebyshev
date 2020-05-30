@@ -163,8 +163,6 @@ void PicardChebyshevDemo() {
     VMPCM(TwoBodyForceModel, N + 1, 3, tau, x_guess, omega1, omega2, errTol, mu, &rvPCM);
 
 
-    printmatrix(N + 1, 6, x_guess);
-
     printf("%s", "Fin");
 
     //TODO: Free matrix and arrays
