@@ -16,19 +16,20 @@
  * @param[in] <m> number of columns
  * @param[in] <ode> Reference function TwoBodyForceModel
  * @param[in] <tau>  transformed time domain  [1 x N]
- * @param[inout] <x_guess>   Input initial Guess of solution values for the Picard Chebyshev Method [N x M],
+ * @param[inout] <x_guess>  - Input initial Guess of solution values for the Picard Chebyshev Method [N x M],
  * Output refined solution meeting the error tolerances defined by errTol
  * @param[in] <omega1> First Omega Term
  * @param[in] <omega2> Second Omega Term
  * @param[in] <errTol> Error Tolerance of solution
  * @param[in] <varargin> Additional inputs which are needed to be passed to the evaluation function ode
+ * @param[out] <rvPCM>
  */
 //------------------------------------------------------------------------------
 void
-VMPCM(double *n, double *m, void (*ode)(int, int, double **, double **, double, double ***), double **tau,
+VMPCM(void (*ode)(int, int, double **, double **, double, double ***), double n, double m, double *tau,
       double **x_guess,
       double omega1, double omega2,
-      double errTol, double varargin);
+      double errTol, double varargin, double ***rvPCM);
 
 //------------------------------------------------------------------------------
 // ChebyshevPolynomial

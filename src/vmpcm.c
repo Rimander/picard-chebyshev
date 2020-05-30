@@ -3,6 +3,7 @@
  * @author Fermin Jimenez
  */
 
+#include <math.h>
 #include "vmpcm.h"
 
 //------------------------------------------------------------------------------
@@ -20,15 +21,30 @@
  * @param[in] <omega2> Second Omega Term
  * @param[in] <errTol> Error Tolerance of solution
  * @param[in] <varargin> Additional inputs which are needed to be passed to the evaluation function ode
+ * @param[out] <rvPCM>
  */
 //------------------------------------------------------------------------------
 void
-VMPCM(double *n, double *m, void (*ode)(int, int, double **, double **, double, double ***), double **tau,
+VMPCM(void (*ode)(int, int, double **, double **, double, double ***), double n, double m, double *tau,
       double **x_guess,
       double omega1, double omega2,
-      double errTol, double varargin) {
+      double errTol, double varargin, double ***rvPCM) {
+
+
+    //tau = tau(:)';
+
+    //N = numel(tau)-1;
+    double N = n - 1;
+
+    //err1 = Inf;
+    double err1 = INFINITY;
+    //err2 = Inf;
+    //Iter = 0;
+    //MaxIter = 300;
 
 }
+
+
 //------------------------------------------------------------------------------
 // ChebyshevPolynomial
 //------------------------------------------------------------------------------

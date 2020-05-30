@@ -6,11 +6,10 @@
 #include "picardchebyshevdemo.h"
 #include "matlab.h"
 #include "kepleruniversal.h"
+#include "vmpcm.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-#include <sys/time.h>
 
 //------------------------------------------------------------------------------
 // PicardChebyshevDemo
@@ -25,7 +24,7 @@
  */
 //------------------------------------------------------------------------------
 void PicardChebyshevDemo() {
-    double **v, **r, **r0m, **v0m, **r_guess, **v_guess, **x_guess;
+    double **v, **r, **r0m, **v0m, **r_guess, **v_guess, **x_guess, **rvPCM;
     double *r0, *v0, *aux, *aux1, *tSpan, *tau, *t;
     double mu, a, vMag, P, NoisePrct, omega1, omega2, errTol;
     int mm;
@@ -160,7 +159,8 @@ void PicardChebyshevDemo() {
 
     //%Run the Picard-Chebyshev Method
     //rvPCM  = VMPCM(@TwoBodyForceModel,tau',x_guess,omega1,omega2,errTol,mu);
-
+    creatematrix(N + 1, 6, &rvPCM);
+    VMPCM(TwoBodyForceModel, N + 1, 3, tau, x_guess, omega1, omega2, errTol, mu, &rvPCM);
 
 
     printmatrix(N + 1, 6, x_guess);
@@ -183,7 +183,7 @@ void PicardChebyshevDemo() {
  */
 void TwoBodyForceModel(int n, int m, double **t, double **posvel, double mu, double ***eta) {
 
-    int N = 50;
+    int N = n - 1;
     double *rMag, *nuR3;
     createarray(N + 1, &rMag);
     createarray(N + 1, &nuR3);

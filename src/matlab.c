@@ -6,8 +6,6 @@
 #include "matlab.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
-#include <float.h>
 #include <math.h>
 
 //------------------------------------------------------------------------------
@@ -301,7 +299,7 @@ void sum(int n, int m, double **a, double **b, double ***out) {
  * @param[in] <mtrx> A [N x M]
  */
 //------------------------------------------------------------------------------
-double printmatrix(int n, int m, double **mtrx) {
+void printmatrix(int n, int m, double **mtrx) {
     int i, j;
 
     for (i = 0; i < n; i++) {
@@ -325,7 +323,7 @@ double printmatrix(int n, int m, double **mtrx) {
  * @param[in] <arr> A [N]
  */
 //------------------------------------------------------------------------------
-double printarray(int n, double *arr) {
+void printarray(int n, double *arr) {
     int i, j;
 
     for (i = 0; i < n; i++) {
