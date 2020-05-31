@@ -25,12 +25,12 @@ void PicardChebyshevDemo();
 /**
  * @param[in] <n> number of rows
  * @param[in] <m> number of columns
- * @param[in] <t>  [1 x N]
+ * @param[in] <t>  [N]
  * @param[in] <posvel>  [N x M]
  * @param[in] <mu>
  * @param[out] <eta>  [N x M]
  */
-void TwoBodyForceModel(int n, int m, double **t, double **posvel, double mu, double ***eta);
+void TwoBodyForceModel(int n, int m, double *t, double **posvel, double mu, double ***eta);
 
 //------------------------------------------------------------------------------
 // PlotPostionAndVelocity

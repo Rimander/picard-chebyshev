@@ -26,7 +26,7 @@
  */
 //------------------------------------------------------------------------------
 void
-VMPCM(void (*ode)(int, int, double **, double **, double, double ***), int n, int m, double *tau,
+VMPCM(void (*ode)(int, int, double *, double **, double, double ***), int n, int m, double *tau,
       double **x_guess,
       double omega1, double omega2,
       double errTol, double varargin, double ***rvPCM);

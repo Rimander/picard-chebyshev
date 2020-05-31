@@ -165,6 +165,7 @@ void PicardChebyshevDemo() {
     VMPCM(TwoBodyForceModel, N + 1, 3, tau, x_guess, omega1, omega2, errTol, mu, &rvPCM);
 
 
+    printmatrix(N + 1, 6, rvPCM);
     printf("%s", "Fin");
 
     //TODO: Free matrix and arrays
@@ -176,32 +177,34 @@ void PicardChebyshevDemo() {
 /**
  * @param[in] <n> number of rows
  * @param[in] <m> number of columns
- * @param[in] <t>  [1 x N]
+ * @param[in] <t>  [N]
  * @param[in] <posvel>  [N x M]
  * @param[in] <mu>
  * @param[out] <eta>  [N x M]
  */
-void TwoBodyForceModel(int n, int m, double **t, double **posvel, double mu, double ***eta) {
+void TwoBodyForceModel(int n, int m, double *t, double **posvel, double mu, double ***eta) {
 
     int N = n - 1;
-    double *rMag, *nuR3;
+    double *rMag;
+    double nuR3;
     createarray(N + 1, &rMag);
-    createarray(N + 1, &nuR3);
 
     double **matrixEta = *eta;
 
+    // rMag = sqrt(sum(posvel(:,1:3).^2,2));
     for (int i = 0; i < n; i++) {
-        double *rowEta = matrixEta[i];
         rMag[i] = 0.0;
-
-        //rMag = sqrt(sum(posvel(:,1:3).^2,2));
         for (int j = 0; j < 3; j++) {
             rMag[i] += pow(posvel[i][j], 2);
         }
         rMag[i] = sqrt(rMag[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        double *rowEta = matrixEta[i];
 
         //nuR3 = -mu./rMag.^3;
-        nuR3[i] = -mu / pow(rMag[i], 3);
+        nuR3 = -mu / pow(rMag[i], 3);
 
         //eta(:,1) = posvel(:,4);
         //eta(:,2) = posvel(:,5);
@@ -212,9 +215,9 @@ void TwoBodyForceModel(int n, int m, double **t, double **posvel, double mu, dou
         rowEta[0] = posvel[i][3];
         rowEta[1] = posvel[i][4];
         rowEta[2] = posvel[i][5];
-        rowEta[3] = nuR3[i] * posvel[i][0];
-        rowEta[4] = nuR3[i] * posvel[i][1];
-        rowEta[5] = nuR3[i] * posvel[i][2];
+        rowEta[3] = nuR3 * posvel[i][0];
+        rowEta[4] = nuR3 * posvel[i][1];
+        rowEta[5] = nuR3 * posvel[i][2];
     }
 }
 

@@ -227,6 +227,43 @@ void repmat(int n, int m, double **in, int cr, int cc, double ***out) {
 }
 
 //------------------------------------------------------------------------------
+// column
+//------------------------------------------------------------------------------
+/**
+ * Column
+ *
+ * @param[in] <n> number of rows
+ * @param[in] <c> number of column
+ * @param[in] <mtrx> A [N x M]
+ * @param[out] <mtrb> B [N]
+ */
+//------------------------------------------------------------------------------
+void column(int n, int c, double **in, double **out) {
+    int row;
+    double *vec = *out;
+    for (row = 0; row < n; row++) {
+        vec[row] = in[row][c];
+    }
+}
+
+//------------------------------------------------------------------------------
+// productarray
+//------------------------------------------------------------------------------
+/**
+ * productarray
+ *
+ */
+//------------------------------------------------------------------------------
+double productarray(int n, double *a, double *b) {
+    double p = 0.0;
+    for (int i = 0; i < n; i++) {
+        p += a[i] * b[i];
+    }
+    return p;
+}
+
+
+//------------------------------------------------------------------------------
 // summatrix
 //------------------------------------------------------------------------------
 /**
@@ -287,6 +324,60 @@ void sum(int n, int m, double **a, double **b, double ***out) {
     }
 }
 
+//------------------------------------------------------------------------------
+// divide
+//------------------------------------------------------------------------------
+/**
+ * divide
+
+ * @param[in] <n> rows
+ * @param[in] <m> columns
+ * @param[in] <in>  [N]
+ * @param[in] <matrix>  [N x M]
+ * @param[out] <out>  [N x M]
+ */
+//------------------------------------------------------------------------------
+void divide(int rows, int columns, double *in, double **matrix, double ***out) {
+    double **outMatrix = *out;
+    for (int i = 0; i < rows; i++) {
+        double *rowOut = outMatrix[i];
+        for (int j = 0; j < columns; j++) {
+            rowOut[j] = matrix[i][j] * (1 / in[i]);
+        }
+    }
+}
+
+
+//------------------------------------------------------------------------------
+// mult
+//------------------------------------------------------------------------------
+/**
+ * mult
+
+ * @param[in] <n> a rows
+ * @param[in] <m> a columns
+ * @param[in] <nn> b rows
+ * @param[in] <mm> b columns
+ * @param[in] <a>  [N X M]
+ * @param[in] <n>  [NN x MM]
+ * @param[out] <out>  [N x MM]
+ */
+//------------------------------------------------------------------------------
+void mult(int n, int m, int nn, int mm, double **a, double **b, double ***out) {
+    double **o = *out;
+    for (int i = 0; i < n; i++) {
+        double *rowA = a[i];
+        for (int j = 0; j < mm; j++) {
+            double *colB;
+            createarray(nn, &colB);
+            column(nn, j, b, &colB);
+
+            o[i][j] = productarray(nn, rowA, colB);
+
+            freearray(colB);
+        }
+    }
+}
 
 //------------------------------------------------------------------------------
 // printmatrix
