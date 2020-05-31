@@ -80,7 +80,9 @@ void PicardChebyshevDemo() {
         aux[i] = i * (M_PI / N);
     }
 
+
     applyfunonearg(cos, aux, N + 1, &aux);
+
     fliplr(N + 1, aux, &tau);
 
 

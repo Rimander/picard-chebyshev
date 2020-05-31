@@ -31,7 +31,7 @@ VMPCM(void (*ode)(int, int, double **, double **, double, double ***), int n, in
       double omega1, double omega2,
       double errTol, double varargin, double ***rvPCM) {
 
-    double **t, **tv1, **auxm;
+    double **t, **tv1, **tv2, **auxm;
     double *aux, *v;
     int i, j;
 
@@ -66,8 +66,8 @@ VMPCM(void (*ode)(int, int, double **, double **, double, double ***), int n, in
 
     //V = ones(1,length(tau))./N;
     //V(2:end-1) = V(2:end-1).*2;
-    createarray(N + 1, &v);
-    for (i = 0; i < N + 1; i++) {
+    createarray(N + 2, &v);
+    for (i = 0; i < N + 2; i++) {
         v[i] = 1.0 / N;
         if (i < N && i > 0) {
             v[i] = 2 * v[i];
@@ -84,9 +84,22 @@ VMPCM(void (*ode)(int, int, double **, double **, double, double ***), int n, in
         }
     }
     times(N, N + 1, v, auxm, &tv1);
+    freematrix(N, auxm);
+
+    // TV2 = bsxfun(@times,T(3:N+2,:),V);
+    creatematrix(N, N + 1, &tv2);
+    creatematrix(N, N + 1, &auxm);
+
+    for (i = 2; i < N + 2; i++) {
+        for (j = 0; j < N + 1; j++) {
+            auxm[i - 2][j] = t[i][j];
+        }
+    }
+    times(N, N + 1, v, auxm, &tv2);
+    freematrix(N, auxm);
 
 
-    printmatrix(N, N + 1, tv1);
+    printmatrix(N, N + 1, tv2);
 }
 
 
