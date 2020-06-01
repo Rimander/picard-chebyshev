@@ -25,7 +25,7 @@
 //------------------------------------------------------------------------------
 void PicardChebyshevDemo() {
     double **v, **r, **r0m, **v0m, **r_guess, **v_guess, **x_guess, **rvPCM;
-    double *r0, *v0, *aux, *aux1, *tSpan, *tau, *t, *aPosMag, *aVelMag, *pcmPosMag, *pcmVelMag, *posErr, *velErr;
+    double *r0, *v0, *aux, *tSpan, *tau, *t, *aPosMag, *aVelMag, *pcmPosMag, *pcmVelMag, *posErr, *velErr;
     double mu, a, vMag, P, NoisePrct, omega1, omega2, errTol;
     int mm;
     int i, N;
