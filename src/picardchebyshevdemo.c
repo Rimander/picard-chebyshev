@@ -215,10 +215,24 @@ void PicardChebyshevDemo() {
     PlotPostionAndVelocity(N + 1, rvPCM, r, v, vMag, a, t, x_guess);
     PlotMagnitudeErrors(N + 1, t, posErr, velErr);
 
-    printf("%s", "Fin");
 
+    freearray(posErr);
+    freearray(velErr);
+    freearray(pcmVelMag);
+    freearray(pcmPosMag);
+    freearray(aPosMag);
+    freearray(aVelMag);
+    freearray(tau);
+    freearray(aux);
+    freearray(r0);
+    freearray(v0);
+    freearray(tSpan);
 
-    //TODO: Free matrix and arrays
+    freematrix(3, r);
+    freematrix(3, v);
+    freematrix(3, r0m);
+    freematrix(3, v0m);
+
 }
 
 //------------------------------------------------------------------------------

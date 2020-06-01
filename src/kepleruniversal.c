@@ -272,8 +272,21 @@ void KeplerUniversal(int N, double **r0, double **v0, double *t, double mu, doub
     times(3, N + 1, gdot, v0, &aux1);
     sum(3, N + 1, aux, aux1, &vReturn);
 
-
-    //TODO: Free memory
+    freearray(X02);
+    freearray(X03);
+    freearray(psi);
+    freearray(c2);
+    freearray(c3);
+    freearray(X0tOmPsiC3);
+    freearray(X02tC2);
+    freearray(rTmp);
+    freearray(Xn);
+    freearray(f);
+    freearray(fdot);
+    freearray(g);
+    freearray(gdot);
+    freearray(v0Mag);
+    freearray(r0Mag);
 
     //%% Ensure Solution Integrity
     //%idx = round((f.*gdot - fdot.*g)./tol).*tol ~= 1; r(:,idx) = NaN; v(:,idx) = NaN;
