@@ -371,12 +371,12 @@ void PlotPostionAndVelocity(int m, double **rvPCM, double **rA, double **vA, dou
         }
         fprintf(f, "\n");
     }
+    fprintf(f, "\n");
 
     // t
     for (int i = 0; i < m; i++) {
         fprintf(f, "%f,", t[i]);
     }
-    fprintf(f, "\n");
     fprintf(f, "\n");
 
     fclose(f);
@@ -414,6 +414,7 @@ void PlotMagnitudeErrors(int n, double *t, double *PosErr, double *VelErr) {
     for (int i = 0; i < n; i++) {
         fprintf(f, "%f,", t[i]);
     }
+    fprintf(f, "\n");
     fprintf(f, "\n");
 
     // PosErr
