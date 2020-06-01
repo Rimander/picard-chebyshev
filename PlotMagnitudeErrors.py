@@ -30,7 +30,6 @@ with open(file_path) as fp:
     # PosErr
     posErr = np.zeros(m)
     line = fp.readline()
-    print(line)
     cols = line.split(",")
     for i in range(0, m):
         posErr[i] = float(cols[i])
@@ -63,7 +62,7 @@ with open(file_path) as fp:
 
     # plot(t./60,VelErr.*1e6,'k');
     p_y = velErr * 1e6
-    ax2.plot(p_x, p_y, label='PosErr', color="grey")
+    ax2.plot(p_x, p_y, label='VelErr', color="grey")
 
     plt.legend(loc='upper left')
 
