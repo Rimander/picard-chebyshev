@@ -31,7 +31,7 @@ VMPCM(void (*ode)(int, int, double *, double **, double, double ***), int n, int
       double omega1, double omega2,
       double errTol, double varargin, double ***rvPCM) {
 
-    double **f, **beta_r, **beta_k, **new_x;
+    double **f, **beta_r, **beta_k, **new_x, **x_guess_aux;
     double **t, **tv1, **tv2, **tv, **cx, **auxm;
     double *v, *s, *err1, *err2, *aux, *aux2;
 
@@ -152,6 +152,13 @@ VMPCM(void (*ode)(int, int, double *, double **, double, double ***), int n, int
     elementgtvalue(N + 1, err1, errTol, &aux);
     elementgtvalue(N + 1, err2, errTol, &aux2);
 
+    creatematrix(N + 1, 6, &x_guess_aux);
+    for (i = 0; i < N + 1; i++) {
+        for (j = 0; j < 6; j++) {
+            x_guess_aux[i][j] = x_guess[i][j];
+        }
+
+    }
     while (iter < maxIter && (any(N + 1, aux) == 1 || any(N + 1, aux2) == 1)) {
 
         //Iter = Iter + 1;
@@ -169,7 +176,7 @@ VMPCM(void (*ode)(int, int, double *, double **, double, double ***), int n, int
         }
 
         //F = ode(input{:}).*omega2;
-        ode(N + 1, 6, input1, x_guess, varargin, &f);
+        ode(N + 1, 6, input1, x_guess_aux, varargin, &f);
         for (i = 0; i < N + 1; i++) {
             for (j = 0; j < 6; j++) {
                 f[i][j] = f[i][j] * omega2;
@@ -186,11 +193,9 @@ VMPCM(void (*ode)(int, int, double *, double **, double, double ***), int n, int
         creatematrix(N + 1, 6, &new_x);
 
 
-
         //%Matrix Multiply
         //Beta_r(:,i) = TV*F(:,i);
         mult(N, N + 1, N + 1, 6, tv, f, &beta_r);
-
 
 
         //Beta_k(:,i) = [S*Beta_r(:,i) + 2.*x_guess(1,i); Beta_r(:,i)];
@@ -203,7 +208,7 @@ VMPCM(void (*ode)(int, int, double *, double **, double, double ***), int n, int
             double tmp = productarray(N, col, s);
             freearray(col);
 
-            beta_k[0][j] = tmp + 2 * x_guess[0][j];
+            beta_k[0][j] = tmp + 2 * x_guess_aux[0][j];
         }
 
 
@@ -220,8 +225,6 @@ VMPCM(void (*ode)(int, int, double *, double **, double, double ***), int n, int
         mult(N + 1, N + 1, N + 1, 6, cx, beta_k, &new_x);
 
 
-
-
         //printmatrix(N, 6, x_guess);
         //err2 = err1;
         //err1 = max(abs(x_new - x_guess),[],2);
@@ -230,17 +233,14 @@ VMPCM(void (*ode)(int, int, double *, double **, double, double ***), int n, int
 
         for (i = 0; i < N + 1; i++) {
             err2[i] = err1[i];
-            err1[i] = fabs(new_x[i][0] - x_guess[i][0]);
+            err1[i] = fabs(new_x[i][0] - x_guess_aux[i][0]);
             for (j = 0; j < 6; j++) {
-                if (err1[i] < fabs(new_x[i][j] - x_guess[i][j]))
-                    err1[i] = fabs(new_x[i][j] - x_guess[i][j]);
-
-                x_guess[i][j] = new_x[i][j];
+                if (err1[i] < fabs(new_x[i][j] - x_guess_aux[i][j]))
+                    err1[i] = fabs(new_x[i][j] - x_guess_aux[i][j]);
+                x_guess_aux[i][j] = new_x[i][j];
             }
 
         }
-
-
         elementgtvalue(N + 1, err1, errTol, &aux);
         elementgtvalue(N + 1, err2, errTol, &aux2);
 
@@ -251,7 +251,8 @@ VMPCM(void (*ode)(int, int, double *, double **, double, double ***), int n, int
         freematrix(N + 1, new_x);
     }
 
-    *rvPCM = x_guess;
+
+    *rvPCM = x_guess_aux;
 
 }
 

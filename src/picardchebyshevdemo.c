@@ -158,7 +158,6 @@ void PicardChebyshevDemo() {
         x_guess[0][tmp] = v[i][0];
     }
 
-
     //%Run the Picard-Chebyshev Method
     //rvPCM  = VMPCM(@TwoBodyForceModel,tau',x_guess,omega1,omega2,errTol,mu);
     creatematrix(N + 1, 6, &rvPCM);
