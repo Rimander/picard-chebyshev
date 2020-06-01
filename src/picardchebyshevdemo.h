@@ -36,29 +36,29 @@ void TwoBodyForceModel(int n, int m, double *t, double **posvel, double mu, doub
 // PlotPostionAndVelocity
 //------------------------------------------------------------------------------
 /**
- * @param[in] <n> number of rows
- * @param[in] <m> number of columns
- * @param[in] <rvPCM>  double [N x M]
- * @param[in] <rA>  [N x M]
- * @param[in] <vA>  [N x M]
+ * @param[in] <m> number
+ * @param[in] <rvPCM>  [M x 6]
+ * @param[in] <rA>  [3 x M]
+ * @param[in] <vA>  [3 x M]
  * @param[in] <vMag>
  * @param[in] <a>
- * @param[in] <t>  [1 x N]
- * @param[in] <xg>  [N x M]
+ * @param[in] <t>  [M]
+ * @param[in] <xg>  [M x 6]
  */
 //------------------------------------------------------------------------------
-void PlotPostionAndVelocity(int n, int m, double **rvPCM, double **rA, double **vA, double vMag, double a, double **t,
+void PlotPostionAndVelocity(int m, double **rvPCM, double **rA, double **vA, double vMag, double a, double *t,
                             double **xg);
+
 //------------------------------------------------------------------------------
 // PlotMagnitudeErrors
 //------------------------------------------------------------------------------
 /**
  * @param[in] <n> number of rows
- * @param[in] <t>  [1 x N]
- * @param[in] <PosErr>  [N x 1]
- * @param[in] <VelErr>  [N x 1]
+ * @param[in] <t>  [N]
+ * @param[in] <PosErr>  [N]
+ * @param[in] <VelErr>  [N]
  */
 //------------------------------------------------------------------------------
-void PlotMagnitudeErrors(int n, double **t, double **PosErr, double **VelErr);
+void PlotMagnitudeErrors(int n, double *t, double *PosErr, double *VelErr);
 
 #endif //CODIGO_PICARDCHEBYSHEVDEMO_H

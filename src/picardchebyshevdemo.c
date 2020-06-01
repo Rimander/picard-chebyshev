@@ -25,7 +25,7 @@
 //------------------------------------------------------------------------------
 void PicardChebyshevDemo() {
     double **v, **r, **r0m, **v0m, **r_guess, **v_guess, **x_guess, **rvPCM;
-    double *r0, *v0, *aux, *aux1, *tSpan, *tau, *t;
+    double *r0, *v0, *aux, *aux1, *tSpan, *tau, *t, *aPosMag, *aVelMag, *pcmPosMag, *pcmVelMag, *posErr, *velErr;
     double mu, a, vMag, P, NoisePrct, omega1, omega2, errTol;
     int mm;
     int i, N;
@@ -165,8 +165,58 @@ void PicardChebyshevDemo() {
     VMPCM(TwoBodyForceModel, N + 1, 3, tau, x_guess, omega1, omega2, errTol, mu, &rvPCM);
 
 
-    printmatrix(N + 1, 6, rvPCM);
+    //%Compare Error to analytical solution
+    //PCMPosMag = sqrt(sum(rvPCM(:,1:3).^2,2));
+    createarray(N + 1, &pcmPosMag);
+    for (i = 0; i < N + 1; i++) {
+        pcmPosMag[i] = 0.0;
+        for (int j = 0; j < 3; j++) {
+            pcmPosMag[i] += pow(x_guess[i][j], 2);
+        }
+        pcmPosMag[i] = sqrt(pcmPosMag[i]);
+    }
+
+    //APosMag = sqrt(sum(rA'.^2,2));
+    //AVelMag = sqrt(sum(vA'.^2,2));
+    createarray(N + 1, &aPosMag);
+    createarray(N + 1, &aVelMag);
+    for (i = 0; i < N + 1; i++) {
+        aPosMag[i] = 0.0;
+        aVelMag[i] = 0.0;
+        for (int j = 0; j < 3; j++) {
+            aPosMag[i] += pow(r[j][i], 2);
+            aVelMag[i] += pow(v[j][i], 2);
+        }
+        aPosMag[i] = sqrt(aPosMag[i]);
+        aVelMag[i] = sqrt(aVelMag[i]);
+    }
+
+    //PCMVelMag = sqrt(sum(rvPCM(:,4:end).^2,2));
+    createarray(N + 1, &pcmVelMag);
+    for (i = 0; i < N + 1; i++) {
+        pcmVelMag[i] = 0.0;
+        for (int j = 3; j < 6; j++) {
+            pcmVelMag[i] += pow(x_guess[i][j], 2);
+        }
+        pcmVelMag[i] = sqrt(pcmVelMag[i]);
+    }
+
+
+    //PosErr = abs(PCMPosMag-APosMag);
+    //VelErr = abs(PCMVelMag-AVelMag);
+    createarray(N + 1, &posErr);
+    createarray(N + 1, &velErr);
+    for (i = 0; i < N + 1; i++) {
+        posErr[i] = fabs(pcmPosMag[i] - aPosMag[i]);
+        velErr[i] = fabs(pcmVelMag[i] - aVelMag[i]);
+    }
+
+
+    PlotPostionAndVelocity(N + 1, rvPCM, r, v, vMag, a, t, x_guess);
+    PlotMagnitudeErrors(N + 1, t, posErr, velErr);
+
     printf("%s", "Fin");
+
 
     //TODO: Free matrix and arrays
 }
@@ -225,18 +275,17 @@ void TwoBodyForceModel(int n, int m, double *t, double **posvel, double mu, doub
 // PlotPostionAndVelocity
 //------------------------------------------------------------------------------
 /**
- * @param[in] <n> number of rows
- * @param[in] <m> number of columns
- * @param[in] <rvPCM>  [N x M]
- * @param[in] <rA>  [N x M]
- * @param[in] <vA>  [N x M]
+ * @param[in] <m> number
+ * @param[in] <rvPCM>  [M x 6]
+ * @param[in] <rA>  [3 x M]
+ * @param[in] <vA>  [3 x M]
  * @param[in] <vMag>
  * @param[in] <a>
- * @param[in] <t>  [1 x N]
- * @param[in] <xg>  [N x M]
+ * @param[in] <t>  [M]
+ * @param[in] <xg>  [M x 6]
  */
 //------------------------------------------------------------------------------
-void PlotPostionAndVelocity(int n, int m, double **rvPCM, double **rA, double **vA, double vMag, double a, double **t,
+void PlotPostionAndVelocity(int m, double **rvPCM, double **rA, double **vA, double vMag, double a, double *t,
                             double **xg) {
 
 }
@@ -245,11 +294,11 @@ void PlotPostionAndVelocity(int n, int m, double **rvPCM, double **rA, double **
 //------------------------------------------------------------------------------
 /**
  * @param[in] <n> number of rows
- * @param[in] <t>  [1 x N]
- * @param[in] <PosErr>  [N x 1]
- * @param[in] <VelErr>  [N x 1]
+ * @param[in] <t>  [N]
+ * @param[in] <PosErr>  [N]
+ * @param[in] <VelErr>  [N]
  */
 //------------------------------------------------------------------------------
-void PlotMagnitudeErrors(int n, double **t, double **PosErr, double **VelErr) {
+void PlotMagnitudeErrors(int n, double *t, double *PosErr, double *VelErr) {
 
 }
