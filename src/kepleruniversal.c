@@ -259,11 +259,8 @@ void KeplerUniversal(int N, double **r0, double **v0, double *t, double mu, doub
         fdot[i] = Xn[i] * (psi[i] * c3[i] - 1) * sqrt(mu) / (rTmp[i] * r0Mag[i]);
     }
 
-
-    //a = bsxfun(@times,f,r0);
-    times(3, N + 1, f, r0, &aux);
-
     //r = bsxfun(@times,f,r0) + bsxfun(@times,g,v0);
+    times(3, N + 1, f, r0, &aux);
     times(3, N + 1, g, v0, &aux1);
     sum(3, N + 1, aux, aux1, &rReturn);
 

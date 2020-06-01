@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-int main() {
+int main2() {
     PicardChebyshevDemo();
     return 0;
 }

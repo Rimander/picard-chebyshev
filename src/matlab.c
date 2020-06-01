@@ -29,7 +29,7 @@ void fliplr(int m, double *in, double **out) {
     int start = 0;
     int end = m - 1;
 
-    while (start < end) {
+    while (start <= end) {
         elementsOut[start] = in[end];
         elementsOut[end] = in[start];
         start++;
