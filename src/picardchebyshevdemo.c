@@ -302,6 +302,84 @@ void TwoBodyForceModel(int n, int m, double *t, double **posvel, double mu, doub
 void PlotPostionAndVelocity(int m, double **rvPCM, double **rA, double **vA, double vMag, double a, double *t,
                             double **xg) {
 
+    // m
+    //
+    // vMag
+    //
+    // a
+    //
+    // rvPCM
+    //
+    // xg
+    //
+    // rA
+    //
+    // vA
+    //
+    // t
+    //
+    FILE *f = fopen("positionAndVelocity.txt", "w");
+    if (f == NULL) {
+        printf("Error opening file!\n");
+        exit(1);
+    }
+
+    // m
+    fprintf(f, "%i\n", m);
+    fprintf(f, "\n");
+
+
+    // vMag
+    fprintf(f, "%f\n", vMag);
+    fprintf(f, "\n");
+
+    // a
+    fprintf(f, "%f\n", a);
+    fprintf(f, "\n");
+
+    // rvPCM
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < 6; j++) {
+            fprintf(f, "%f,", rvPCM[i][j]);
+        }
+        fprintf(f, "\n");
+    }
+    fprintf(f, "\n");
+
+    // xg
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < 6; j++) {
+            fprintf(f, "%f,", xg[i][j]);
+        }
+        fprintf(f, "\n");
+    }
+    fprintf(f, "\n");
+
+    // rA
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < m; j++) {
+            fprintf(f, "%f,", rA[i][j]);
+        }
+        fprintf(f, "\n");
+    }
+    fprintf(f, "\n");
+
+    // vA
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < m; j++) {
+            fprintf(f, "%f,", vA[i][j]);
+        }
+        fprintf(f, "\n");
+    }
+
+    // t
+    for (int i = 0; i < m; i++) {
+        fprintf(f, "%f,", t[i]);
+    }
+    fprintf(f, "\n");
+    fprintf(f, "\n");
+
+    fclose(f);
 }
 //------------------------------------------------------------------------------
 // PlotMagnitudeErrors
@@ -314,5 +392,43 @@ void PlotPostionAndVelocity(int m, double **rvPCM, double **rA, double **vA, dou
  */
 //------------------------------------------------------------------------------
 void PlotMagnitudeErrors(int n, double *t, double *PosErr, double *VelErr) {
+    // n
+    //
+    // t
+    //
+    // PosErr
+    //
+    // VelErr
+    //
+    FILE *f = fopen("magnitudeErrors.txt", "w");
+    if (f == NULL) {
+        printf("Error opening file!\n");
+        exit(1);
+    }
 
+    // n
+    fprintf(f, "%i\n", n);
+    fprintf(f, "\n");
+
+    // t
+    for (int i = 0; i < n; i++) {
+        fprintf(f, "%f,", t[i]);
+    }
+    fprintf(f, "\n");
+
+    // PosErr
+    for (int i = 0; i < n; i++) {
+        fprintf(f, "%f,", PosErr[i]);
+    }
+    fprintf(f, "\n");
+    fprintf(f, "\n");
+
+    // VelErr
+    for (int i = 0; i < n; i++) {
+        fprintf(f, "%f,", VelErr[i]);
+    }
+    fprintf(f, "\n");
+    fprintf(f, "\n");
+
+    fclose(f);
 }
