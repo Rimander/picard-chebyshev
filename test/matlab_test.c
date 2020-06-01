@@ -52,3 +52,21 @@ int repmat_test() {
 
     return 0;
 }
+
+
+int column_test() {
+    double **a, *b;
+    creatematrix(2, 2, &a);
+    createarray(2, &b);
+    a[0][0] = 1;
+    a[0][1] = 2;
+    a[1][0] = 3;
+    a[1][1] = 4;
+
+    column(2, 1, a, &b);
+
+    assert(a[0][1] == b[0]);
+    assert(a[1][1] == b[1]);
+
+    return 0;
+}
