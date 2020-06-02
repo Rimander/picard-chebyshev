@@ -201,7 +201,7 @@ VMPCM(void (*ode)(int, int, double *, double **, double, double ***), int n, int
 
         //Beta_k(:,i) = [S*Beta_r(:,i) + 2.*x_guess(1,i); Beta_r(:,i)];
         //  S*Beta_r(:,i) + 2.*x_guess(1,i)
-        for (j = 0; j < N; j++) {
+        for (j = 0; j < 6; j++) {
             //S*Beta_r(:,i)
             double *col;
             createarray(N, &col);
