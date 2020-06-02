@@ -1,4 +1,4 @@
-## Picard-Chebyshev Method
+# Picard-Chebyshev Method
 
 Demo function used to demonstrate how to use the Picard-Chebyshev method
 This will propagate an orbit a total of one period and compare the solution to the analytical solution using kepler universal variable propagation.
@@ -6,16 +6,16 @@ This will propagate an orbit a total of one period and compare the solution to t
 This is a migration the original code (MatLab) to C
 
 
-### C
+## C
 
 Compile with:
 ```
 gcc main.c src/kepleruniversal.c src/kepleruniversal.h src/picardchebyshevdemo.c src/picardchebyshevdemo.h src/vmpcm.c src/vmpcm.h src/matlab.c src/matlab.h
 ```
 
-Execute application to create files positionAndVelocity.txt and magnitudeErrors.txt
+Execute to create files positionAndVelocity.txt and magnitudeErrors.txt
 
-### Python
+## Python
 Require python 3.X
 ```
 pip3 install requirements.txt
