@@ -8,5 +8,8 @@ include_directories(test)
 
 add_executable(
         codigo main.c src/kepleruniversal.c src/kepleruniversal.h src/picardchebyshevdemo.c src/picardchebyshevdemo.h src/vmpcm.c src/vmpcm.h src/matlab.c src/matlab.h
-        test/main_test.c test/matlab_test.c
+)
+
+add_executable(
+        test test/main_test.c test/matlab_test.c src/kepleruniversal.c src/kepleruniversal.h src/picardchebyshevdemo.c src/picardchebyshevdemo.h src/vmpcm.c src/vmpcm.h src/matlab.c src/matlab.h
 )

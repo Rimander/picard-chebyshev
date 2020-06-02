@@ -6,6 +6,7 @@
 #include <math.h>
 #include "vmpcm.h"
 #include "matlab.h"
+#include <float.h>
 
 //------------------------------------------------------------------------------
 // VMPCM
@@ -145,8 +146,8 @@ VMPCM(void (*ode)(int, int, double *, double **, double, double ***), int n, int
     createarray(N + 1, &aux2);
     creatematrix(N + 1, 6, &f);
     for (i = 0; i < N + 1; i++) {
-        err1[i] = INFINITY;
-        err2[i] = INFINITY;
+        err1[i] = DBL_MAX;
+        err2[i] = DBL_MAX;
     }
 
     elementgtvalue(N + 1, err1, errTol, &aux);
