@@ -22,8 +22,6 @@
  */
 //------------------------------------------------------------------------------
 void fliplr(int m, double *in, double **out) {
-
-
     double *elementsOut = *out;
     // Start and end position of array
     int start = 0;
@@ -37,6 +35,7 @@ void fliplr(int m, double *in, double **out) {
     }
 
 }
+
 
 //------------------------------------------------------------------------------
 // create
@@ -55,7 +54,6 @@ void createarray(int n, double **out) {
         exit(1);
     }
 }
-
 
 
 //------------------------------------------------------------------------------
@@ -91,7 +89,6 @@ void creatematrix(int n, int m, double ***out) {
         arr[i] = (double *) calloc(m, sizeof(double));
     }
 }
-
 
 
 //------------------------------------------------------------------------------
@@ -226,6 +223,7 @@ void repmat(int n, int m, double **in, int cr, int cc, double ***out) {
     }
 }
 
+
 //------------------------------------------------------------------------------
 // column
 //------------------------------------------------------------------------------
@@ -245,6 +243,7 @@ void column(int n, int c, double **in, double **out) {
         vec[row] = in[row][c];
     }
 }
+
 
 //------------------------------------------------------------------------------
 // productarray
@@ -323,6 +322,7 @@ void sum(int n, int m, double **a, double **b, double ***out) {
         }
     }
 }
+
 
 //------------------------------------------------------------------------------
 // divide
@@ -697,9 +697,9 @@ void cross(int n, int m, double **a, double **b, double ***out) {
  *
  * @param[in] <n>  number of rows
  * @param[in] <b>  number of columns
- * @param[in] <a>  [3 x M]
- * @param[in] <b>  [3 x M]
- * @param[out] <out> [3 x M]
+ * @param[in] <a>  [N x M]
+ * @param[in] <b>  [N x M]
+ * @param[out] <out> [M]
  */
 //------------------------------------------------------------------------------
 void dot(int n, int m, double **a, double **b, double **out) {
@@ -751,7 +751,6 @@ int sign(double in) {
  */
 //------------------------------------------------------------------------------
 void times(int n, int m, double *in, double **matrix, double ***out) {
-
     double **o = *out;
 
     for (int i = 0; i < n; i++) {
@@ -763,8 +762,6 @@ void times(int n, int m, double *in, double **matrix, double ***out) {
         }
     }
 }
-
-
 
 
 //------------------------------------------------------------------------------

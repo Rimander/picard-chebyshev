@@ -436,9 +436,9 @@ void truevalues(int n, int m, double **in, double *compare, double ***out);
  *
  * @param[in] <n>  number of rows
  * @param[in] <b>  number of columns
- * @param[in] <a>  [N x M]
- * @param[in] <b>  [N x M]
- * @param[out] <out> [N x M]
+ * @param[in] <a>  [3 x M]
+ * @param[in] <b>  [3 x M]
+ * @param[out] <out> [3 x M]
  */
 //------------------------------------------------------------------------------
 void cross(int n, int m, double **a, double **b, double ***out);
@@ -451,8 +451,8 @@ void cross(int n, int m, double **a, double **b, double ***out);
  *
  * @param[in] <n>  number of rows
  * @param[in] <b>  number of columns
- * @param[in] <a>  [3 x M]
- * @param[in] <b>  [3 x M]
+ * @param[in] <a>  [N x M]
+ * @param[in] <b>  [N x M]
  * @param[out] <out> [M]
  */
 //------------------------------------------------------------------------------
