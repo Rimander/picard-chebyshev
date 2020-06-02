@@ -1,4 +1,4 @@
 var searchData =
     [
-        ['frameworks_780', ['Frameworks', ['../_c_make_cache_8txt.html#aad3b83729f9a552e5a070a5cc4d7577a', 1, 'CMakeCache.txt']]]
+        ['exemplary_81', ['EXEMPLARY', ['../license_8txt.html#a4a5b582211931da7488e51ed11d55aaf', 1, 'license.txt']]]
     ];

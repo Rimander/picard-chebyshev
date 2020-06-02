@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
     <meta name="generator" content="Doxygen 1.8.17"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>My Project: /Users/ferminjimenezalfaro/Google Drive/Clase/Uni/Tercero/Taller
-        Transversal/Proyecto/codigo/matlab.h Source File</title>
+    <title>Proyecto: codigo/src/matlab.h Source File</title>
     <link href="tabs.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +22,7 @@
             <tbody>
             <tr style="height: 56px;">
                 <td id="projectalign" style="padding-left: 0.5em;">
-                    <div id="projectname">My Project
+                    <div id="projectname">Proyecto
                     </div>
                 </td>
             </tr>
@@ -66,6 +65,7 @@
     <div id="nav-path" class="navpath">
         <ul>
             <li class="navelem"><a class="el" href="dir_4d7be947362df13686123d6563352e9b.html">codigo</a></li>
+            <li class="navelem"><a class="el" href="dir_41b9fbeb69ad6f5180ac53fc1c43d38b.html">src</a></li>
         </ul>
     </div>
 </div><!-- top -->
@@ -88,50 +88,646 @@
         <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
         </div>
         <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span
-                class="comment">// fliplr</span>
-        </div>
+                class="comment">// fliplr</span></div>
         <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
         </div>
         <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span><span
-                class="comment">//------------------------------------------------------------------------------</span>
+                class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+        <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+        <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
         </div>
-        <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span
-                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#ac857ab81dee6dfb4b98f04fb6737285e">fliplr</a>(<span
-                class="keywordtype">int</span> *n, <span class="keywordtype">int</span> *m, <span class="keywordtype">double</span>
-            **mtrx);
+        <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#ad307a6a646ee6092077143e9b8af8351">fliplr</a>(<span
+                class="keywordtype">int</span> m, <span class="keywordtype">double</span> *in, <span
+                class="keywordtype">double</span> **out);
         </div>
-        <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-        <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
         <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-        <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
-        </div>
-        <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span
-                class="comment">// repmat</span>
-        </div>
+        <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+        <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
         <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
         </div>
-        <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"></span><span
+        <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span
+                class="comment">// create</span></div>
+        <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"></span><span
                 class="comment">//------------------------------------------------------------------------------</span>
         </div>
-        <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span
-                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#ad04fe2cd78d669fbbb017f11c0457438">repmat</a>(<span
-                class="keywordtype">int</span> n, <span class="keywordtype">int</span> m, <span class="keywordtype">double</span>
-            **mtrx, <span class="keywordtype">int</span> c, <span class="keywordtype">int</span> *nn, <span
-                    class="keywordtype">int</span> *mm, <span class="keywordtype">double</span> **mtrxb);
+        <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#a4b98278a6b3c3724c1286994971211d4">createarray</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">double</span> **out);
         </div>
-        <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+        <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+        <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+        <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+        <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span
+                class="comment">// free</span></div>
+        <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#ae93c9a10f8fc677cc02e6fcbabd2e49e">freearray</a>(<span
+                class="keywordtype">double</span> *in);
+        </div>
         <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
         <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-        <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif //CODIGO_MATLAB_H</span>
+        <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+        <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span
+                class="comment">// create</span></div>
+        <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#aedf36ff849d7683bcc3716a5aea8db08">creatematrix</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">int</span> m, <span class="keywordtype">double</span>
+            ***out);
+        </div>
+        <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+        <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+        <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+        <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span
+                class="comment">// free</span></div>
+        <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#a72d485f7f1a94cf4e8c21457509fea5f">freematrix</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">double</span> **in);
+        </div>
+        <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+        <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">// arrtocolum</span>
+        </div>
+        <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"></span><span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#aa4e28a034b045bf0d808047ef3a98287">arrtocolum</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">double</span> *in, <span
+                class="keywordtype">double</span> ***out);
+        </div>
+        <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+        <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span
+                class="comment">// repmat</span></div>
+        <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#a738af15d58586c33f90e0a3a357b2c83">repmatarr</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">int</span> m, <span class="keywordtype">double</span>
+            *in, <span class="keywordtype">int</span> cr, <span class="keywordtype">int</span> cc, <span
+                    class="keywordtype">double</span> ***out);
+        </div>
+        <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+        <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+        <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span
+                class="comment">// repmat</span></div>
+        <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#ad0356949c8a254389e72914f15285adb">repmat</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">int</span> m, <span class="keywordtype">double</span>
+            **in, <span class="keywordtype">int</span> cr, <span class="keywordtype">int</span> cc, <span
+                    class="keywordtype">double</span> ***out);
+        </div>
+        <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+        <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+        <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span
+                class="comment">// column</span></div>
+        <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#ac5414b41fbe278cd0ccbd2246a2bda5f">column</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">int</span> c, <span class="keywordtype">double</span>
+            **in, <span class="keywordtype">double</span> **out);
+        </div>
+        <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+        <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+        <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+        <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">// productarray</span>
+        </div>
+        <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span
+                class="keywordtype">double</span> <a class="code"
+                                                     href="matlab_8h.html#a4e220b2826e7ae53a6ff64a251bfc1f3">productarray</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">double</span> *a, <span class="keywordtype">double</span>
+            *b);
+        </div>
+        <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+        <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+        <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span
+                class="comment">// summatrix</span></div>
+        <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#ad37801280bff1ffd67bee2f55c897d4a">summatrix</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">int</span> m, <span class="keywordtype">double</span>
+            **in, <span class="keywordtype">double</span> **out);
+        </div>
+        <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+        <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+        <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+        <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span
+                class="comment">// sum</span></div>
+        <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#a393568015101fe5e4aa7f8c0f1f213f7">sum</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">int</span> m, <span class="keywordtype">double</span>
+            **a, <span class="keywordtype">double</span> **b, <span class="keywordtype">double</span> ***out);
+        </div>
+        <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+        <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+        <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span
+                class="comment">// divide</span></div>
+        <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#a65de57eaddd57dc43e7ea88972054570">divide</a>(<span
+                class="keywordtype">int</span> rows, <span class="keywordtype">int</span> columns, <span
+                class="keywordtype">double</span> *in, <span class="keywordtype">double</span> **matrix, <span
+                class="keywordtype">double</span> ***out);
+        </div>
+        <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
+        <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+        <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span
+                class="comment">// mult</span></div>
+        <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#ae61819567d0475f2a1136c8059922783">mult</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">int</span> m, <span
+                class="keywordtype">int</span> nn, <span class="keywordtype">int</span> mm, <span class="keywordtype">double</span>
+            **a, <span class="keywordtype">double</span> **b, <span class="keywordtype">double</span> ***out);
+        </div>
+        <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+        <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+        <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment">// printmatrix</span>
+        </div>
+        <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#a15245039bbdb0ebe368c9653e159e50f">printmatrix</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">int</span> m, <span class="keywordtype">double</span>
+            **mtrx);
+        </div>
+        <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
+        <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+        <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="comment">// printarray</span>
+        </div>
+        <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#a046e166358d0eb6b887588471207459b">printarray</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">double</span> *arr);
+        </div>
+        <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
+        <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+        <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span
+                class="comment">// sum</span></div>
+        <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span
+                class="keywordtype">double</span> <a class="code"
+                                                     href="matlab_8h.html#a76c4d1fbd3abef5b65b5f52685ef7f2a">sumarray</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">double</span> *in);
+        </div>
+        <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
+        <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
+        <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="comment">// applyfunonearg</span>
+        </div>
+        <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#ab5bbcf6bcab4216051c1bcb346483c0a">applyfunonearg</a>(<span
+                class="keywordtype">double</span> (*fp)(<span class="keywordtype">double</span>), <span
+                class="keywordtype">double</span> *in, <span class="keywordtype">int</span> m, <span
+                class="keywordtype">double</span> **out);
+        </div>
+        <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
+        <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
+        <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="comment">// applyfuntwoargs</span>
+        </div>
+        <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#a7da6875467099cbe7e89f5f519912023">applyfuntwoargs</a>(<span
+                class="keywordtype">double</span> (*fp)(<span class="keywordtype">double</span>, <span
+                class="keywordtype">double</span>), <span class="keywordtype">double</span> c, <span
+                class="keywordtype">double</span> *in, <span class="keywordtype">int</span> m, <span
+                class="keywordtype">double</span> **out);
+        </div>
+        <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
+        <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
+        <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
+        <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="comment">// applyfuntwoargsmatrix</span>
+        </div>
+        <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#ae4c81fcfc3e6b89693b89d1afe8c55d5">applyfuntwoargsmatrix</a>(<span
+                class="keywordtype">double</span> (*fp)(<span class="keywordtype">double</span>, <span
+                class="keywordtype">double</span>), <span class="keywordtype">double</span> c, <span
+                class="keywordtype">double</span> **in, <span class="keywordtype">int</span> n, <span
+                class="keywordtype">int</span> m, <span class="keywordtype">double</span> ***out);
+        </div>
+        <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div>
+        <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
+        <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;</div>
+        <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="comment">// elementgtvalue</span>
+        </div>
+        <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#af271aca4b1fa41cf8f6e5b880c66bb0d">elementgtvalue</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">double</span> *in, <span
+                class="keywordtype">double</span> value, <span class="keywordtype">double</span> **out);
+        </div>
+        <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;</div>
+        <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div>
+        <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="comment">// elementltvalue</span>
+        </div>
+        <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#a2804849939d45103ad8e9626e0226a47">elementltvalue</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">double</span> *in, <span
+                class="keywordtype">double</span> value, <span class="keywordtype">double</span> **out);
+        </div>
+        <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
+        <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;</div>
+        <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="comment">// elementgtvalueabs</span>
+        </div>
+        <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#a7b9fdd304952da2cd7e9a8f5d79f1883">elementgtvalueabs</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">double</span> *in, <span
+                class="keywordtype">double</span> value, <span class="keywordtype">double</span> **out);
+        </div>
+        <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;</div>
+        <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;</div>
+        <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="comment">// elementltvalueabs</span>
+        </div>
+        <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#aaaaf0e6920f716834aafdcdce263d705">elementltvalueabs</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">double</span> *in, <span
+                class="keywordtype">double</span> value, <span class="keywordtype">double</span> **out);
+        </div>
+        <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;</div>
+        <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
+        <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;<span class="comment">// truevalues</span>
+        </div>
+        <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#a34ff0b8c90b2245ada8c5037adda08bb">truevalues</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">int</span> m, <span class="keywordtype">double</span>
+            **in, <span class="keywordtype">double</span> *compare, <span class="keywordtype">double</span> ***out);
+        </div>
+        <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;</div>
+        <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;</div>
+        <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;<span
+                class="comment">// cross</span></div>
+        <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#a20f7e6382e40b6e31671a659465dd480">cross</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">int</span> m, <span class="keywordtype">double</span>
+            **a, <span class="keywordtype">double</span> **b, <span class="keywordtype">double</span> ***out);
+        </div>
+        <div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;</div>
+        <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;</div>
+        <div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<span
+                class="comment">// dot</span></div>
+        <div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#a06fa9bf3f7ffa58541e1ed5283300305">dot</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">int</span> m, <span class="keywordtype">double</span>
+            **a, <span class="keywordtype">double</span> **b, <span class="keywordtype">double</span> **out);
+        </div>
+        <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;</div>
+        <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;</div>
+        <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;<span
+                class="comment">// sign</span></div>
+        <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;<span
+                class="keywordtype">int</span> <a class="code" href="matlab_8h.html#a3d06146e323d3dddcf0cb59b778ad93b">sign</a>(<span
+                class="keywordtype">double</span> in);
+        </div>
+        <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;</div>
+        <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;<span
+                class="comment">// times</span></div>
+        <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;<span
+                class="keywordtype">void</span> <a class="code" href="matlab_8h.html#aa0376ae38b29b4968ec86c7e4440be13">times</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">int</span> m, <span class="keywordtype">double</span>
+            *in, <span class="keywordtype">double</span> **matrix, <span class="keywordtype">double</span> ***out);
+        </div>
+        <div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;</div>
+        <div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;<span
+                class="comment">// any</span></div>
+        <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;<span class="comment"></span><span
+                class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;<span
+                class="keywordtype">int</span> <a class="code" href="matlab_8h.html#ae21d7514e42042466a9390e7c6c1bb47">any</a>(<span
+                class="keywordtype">int</span> n, <span class="keywordtype">double</span> *in);
+        </div>
+        <div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;</div>
+        <div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;<span class="comment">// TODO: Hacer 3 any, any, any &lt; , any &gt;</span>
+        </div>
+        <div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;<span class="preprocessor">#endif //CODIGO_MATLAB_H</span>
         </div>
     </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="amatlab_8h_html_ad04fe2cd78d669fbbb017f11c0457438">
-    <div class="ttname"><a href="matlab_8h.html#ad04fe2cd78d669fbbb017f11c0457438">repmat</a></div>
-    <div class="ttdeci">void repmat(int n, int m, double **mtrx, int c, int *nn, int *mm, double **mtrxb)</div>
+<div class="ttc" id="amatlab_8h_html_a738af15d58586c33f90e0a3a357b2c83">
+    <div class="ttname"><a href="matlab_8h.html#a738af15d58586c33f90e0a3a357b2c83">repmatarr</a></div>
+    <div class="ttdeci">void repmatarr(int n, int m, double *in, int cr, int cc, double ***out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00160">matlab.c:160</a></div>
 </div>
-<div class="ttc" id="amatlab_8h_html_ac857ab81dee6dfb4b98f04fb6737285e">
-    <div class="ttname"><a href="matlab_8h.html#ac857ab81dee6dfb4b98f04fb6737285e">fliplr</a></div>
-    <div class="ttdeci">void fliplr(int *n, int *m, double **mtrx)</div>
+<div class="ttc" id="amatlab_8h_html_a15245039bbdb0ebe368c9653e159e50f">
+    <div class="ttname"><a href="matlab_8h.html#a15245039bbdb0ebe368c9653e159e50f">printmatrix</a></div>
+    <div class="ttdeci">void printmatrix(int n, int m, double **mtrx)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00393">matlab.c:393</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_a34ff0b8c90b2245ada8c5037adda08bb">
+    <div class="ttname"><a href="matlab_8h.html#a34ff0b8c90b2245ada8c5037adda08bb">truevalues</a></div>
+    <div class="ttdeci">void truevalues(int n, int m, double **in, double *compare, double ***out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00638">matlab.c:638</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_a2804849939d45103ad8e9626e0226a47">
+    <div class="ttname"><a href="matlab_8h.html#a2804849939d45103ad8e9626e0226a47">elementltvalue</a></div>
+    <div class="ttdeci">void elementltvalue(int n, double *in, double value, double **out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00571">matlab.c:571</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_a046e166358d0eb6b887588471207459b">
+    <div class="ttname"><a href="matlab_8h.html#a046e166358d0eb6b887588471207459b">printarray</a></div>
+    <div class="ttdeci">void printarray(int n, double *arr)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00417">matlab.c:417</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_a7da6875467099cbe7e89f5f519912023">
+    <div class="ttname"><a href="matlab_8h.html#a7da6875467099cbe7e89f5f519912023">applyfuntwoargs</a></div>
+    <div class="ttdeci">void applyfuntwoargs(double(*fp)(double, double), double c, double *in, int m, double **out)
+    </div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00497">matlab.c:497</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_a4b98278a6b3c3724c1286994971211d4">
+    <div class="ttname"><a href="matlab_8h.html#a4b98278a6b3c3724c1286994971211d4">createarray</a></div>
+    <div class="ttdeci">void createarray(int n, double **out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00050">matlab.c:50</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_aedf36ff849d7683bcc3716a5aea8db08">
+    <div class="ttname"><a href="matlab_8h.html#aedf36ff849d7683bcc3716a5aea8db08">creatematrix</a></div>
+    <div class="ttdeci">void creatematrix(int n, int m, double ***out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00084">matlab.c:84</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_a7b9fdd304952da2cd7e9a8f5d79f1883">
+    <div class="ttname"><a href="matlab_8h.html#a7b9fdd304952da2cd7e9a8f5d79f1883">elementgtvalueabs</a></div>
+    <div class="ttdeci">void elementgtvalueabs(int n, double *in, double value, double **out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00593">matlab.c:593</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_a393568015101fe5e4aa7f8c0f1f213f7">
+    <div class="ttname"><a href="matlab_8h.html#a393568015101fe5e4aa7f8c0f1f213f7">sum</a></div>
+    <div class="ttdeci">void sum(int n, int m, double **a, double **b, double ***out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00311">matlab.c:311</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_a20f7e6382e40b6e31671a659465dd480">
+    <div class="ttname"><a href="matlab_8h.html#a20f7e6382e40b6e31671a659465dd480">cross</a></div>
+    <div class="ttdeci">void cross(int n, int m, double **a, double **b, double ***out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00669">matlab.c:669</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_ae61819567d0475f2a1136c8059922783">
+    <div class="ttname"><a href="matlab_8h.html#ae61819567d0475f2a1136c8059922783">mult</a></div>
+    <div class="ttdeci">void mult(int n, int m, int nn, int mm, double **a, double **b, double ***out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00366">matlab.c:366</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_a06fa9bf3f7ffa58541e1ed5283300305">
+    <div class="ttname"><a href="matlab_8h.html#a06fa9bf3f7ffa58541e1ed5283300305">dot</a></div>
+    <div class="ttdeci">void dot(int n, int m, double **a, double **b, double **out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00705">matlab.c:705</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_ae21d7514e42042466a9390e7c6c1bb47">
+    <div class="ttname"><a href="matlab_8h.html#ae21d7514e42042466a9390e7c6c1bb47">any</a></div>
+    <div class="ttdeci">int any(int n, double *in)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00779">matlab.c:779</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_a4e220b2826e7ae53a6ff64a251bfc1f3">
+    <div class="ttname"><a href="matlab_8h.html#a4e220b2826e7ae53a6ff64a251bfc1f3">productarray</a></div>
+    <div class="ttdeci">double productarray(int n, double *a, double *b)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00256">matlab.c:256</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_a65de57eaddd57dc43e7ea88972054570">
+    <div class="ttname"><a href="matlab_8h.html#a65de57eaddd57dc43e7ea88972054570">divide</a></div>
+    <div class="ttdeci">void divide(int rows, int columns, double *in, double **matrix, double ***out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00340">matlab.c:340</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_aa4e28a034b045bf0d808047ef3a98287">
+    <div class="ttname"><a href="matlab_8h.html#aa4e28a034b045bf0d808047ef3a98287">arrtocolum</a></div>
+    <div class="ttdeci">void arrtocolum(int n, double *in, double ***out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00125">matlab.c:125</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_a76c4d1fbd3abef5b65b5f52685ef7f2a">
+    <div class="ttname"><a href="matlab_8h.html#a76c4d1fbd3abef5b65b5f52685ef7f2a">sumarray</a></div>
+    <div class="ttdeci">double sumarray(int n, double *in)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00449">matlab.c:449</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_ad37801280bff1ffd67bee2f55c897d4a">
+    <div class="ttname"><a href="matlab_8h.html#ad37801280bff1ffd67bee2f55c897d4a">summatrix</a></div>
+    <div class="ttdeci">void summatrix(int n, int m, double **in, double **out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00285">matlab.c:285</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_ae4c81fcfc3e6b89693b89d1afe8c55d5">
+    <div class="ttname"><a href="matlab_8h.html#ae4c81fcfc3e6b89693b89d1afe8c55d5">applyfuntwoargsmatrix</a></div>
+    <div class="ttdeci">void applyfuntwoargsmatrix(double(*fp)(double, double), double c, double **in, int n, int m,
+        double ***out)
+    </div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00522">matlab.c:522</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_a72d485f7f1a94cf4e8c21457509fea5f">
+    <div class="ttname"><a href="matlab_8h.html#a72d485f7f1a94cf4e8c21457509fea5f">freematrix</a></div>
+    <div class="ttdeci">void freematrix(int n, double **in)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00104">matlab.c:104</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_ad0356949c8a254389e72914f15285adb">
+    <div class="ttname"><a href="matlab_8h.html#ad0356949c8a254389e72914f15285adb">repmat</a></div>
+    <div class="ttdeci">void repmat(int n, int m, double **in, int cr, int cc, double ***out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00205">matlab.c:205</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_ad307a6a646ee6092077143e9b8af8351">
+    <div class="ttname"><a href="matlab_8h.html#ad307a6a646ee6092077143e9b8af8351">fliplr</a></div>
+    <div class="ttdeci">void fliplr(int m, double *in, double **out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00024">matlab.c:24</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_ab5bbcf6bcab4216051c1bcb346483c0a">
+    <div class="ttname"><a href="matlab_8h.html#ab5bbcf6bcab4216051c1bcb346483c0a">applyfunonearg</a></div>
+    <div class="ttdeci">void applyfunonearg(double(*fp)(double), double *in, int m, double **out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00473">matlab.c:473</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_aaaaf0e6920f716834aafdcdce263d705">
+    <div class="ttname"><a href="matlab_8h.html#aaaaf0e6920f716834aafdcdce263d705">elementltvalueabs</a></div>
+    <div class="ttdeci">void elementltvalueabs(int n, double *in, double value, double **out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00615">matlab.c:615</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_ac5414b41fbe278cd0ccbd2246a2bda5f">
+    <div class="ttname"><a href="matlab_8h.html#ac5414b41fbe278cd0ccbd2246a2bda5f">column</a></div>
+    <div class="ttdeci">void column(int n, int c, double **in, double **out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00239">matlab.c:239</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_ae93c9a10f8fc677cc02e6fcbabd2e49e">
+    <div class="ttname"><a href="matlab_8h.html#ae93c9a10f8fc677cc02e6fcbabd2e49e">freearray</a></div>
+    <div class="ttdeci">void freearray(double *in)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00068">matlab.c:68</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_aa0376ae38b29b4968ec86c7e4440be13">
+    <div class="ttname"><a href="matlab_8h.html#aa0376ae38b29b4968ec86c7e4440be13">times</a></div>
+    <div class="ttdeci">void times(int n, int m, double *in, double **matrix, double ***out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00753">matlab.c:753</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_af271aca4b1fa41cf8f6e5b880c66bb0d">
+    <div class="ttname"><a href="matlab_8h.html#af271aca4b1fa41cf8f6e5b880c66bb0d">elementgtvalue</a></div>
+    <div class="ttdeci">void elementgtvalue(int n, double *in, double value, double **out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00550">matlab.c:550</a></div>
+</div>
+<div class="ttc" id="amatlab_8h_html_a3d06146e323d3dddcf0cb59b778ad93b">
+    <div class="ttname"><a href="matlab_8h.html#a3d06146e323d3dddcf0cb59b778ad93b">sign</a></div>
+    <div class="ttdeci">int sign(double in)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00730">matlab.c:730</a></div>
 </div>
 <!-- start footer part -->
 <hr class="footer"/>

@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
     <meta name="generator" content="Doxygen 1.8.17"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>My Project: /Users/ferminjimenezalfaro/Google Drive/Clase/Uni/Tercero/Taller
-        Transversal/Proyecto/codigo/matlab.c File Reference</title>
+    <title>Proyecto: codigo/src/matlab.c File Reference</title>
     <link href="tabs.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +22,7 @@
             <tbody>
             <tr style="height: 56px;">
                 <td id="projectalign" style="padding-left: 0.5em;">
-                    <div id="projectname">My Project
+                    <div id="projectname">Proyecto
                     </div>
                 </td>
             </tr>
@@ -66,10 +65,13 @@
     <div id="nav-path" class="navpath">
         <ul>
             <li class="navelem"><a class="el" href="dir_4d7be947362df13686123d6563352e9b.html">codigo</a></li>
+            <li class="navelem"><a class="el" href="dir_41b9fbeb69ad6f5180ac53fc1c43d38b.html">src</a></li>
         </ul>
     </div>
 </div><!-- top -->
 <div class="header">
+    <div class="summary">
+        <a href="#func-members">Functions</a></div>
     <div class="headertitle">
         <div class="title">matlab.c File Reference</div>
     </div>
@@ -77,7 +79,334 @@
 <div class="contents">
     <div class="textblock"><code>#include &quot;<a class="el"
                                                    href="matlab_8h_source.html">matlab.h</a>&quot;</code><br/>
+        <code>#include &lt;stdio.h&gt;</code><br/>
+        <code>#include &lt;stdlib.h&gt;</code><br/>
+        <code>#include &lt;math.h&gt;</code><br/>
     </div>
+    <div class="textblock">
+        <div class="dynheader">
+            Include dependency graph for matlab.c:
+        </div>
+        <div class="dyncontent">
+            <div class="center"><img src="matlab_8c__incl.png" border="0" usemap="#codigo_2src_2matlab_8c" alt=""/>
+            </div>
+            <map name="codigo_2src_2matlab_8c" id="codigo_2src_2matlab_8c">
+                <area shape="rect" title=" " alt="" coords="108,5,244,32"/>
+                <area shape="rect" href="matlab_8h.html" title=" " alt="" coords="7,80,79,107"/>
+                <area shape="rect" title=" " alt="" coords="103,80,164,107"/>
+                <area shape="rect" title=" " alt="" coords="188,80,252,107"/>
+                <area shape="rect" title=" " alt="" coords="277,80,339,107"/>
+                <area shape="rect" title=" " alt="" coords="5,155,80,181"/>
+            </map>
+        </div>
+    </div>
+    <p><a href="matlab_8c_source.html">Go to the source code of this file.</a></p>
+    <table class="memberdecls">
+        <tr class="heading">
+            <td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+                Functions</h2></td>
+        </tr>
+        <tr class="memitem:ad307a6a646ee6092077143e9b8af8351">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#ad307a6a646ee6092077143e9b8af8351">fliplr</a>
+                (int m, double *in, double **out)
+            </td>
+        </tr>
+        <tr class="separator:ad307a6a646ee6092077143e9b8af8351">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a4b98278a6b3c3724c1286994971211d4">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#a4b98278a6b3c3724c1286994971211d4">createarray</a>
+                (int n, double **out)
+            </td>
+        </tr>
+        <tr class="separator:a4b98278a6b3c3724c1286994971211d4">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:ae93c9a10f8fc677cc02e6fcbabd2e49e">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#ae93c9a10f8fc677cc02e6fcbabd2e49e">freearray</a>
+                (double *in)
+            </td>
+        </tr>
+        <tr class="separator:ae93c9a10f8fc677cc02e6fcbabd2e49e">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:aedf36ff849d7683bcc3716a5aea8db08">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#aedf36ff849d7683bcc3716a5aea8db08">creatematrix</a>
+                (int n, int m, double ***out)
+            </td>
+        </tr>
+        <tr class="separator:aedf36ff849d7683bcc3716a5aea8db08">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a72d485f7f1a94cf4e8c21457509fea5f">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#a72d485f7f1a94cf4e8c21457509fea5f">freematrix</a>
+                (int n, double **in)
+            </td>
+        </tr>
+        <tr class="separator:a72d485f7f1a94cf4e8c21457509fea5f">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:aa4e28a034b045bf0d808047ef3a98287">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#aa4e28a034b045bf0d808047ef3a98287">arrtocolum</a>
+                (int n, double *in, double ***out)
+            </td>
+        </tr>
+        <tr class="separator:aa4e28a034b045bf0d808047ef3a98287">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a738af15d58586c33f90e0a3a357b2c83">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#a738af15d58586c33f90e0a3a357b2c83">repmatarr</a>
+                (int n, int m, double *in, int cr, int cc, double ***out)
+            </td>
+        </tr>
+        <tr class="separator:a738af15d58586c33f90e0a3a357b2c83">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:ad0356949c8a254389e72914f15285adb">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#ad0356949c8a254389e72914f15285adb">repmat</a>
+                (int n, int m, double **in, int cr, int cc, double ***out)
+            </td>
+        </tr>
+        <tr class="separator:ad0356949c8a254389e72914f15285adb">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:ac5414b41fbe278cd0ccbd2246a2bda5f">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#ac5414b41fbe278cd0ccbd2246a2bda5f">column</a>
+                (int n, int c, double **in, double **out)
+            </td>
+        </tr>
+        <tr class="separator:ac5414b41fbe278cd0ccbd2246a2bda5f">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a4e220b2826e7ae53a6ff64a251bfc1f3">
+            <td class="memItemLeft" align="right" valign="top">double&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#a4e220b2826e7ae53a6ff64a251bfc1f3">productarray</a>
+                (int n, double *a, double *b)
+            </td>
+        </tr>
+        <tr class="separator:a4e220b2826e7ae53a6ff64a251bfc1f3">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:ad37801280bff1ffd67bee2f55c897d4a">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#ad37801280bff1ffd67bee2f55c897d4a">summatrix</a>
+                (int n, int m, double **in, double **out)
+            </td>
+        </tr>
+        <tr class="separator:ad37801280bff1ffd67bee2f55c897d4a">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a393568015101fe5e4aa7f8c0f1f213f7">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#a393568015101fe5e4aa7f8c0f1f213f7">sum</a>
+                (int n, int m, double **a, double **b, double ***out)
+            </td>
+        </tr>
+        <tr class="separator:a393568015101fe5e4aa7f8c0f1f213f7">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a65de57eaddd57dc43e7ea88972054570">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#a65de57eaddd57dc43e7ea88972054570">divide</a>
+                (int rows, int columns, double *in, double **matrix, double ***out)
+            </td>
+        </tr>
+        <tr class="separator:a65de57eaddd57dc43e7ea88972054570">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:ae61819567d0475f2a1136c8059922783">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#ae61819567d0475f2a1136c8059922783">mult</a>
+                (int n, int m, int nn, int mm, double **a, double **b, double ***out)
+            </td>
+        </tr>
+        <tr class="separator:ae61819567d0475f2a1136c8059922783">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a15245039bbdb0ebe368c9653e159e50f">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#a15245039bbdb0ebe368c9653e159e50f">printmatrix</a>
+                (int n, int m, double **mtrx)
+            </td>
+        </tr>
+        <tr class="separator:a15245039bbdb0ebe368c9653e159e50f">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a046e166358d0eb6b887588471207459b">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#a046e166358d0eb6b887588471207459b">printarray</a>
+                (int n, double *arr)
+            </td>
+        </tr>
+        <tr class="separator:a046e166358d0eb6b887588471207459b">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a76c4d1fbd3abef5b65b5f52685ef7f2a">
+            <td class="memItemLeft" align="right" valign="top">double&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#a76c4d1fbd3abef5b65b5f52685ef7f2a">sumarray</a>
+                (int n, double *in)
+            </td>
+        </tr>
+        <tr class="separator:a76c4d1fbd3abef5b65b5f52685ef7f2a">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:ab5bbcf6bcab4216051c1bcb346483c0a">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#ab5bbcf6bcab4216051c1bcb346483c0a">applyfunonearg</a>
+                (double(*fp)(double), double *in, int m, double **out)
+            </td>
+        </tr>
+        <tr class="separator:ab5bbcf6bcab4216051c1bcb346483c0a">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a7da6875467099cbe7e89f5f519912023">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#a7da6875467099cbe7e89f5f519912023">applyfuntwoargs</a>
+                (double(*fp)(double, double), double c, double *in, int m, double **out)
+            </td>
+        </tr>
+        <tr class="separator:a7da6875467099cbe7e89f5f519912023">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:ae4c81fcfc3e6b89693b89d1afe8c55d5">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#ae4c81fcfc3e6b89693b89d1afe8c55d5">applyfuntwoargsmatrix</a>
+                (double(*fp)(double, double), double c, double **in, int n, int m, double ***out)
+            </td>
+        </tr>
+        <tr class="separator:ae4c81fcfc3e6b89693b89d1afe8c55d5">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:af271aca4b1fa41cf8f6e5b880c66bb0d">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#af271aca4b1fa41cf8f6e5b880c66bb0d">elementgtvalue</a>
+                (int n, double *in, double value, double **out)
+            </td>
+        </tr>
+        <tr class="separator:af271aca4b1fa41cf8f6e5b880c66bb0d">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a2804849939d45103ad8e9626e0226a47">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#a2804849939d45103ad8e9626e0226a47">elementltvalue</a>
+                (int n, double *in, double value, double **out)
+            </td>
+        </tr>
+        <tr class="separator:a2804849939d45103ad8e9626e0226a47">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a7b9fdd304952da2cd7e9a8f5d79f1883">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#a7b9fdd304952da2cd7e9a8f5d79f1883">elementgtvalueabs</a>
+                (int n, double *in, double value, double **out)
+            </td>
+        </tr>
+        <tr class="separator:a7b9fdd304952da2cd7e9a8f5d79f1883">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:aaaaf0e6920f716834aafdcdce263d705">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#aaaaf0e6920f716834aafdcdce263d705">elementltvalueabs</a>
+                (int n, double *in, double value, double **out)
+            </td>
+        </tr>
+        <tr class="separator:aaaaf0e6920f716834aafdcdce263d705">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a34ff0b8c90b2245ada8c5037adda08bb">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#a34ff0b8c90b2245ada8c5037adda08bb">truevalues</a>
+                (int n, int m, double **in, double *compare, double ***out)
+            </td>
+        </tr>
+        <tr class="separator:a34ff0b8c90b2245ada8c5037adda08bb">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a20f7e6382e40b6e31671a659465dd480">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#a20f7e6382e40b6e31671a659465dd480">cross</a>
+                (int n, int m, double **a, double **b, double ***out)
+            </td>
+        </tr>
+        <tr class="separator:a20f7e6382e40b6e31671a659465dd480">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a06fa9bf3f7ffa58541e1ed5283300305">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#a06fa9bf3f7ffa58541e1ed5283300305">dot</a>
+                (int n, int m, double **a, double **b, double **out)
+            </td>
+        </tr>
+        <tr class="separator:a06fa9bf3f7ffa58541e1ed5283300305">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:a3d06146e323d3dddcf0cb59b778ad93b">
+            <td class="memItemLeft" align="right" valign="top">int&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#a3d06146e323d3dddcf0cb59b778ad93b">sign</a>
+                (double in)
+            </td>
+        </tr>
+        <tr class="separator:a3d06146e323d3dddcf0cb59b778ad93b">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:aa0376ae38b29b4968ec86c7e4440be13">
+            <td class="memItemLeft" align="right" valign="top">void&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#aa0376ae38b29b4968ec86c7e4440be13">times</a>
+                (int n, int m, double *in, double **matrix, double ***out)
+            </td>
+        </tr>
+        <tr class="separator:aa0376ae38b29b4968ec86c7e4440be13">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+        <tr class="memitem:ae21d7514e42042466a9390e7c6c1bb47">
+            <td class="memItemLeft" align="right" valign="top">int&#160;</td>
+            <td class="memItemRight" valign="bottom"><a class="el"
+                                                        href="matlab_8c.html#ae21d7514e42042466a9390e7c6c1bb47">any</a>
+                (int n, double *in)
+            </td>
+        </tr>
+        <tr class="separator:ae21d7514e42042466a9390e7c6c1bb47">
+            <td class="memSeparator" colspan="2">&#160;</td>
+        </tr>
+    </table>
     <a name="details" id="details"></a>
     <h2 class="groupheader">Detailed Description</h2>
     <div class="textblock">
@@ -85,8 +414,2198 @@
             <dt>Author</dt>
             <dd>Fermin Jimenez</dd>
         </dl>
+
+        <p class="definition">Definition in file <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+    </div>
+    <h2 class="groupheader">Function Documentation</h2>
+    <a id="ae21d7514e42042466a9390e7c6c1bb47"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#ae21d7514e42042466a9390e7c6c1bb47">&#9670;&nbsp;</a></span>any()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">int any</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramname"><em>in</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Determine if any array elements are nonzero</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of items</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;in&gt;</td>
+                            <td>[N]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+            <dl class="section return">
+                <dt>Returns</dt>
+                <dd>1 if any element are nonzero, other case 0;</dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00779">779</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="ab5bbcf6bcab4216051c1bcb346483c0a"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#ab5bbcf6bcab4216051c1bcb346483c0a">&#9670;&nbsp;</a></span>applyfunonearg()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void applyfunonearg</td>
+                    <td>(</td>
+                    <td class="paramtype">double(*)(double)&#160;</td>
+                    <td class="paramname"><em>fp</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramname"><em>in</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>m</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Apply a function with one argument</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;fp&gt;</td>
+                            <td>function</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;in&gt;</td>
+                            <td>[1 x M]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;m&gt;</td>
+                            <td>number of items</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;out&gt;</td>
+                            <td>[1 x M]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00473">473</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="a7da6875467099cbe7e89f5f519912023"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a7da6875467099cbe7e89f5f519912023">&#9670;&nbsp;</a></span>applyfuntwoargs()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void applyfuntwoargs</td>
+                    <td>(</td>
+                    <td class="paramtype">double(*)(double, double)&#160;</td>
+                    <td class="paramname"><em>fp</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double&#160;</td>
+                    <td class="paramname"><em>c</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramname"><em>in</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>m</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Apply a function with one argument</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;fp&gt;</td>
+                            <td>function</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;in&gt;</td>
+                            <td>[1 x M]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;m&gt;</td>
+                            <td>number of items</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;out&gt;</td>
+                            <td>[1 x M]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00497">497</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="ae4c81fcfc3e6b89693b89d1afe8c55d5"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#ae4c81fcfc3e6b89693b89d1afe8c55d5">&#9670;&nbsp;</a></span>applyfuntwoargsmatrix()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void applyfuntwoargsmatrix</td>
+                    <td>(</td>
+                    <td class="paramtype">double(*)(double, double)&#160;</td>
+                    <td class="paramname"><em>fp</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double&#160;</td>
+                    <td class="paramname"><em>c</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>in</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>m</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double ***&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Apply a function with one argument matrix</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;fp&gt;</td>
+                            <td>function</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;in&gt;</td>
+                            <td>[N x M]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of rows</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;m&gt;</td>
+                            <td>number of columns</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;out&gt;</td>
+                            <td>[N x M]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00522">522</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="aa4e28a034b045bf0d808047ef3a98287"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#aa4e28a034b045bf0d808047ef3a98287">&#9670;&nbsp;</a></span>arrtocolum()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void arrtocolum</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramname"><em>in</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double ***&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Transform array to matrix column</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>items</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;in&gt;</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;out&gt;</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00125">125</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="ac5414b41fbe278cd0ccbd2246a2bda5f"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#ac5414b41fbe278cd0ccbd2246a2bda5f">&#9670;&nbsp;</a></span>column()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void column</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>c</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>in</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Column</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of rows</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;c&gt;</td>
+                            <td>number of column</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;mtrx&gt;</td>
+                            <td>A [N x M]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;mtrb&gt;</td>
+                            <td>B [N]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00239">239</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="a4b98278a6b3c3724c1286994971211d4"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a4b98278a6b3c3724c1286994971211d4">&#9670;&nbsp;</a></span>createarray()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void createarray</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Create</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of rows</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;out&gt;</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00050">50</a> of file <a
+                    class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="aedf36ff849d7683bcc3716a5aea8db08"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#aedf36ff849d7683bcc3716a5aea8db08">&#9670;&nbsp;</a></span>creatematrix()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void creatematrix</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>m</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double ***&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Create</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of rows</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of columns</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;out&gt;</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00084">84</a> of file <a
+                    class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="a20f7e6382e40b6e31671a659465dd480"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a20f7e6382e40b6e31671a659465dd480">&#9670;&nbsp;</a></span>cross()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void cross</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>m</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>a</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>b</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double ***&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Cross product</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of rows</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;b&gt;</td>
+                            <td>number of columns</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;a&gt;</td>
+                            <td>[3 x M]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;b&gt;</td>
+                            <td>[3 x M]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;out&gt;</td>
+                            <td>[3 x M]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00669">669</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="a65de57eaddd57dc43e7ea88972054570"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a65de57eaddd57dc43e7ea88972054570">&#9670;&nbsp;</a></span>divide()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void divide</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>rows</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>columns</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramname"><em>in</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>matrix</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double ***&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>divide</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>rows</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;m&gt;</td>
+                            <td>columns</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;in&gt;</td>
+                            <td>[N]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;matrix&gt;</td>
+                            <td>[N x M]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;out&gt;</td>
+                            <td>[N x M]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00340">340</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="a06fa9bf3f7ffa58541e1ed5283300305"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a06fa9bf3f7ffa58541e1ed5283300305">&#9670;&nbsp;</a></span>dot()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void dot</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>m</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>a</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>b</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of rows</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;b&gt;</td>
+                            <td>number of columns</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;a&gt;</td>
+                            <td>[N x M]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;b&gt;</td>
+                            <td>[N x M]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;out&gt;</td>
+                            <td>[M]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00705">705</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="af271aca4b1fa41cf8f6e5b880c66bb0d"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#af271aca4b1fa41cf8f6e5b880c66bb0d">&#9670;&nbsp;</a></span>elementgtvalue()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void elementgtvalue</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramname"><em>in</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double&#160;</td>
+                    <td class="paramname"><em>value</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Element greater than value</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of items</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;in&gt;</td>
+                            <td>[N]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;value&gt;</td>
+                            <td>value</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;out&gt;</td>
+                            <td>[N]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00550">550</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="a7b9fdd304952da2cd7e9a8f5d79f1883"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a7b9fdd304952da2cd7e9a8f5d79f1883">&#9670;&nbsp;</a></span>elementgtvalueabs()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void elementgtvalueabs</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramname"><em>in</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double&#160;</td>
+                    <td class="paramname"><em>value</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Element greater than value with abs</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of items</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;in&gt;</td>
+                            <td>[N]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;value&gt;</td>
+                            <td>value</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;out&gt;</td>
+                            <td>[N]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00593">593</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="a2804849939d45103ad8e9626e0226a47"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a2804849939d45103ad8e9626e0226a47">&#9670;&nbsp;</a></span>elementltvalue()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void elementltvalue</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramname"><em>in</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double&#160;</td>
+                    <td class="paramname"><em>value</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Element less than value</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of items</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;in&gt;</td>
+                            <td>[N]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;value&gt;</td>
+                            <td>value</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;out&gt;</td>
+                            <td>[N]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00571">571</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="aaaaf0e6920f716834aafdcdce263d705"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#aaaaf0e6920f716834aafdcdce263d705">&#9670;&nbsp;</a></span>elementltvalueabs()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void elementltvalueabs</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramname"><em>in</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double&#160;</td>
+                    <td class="paramname"><em>value</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Element less than value with abs</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of items</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;in&gt;</td>
+                            <td>[N]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;value&gt;</td>
+                            <td>value</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;out&gt;</td>
+                            <td>[N]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00615">615</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="ad307a6a646ee6092077143e9b8af8351"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#ad307a6a646ee6092077143e9b8af8351">&#9670;&nbsp;</a></span>fliplr()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void fliplr</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>m</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramname"><em>in</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Turn the columns, left to right</p>
+            <p>[1,3,4,2,5] -&gt; [5,2,4,3,1]</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;m&gt;</td>
+                            <td>number of items</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;in&gt;</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;out&gt;</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00024">24</a> of file <a
+                    class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="ae93c9a10f8fc677cc02e6fcbabd2e49e"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#ae93c9a10f8fc677cc02e6fcbabd2e49e">&#9670;&nbsp;</a></span>freearray()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void freearray</td>
+                    <td>(</td>
+                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramname"><em>in</em></td>
+                    <td>)</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Liberate</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;in&gt;</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00068">68</a> of file <a
+                    class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="a72d485f7f1a94cf4e8c21457509fea5f"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a72d485f7f1a94cf4e8c21457509fea5f">&#9670;&nbsp;</a></span>freematrix()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void freematrix</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>in</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Free</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of rows</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;in&gt;</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00104">104</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="ae61819567d0475f2a1136c8059922783"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#ae61819567d0475f2a1136c8059922783">&#9670;&nbsp;</a></span>mult()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void mult</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>m</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>nn</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>mm</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>a</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>b</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double ***&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>mult</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>a rows</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;m&gt;</td>
+                            <td>a columns</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;nn&gt;</td>
+                            <td>b rows</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;mm&gt;</td>
+                            <td>b columns</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;a&gt;</td>
+                            <td>[N X M]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>[NN x MM]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;out&gt;</td>
+                            <td>[N x MM]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00366">366</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="a046e166358d0eb6b887588471207459b"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a046e166358d0eb6b887588471207459b">&#9670;&nbsp;</a></span>printarray()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void printarray</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramname"><em>arr</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>print elements</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>items</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;arr&gt;</td>
+                            <td>A [N]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00417">417</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="a15245039bbdb0ebe368c9653e159e50f"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a15245039bbdb0ebe368c9653e159e50f">&#9670;&nbsp;</a></span>printmatrix()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void printmatrix</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>m</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>mtrx</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>print elements</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>rows</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;m&gt;</td>
+                            <td>columns</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;mtrx&gt;</td>
+                            <td>A [N x M]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00393">393</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="a4e220b2826e7ae53a6ff64a251bfc1f3"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a4e220b2826e7ae53a6ff64a251bfc1f3">&#9670;&nbsp;</a></span>productarray()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">double productarray</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramname"><em>a</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramname"><em>b</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>productarray </p>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00256">256</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="ad0356949c8a254389e72914f15285adb"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#ad0356949c8a254389e72914f15285adb">&#9670;&nbsp;</a></span>repmat()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void repmat</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>m</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>in</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>cr</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>cc</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double ***&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Generate a containing c copies of A at the row and column levels.</p>
+            <div class="fragment">
+                <div class="line"><a class="code" href="matlab_8c.html#ad0356949c8a254389e72914f15285adb">repmat</a>(2,
+                    2, matrix, 3, 2, ...)
+                </div>
+                <div class="line"></div>
+                <div class="line">100 0 100 0 100 0</div>
+                <div class="line">0 200 0 200 0 200</div>
+                <div class="line"> 100 0 100 0</div>
+                <div class="line"> 0 200 0 200</div>
+                <div class="line"> 100 0 100 0</div>
+                <div class="line"> 0 200 0 200</div>
+            </div><!-- fragment -->
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of rows</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;m&gt;</td>
+                            <td>number of cols</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;mtrx&gt;</td>
+                            <td>A [N x M]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;cr&gt;</td>
+                            <td>number multiply row copies</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;cc&gt;</td>
+                            <td>number multiply column copies</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;mtrb&gt;</td>
+                            <td>B [N x M]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00205">205</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="a738af15d58586c33f90e0a3a357b2c83"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a738af15d58586c33f90e0a3a357b2c83">&#9670;&nbsp;</a></span>repmatarr()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void repmatarr</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>m</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramname"><em>in</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>cr</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>cc</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double ***&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Generate a containing c copies of A at the row and column levels.</p>
+            <div class="fragment">
+                <div class="line"><a class="code" href="matlab_8c.html#ad0356949c8a254389e72914f15285adb">repmat</a>(2,
+                    2, matrix, 3, 2, ...)
+                </div>
+                <div class="line"></div>
+                <div class="line">100 0 100 0 100 0</div>
+                <div class="line">0 200 0 200 0 200</div>
+                <div class="line"> 100 0 100 0</div>
+                <div class="line"> 0 200 0 200</div>
+                <div class="line"> 100 0 100 0</div>
+                <div class="line"> 0 200 0 200</div>
+            </div><!-- fragment -->
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of rows</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;m&gt;</td>
+                            <td>number of cols</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;mtrx&gt;</td>
+                            <td>A [M]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;cr&gt;</td>
+                            <td>number multiply row copies</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;cc&gt;</td>
+                            <td>number multiply column copies</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;mtrb&gt;</td>
+                            <td>B [N x M]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00160">160</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="a3d06146e323d3dddcf0cb59b778ad93b"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a3d06146e323d3dddcf0cb59b778ad93b">&#9670;&nbsp;</a></span>sign()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">int sign</td>
+                    <td>(</td>
+                    <td class="paramtype">double&#160;</td>
+                    <td class="paramname"><em>in</em></td>
+                    <td>)</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;in&gt;</td>
+                            <td>number</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+            <dl class="section return">
+                <dt>Returns</dt>
+                <dd>result</dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00730">730</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="a393568015101fe5e4aa7f8c0f1f213f7"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a393568015101fe5e4aa7f8c0f1f213f7">&#9670;&nbsp;</a></span>sum()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void sum</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>m</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>a</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>b</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double ***&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Sum</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of rows</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;m&gt;</td>
+                            <td>number of cols</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;a&gt;</td>
+                            <td>A [N x M]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;b&gt;</td>
+                            <td>B [N x M]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;mtrb&gt;</td>
+                            <td>C [N x M]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00311">311</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="a76c4d1fbd3abef5b65b5f52685ef7f2a"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a76c4d1fbd3abef5b65b5f52685ef7f2a">&#9670;&nbsp;</a></span>sumarray()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">double sumarray</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramname"><em>in</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Sum elements</p>
+            <div class="fragment">
+                <div class="line"><a class="code" href="matlab_8c.html#a393568015101fe5e4aa7f8c0f1f213f7">sum</a>(3,3,
+                    matrix, ...)
+                </div>
+                <div class="line"></div>
+                <div class="line">1 3 2 11 6 11</div>
+                <div class="line">4 2 5</div>
+                <div class="line">6 1 4</div>
+            </div><!-- fragment -->
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of items</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;mtrx&gt;</td>
+                            <td>A [N x M]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+            <dl class="section return">
+                <dt>Returns</dt>
+                <dd>double sum</dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00449">449</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="ad37801280bff1ffd67bee2f55c897d4a"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#ad37801280bff1ffd67bee2f55c897d4a">&#9670;&nbsp;</a></span>summatrix()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void summatrix</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>m</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>in</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Sum elements</p>
+            <div class="fragment">
+                <div class="line"><a class="code" href="matlab_8c.html#a393568015101fe5e4aa7f8c0f1f213f7">sum</a>(3,3,
+                    matrix, ...)
+                </div>
+                <div class="line"></div>
+                <div class="line">1 3 2 11 6 11</div>
+                <div class="line">4 2 5</div>
+                <div class="line">6 1 4</div>
+            </div><!-- fragment -->
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of rows</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;m&gt;</td>
+                            <td>number of cols</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;mtrx&gt;</td>
+                            <td>A [N x M]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;mtrb&gt;</td>
+                            <td>B [1 x M]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00285">285</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="aa0376ae38b29b4968ec86c7e4440be13"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#aa0376ae38b29b4968ec86c7e4440be13">&#9670;&nbsp;</a></span>times()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void times</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>m</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramname"><em>in</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>matrix</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double ***&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of rows</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;b&gt;</td>
+                            <td>number of columns</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;in&gt;</td>
+                            <td>[1 x M]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;matrix&gt;</td>
+                            <td>[N x M]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;out&gt;</td>
+                            <td>[N x M]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00753">753</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
+    </div>
+    <a id="a34ff0b8c90b2245ada8c5037adda08bb"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a34ff0b8c90b2245ada8c5037adda08bb">&#9670;&nbsp;</a></span>truevalues()
+    </h2>
+
+    <div class="memitem">
+        <div class="memproto">
+            <table class="memname">
+                <tr>
+                    <td class="memname">void truevalues</td>
+                    <td>(</td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>n</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
+                    <td class="paramname"><em>m</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramname"><em>in</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramname"><em>compare</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double ***&#160;</td>
+                    <td class="paramname"><em>out</em>&#160;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="memdoc">
+            <p>Element less than value with abs</p>
+            <dl class="params">
+                <dt>Parameters</dt>
+                <dd>
+                    <table class="params">
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;n&gt;</td>
+                            <td>number of rows</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;m&gt;</td>
+                            <td>number of columns</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;in&gt;</td>
+                            <td>[N * M]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[in]</td>
+                            <td class="paramname">&lt;compare&gt;</td>
+                            <td>[M]</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;out&gt;</td>
+                            <td>[N * M]</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="matlab_8c_source.html#l00638">638</a> of file
+                <a class="el" href="matlab_8c_source.html">matlab.c</a>.</p>
+
+        </div>
     </div>
 </div><!-- contents -->
+<div class="ttc" id="amatlab_8c_html_ad0356949c8a254389e72914f15285adb">
+    <div class="ttname"><a href="matlab_8c.html#ad0356949c8a254389e72914f15285adb">repmat</a></div>
+    <div class="ttdeci">void repmat(int n, int m, double **in, int cr, int cc, double ***out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00205">matlab.c:205</a></div>
+</div>
+<div class="ttc" id="amatlab_8c_html_a393568015101fe5e4aa7f8c0f1f213f7">
+    <div class="ttname"><a href="matlab_8c.html#a393568015101fe5e4aa7f8c0f1f213f7">sum</a></div>
+    <div class="ttdeci">void sum(int n, int m, double **a, double **b, double ***out)</div>
+    <div class="ttdef"><b>Definition:</b> <a href="matlab_8c_source.html#l00311">matlab.c:311</a></div>
+</div>
 <!-- start footer part -->
 <hr class="footer"/>
 <address class="footer"><small>

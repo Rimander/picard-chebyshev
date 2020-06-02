@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
     <meta name="generator" content="Doxygen 1.8.17"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>My Project: /Users/ferminjimenezalfaro/Google Drive/Clase/Uni/Tercero/Taller
-        Transversal/Proyecto/codigo/kepleruniversal.h File Reference</title>
+    <title>Proyecto: codigo/src/kepleruniversal.h File Reference</title>
     <link href="tabs.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +22,7 @@
             <tbody>
             <tr style="height: 56px;">
                 <td id="projectalign" style="padding-left: 0.5em;">
-                    <div id="projectname">My Project
+                    <div id="projectname">Proyecto
                     </div>
                 </td>
             </tr>
@@ -66,6 +65,7 @@
     <div id="nav-path" class="navpath">
         <ul>
             <li class="navelem"><a class="el" href="dir_4d7be947362df13686123d6563352e9b.html">codigo</a></li>
+            <li class="navelem"><a class="el" href="dir_41b9fbeb69ad6f5180ac53fc1c43d38b.html">src</a></li>
         </ul>
     </div>
 </div><!-- top -->
@@ -77,31 +77,44 @@
     </div>
 </div><!--header-->
 <div class="contents">
-
+    <div class="textblock">
+        <div class="dynheader">
+            This graph shows which files directly or indirectly include this file:
+        </div>
+        <div class="dyncontent">
+            <div class="center"><img src="kepleruniversal_8h__dep__incl.png" border="0"
+                                     usemap="#codigo_2src_2kepleruniversal_8hdep" alt=""/></div>
+            <map name="codigo_2src_2kepleruniversal_8hdep" id="codigo_2src_2kepleruniversal_8hdep">
+                <area shape="rect" title=" " alt="" coords="120,5,304,32"/>
+                <area shape="rect" href="kepleruniversal_8c.html" title=" " alt="" coords="5,80,189,107"/>
+                <area shape="rect" href="picardchebyshevdemo_8c.html" title=" " alt="" coords="213,80,440,107"/>
+            </map>
+        </div>
+    </div>
     <p><a href="kepleruniversal_8h_source.html">Go to the source code of this file.</a></p>
     <table class="memberdecls">
         <tr class="heading">
             <td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
                 Functions</h2></td>
         </tr>
-        <tr class="memitem:a7cc43d9f36f643aa3614b59b6a0d5a5f">
+        <tr class="memitem:a6cc5430ee8395c0e42e364fb4da8abff">
             <td class="memItemLeft" align="right" valign="top">void&#160;</td>
             <td class="memItemRight" valign="bottom"><a class="el"
-                                                        href="kepleruniversal_8h.html#a7cc43d9f36f643aa3614b59b6a0d5a5f">KeplerUniversal</a>
-                (int m, double **r0, double **v0, double *t, double mu, double **r, double **v, int *mm)
+                                                        href="kepleruniversal_8h.html#a6cc5430ee8395c0e42e364fb4da8abff">KeplerUniversal</a>
+                (int N, double **r0, double **v0, double *t, double mu, double ***r, double ***v, int *mm)
             </td>
         </tr>
-        <tr class="separator:a7cc43d9f36f643aa3614b59b6a0d5a5f">
+        <tr class="separator:a6cc5430ee8395c0e42e364fb4da8abff">
             <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
-        <tr class="memitem:a2d71654e3c7a5268b824e81ef258cdf6">
+        <tr class="memitem:a1019b0c6f036d7a1f642f3a1c658d88d">
             <td class="memItemLeft" align="right" valign="top">void&#160;</td>
             <td class="memItemRight" valign="bottom"><a class="el"
-                                                        href="kepleruniversal_8h.html#a2d71654e3c7a5268b824e81ef258cdf6">C2c3</a>
-                (int m, double psi, double *c2, double *c3, int *mm)
+                                                        href="kepleruniversal_8h.html#a1019b0c6f036d7a1f642f3a1c658d88d">C2c3</a>
+                (double psi, double *c2, double *c3)
             </td>
         </tr>
-        <tr class="separator:a2d71654e3c7a5268b824e81ef258cdf6">
+        <tr class="separator:a1019b0c6f036d7a1f642f3a1c658d88d">
             <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
     </table>
@@ -112,10 +125,13 @@
             <dt>Author</dt>
             <dd>Fermin Jimenez</dd>
         </dl>
+
+        <p class="definition">Definition in file <a class="el"
+                                                    href="kepleruniversal_8h_source.html">kepleruniversal.h</a>.</p>
     </div>
     <h2 class="groupheader">Function Documentation</h2>
-    <a id="a2d71654e3c7a5268b824e81ef258cdf6"></a>
-    <h2 class="memtitle"><span class="permalink"><a href="#a2d71654e3c7a5268b824e81ef258cdf6">&#9670;&nbsp;</a></span>C2c3()
+    <a id="a1019b0c6f036d7a1f642f3a1c658d88d"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a1019b0c6f036d7a1f642f3a1c658d88d">&#9670;&nbsp;</a></span>C2c3()
     </h2>
 
     <div class="memitem">
@@ -124,12 +140,6 @@
                 <tr>
                     <td class="memname">void C2c3</td>
                     <td>(</td>
-                    <td class="paramtype">int&#160;</td>
-                    <td class="paramname"><em>m</em>,</td>
-                </tr>
-                <tr>
-                    <td class="paramkey"></td>
-                    <td></td>
                     <td class="paramtype">double&#160;</td>
                     <td class="paramname"><em>psi</em>,</td>
                 </tr>
@@ -143,13 +153,7 @@
                     <td class="paramkey"></td>
                     <td></td>
                     <td class="paramtype">double *&#160;</td>
-                    <td class="paramname"><em>c3</em>,</td>
-                </tr>
-                <tr>
-                    <td class="paramkey"></td>
-                    <td></td>
-                    <td class="paramtype">int *&#160;</td>
-                    <td class="paramname"><em>mm</em>&#160;</td>
+                    <td class="paramname"><em>c3</em>&#160;</td>
                 </tr>
                 <tr>
                     <td></td>
@@ -166,77 +170,30 @@
                     <table class="params">
                         <tr>
                             <td class="paramdir">[in]</td>
-                            <td class="paramname">&lt;m&gt;</td>
-                            <td>int number of cols</td>
-                        </tr>
-                        <tr>
-                            <td class="paramdir"></td>
                             <td class="paramname">&lt;psi&gt;</td>
-                            <td> double [1 X M]</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td class="paramdir">[out]</td>
                             <td class="paramname">&lt;c2&gt;</td>
-                            <td> double [1 X M]</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td class="paramdir">[out]</td>
                             <td class="paramname">&lt;c3&gt;</td>
-                            <td> double [1 X M]</td>
-                        </tr>
-                        <tr>
-                            <td class="paramdir">[out]</td>
-                            <td class="paramname">&lt;mm&gt;</td>
-                            <td>int number of cols</td>
+                            <td></td>
                         </tr>
                     </table>
                 </dd>
             </dl>
-            <dl class="section note">
-                <dt>Note</dt>
-                <dd>c2c3 function - original file keplerUniversal.m</dd>
-            </dl>
-            <dl class="params">
-                <dt>Parameters</dt>
-                <dd>
-                    <table class="params">
-                        <tr>
-                            <td class="paramdir">[in]</td>
-                            <td class="paramname">&lt;m&gt;</td>
-                            <td>int number of cols</td>
-                        </tr>
-                        <tr>
-                            <td class="paramdir">[in]</td>
-                            <td class="paramname">&lt;psi&gt;</td>
-                            <td> double [1 X M]</td>
-                        </tr>
-                        <tr>
-                            <td class="paramdir">[out]</td>
-                            <td class="paramname">&lt;c2&gt;</td>
-                            <td> double [1 X M]</td>
-                        </tr>
-                        <tr>
-                            <td class="paramdir">[out]</td>
-                            <td class="paramname">&lt;c3&gt;</td>
-                            <td> double [1 X M]</td>
-                        </tr>
-                        <tr>
-                            <td class="paramdir">[out]</td>
-                            <td class="paramname">&lt;mm&gt;</td>
-                            <td>int number of cols</td>
-                        </tr>
-                    </table>
-                </dd>
-            </dl>
-            <dl class="section note">
-                <dt>Note</dt>
-                <dd>c2c3 function - original file keplerUniversal.m</dd>
-            </dl>
+
+            <p class="definition">Definition at line <a class="el" href="kepleruniversal_8c_source.html#l00302">302</a>
+                of file <a class="el" href="kepleruniversal_8c_source.html">kepleruniversal.c</a>.</p>
 
         </div>
     </div>
-    <a id="a7cc43d9f36f643aa3614b59b6a0d5a5f"></a>
-    <h2 class="memtitle"><span class="permalink"><a href="#a7cc43d9f36f643aa3614b59b6a0d5a5f">&#9670;&nbsp;</a></span>KeplerUniversal()
+    <a id="a6cc5430ee8395c0e42e364fb4da8abff"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a6cc5430ee8395c0e42e364fb4da8abff">&#9670;&nbsp;</a></span>KeplerUniversal()
     </h2>
 
     <div class="memitem">
@@ -246,7 +203,7 @@
                     <td class="memname">void KeplerUniversal</td>
                     <td>(</td>
                     <td class="paramtype">int&#160;</td>
-                    <td class="paramname"><em>m</em>,</td>
+                    <td class="paramname"><em>N</em>,</td>
                 </tr>
                 <tr>
                     <td class="paramkey"></td>
@@ -275,13 +232,13 @@
                 <tr>
                     <td class="paramkey"></td>
                     <td></td>
-                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramtype">double ***&#160;</td>
                     <td class="paramname"><em>r</em>,</td>
                 </tr>
                 <tr>
                     <td class="paramkey"></td>
                     <td></td>
-                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramtype">double ***&#160;</td>
                     <td class="paramname"><em>v</em>,</td>
                 </tr>
                 <tr>
@@ -306,8 +263,8 @@
                     <table class="params">
                         <tr>
                             <td class="paramdir">[in]</td>
-                            <td class="paramname">&lt;m&gt;</td>
-                            <td>int number of cols</td>
+                            <td class="paramname">&lt;N&gt;</td>
+                            <td>number of cols</td>
                         </tr>
                         <tr>
                             <td class="paramdir">[in]</td>
@@ -342,7 +299,7 @@
                         <tr>
                             <td class="paramdir">[out]</td>
                             <td class="paramname">&lt;mm&gt;</td>
-                            <td>int number of cols</td>
+                            <td>number of cols</td>
                         </tr>
                     </table>
                 </dd>
@@ -351,6 +308,9 @@
                 <dt>Note</dt>
                 <dd>keplerUniversal function - original file keplerUniversal.m</dd>
             </dl>
+
+            <p class="definition">Definition at line <a class="el" href="kepleruniversal_8c_source.html#l00031">31</a>
+                of file <a class="el" href="kepleruniversal_8c_source.html">kepleruniversal.c</a>.</p>
 
         </div>
     </div>

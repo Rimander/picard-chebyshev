@@ -1,4 +1,6 @@
 var searchData =
     [
-        ['twobodyforcemodel_15', ['TwoBodyForceModel', ['../picardchebyshevdemo_8c.html#af368f83ee3c180baf4b9411a92a4113f', 1, 'TwoBodyForceModel(int n, int m, double *t, double **posvel, double mu, double *eta, int *nn, int *mm):&#160;picardchebyshevdemo.c'], ['../picardchebyshevdemo_8h.html#af368f83ee3c180baf4b9411a92a4113f', 1, 'TwoBodyForceModel(int n, int m, double *t, double **posvel, double mu, double *eta, int *nn, int *mm):&#160;picardchebyshevdemo.c']]]
+        ['matlab_2ec_23', ['matlab.c', ['../matlab_8c.html', 1, '']]],
+        ['matlab_2eh_24', ['matlab.h', ['../matlab_8h.html', 1, '']]],
+        ['mult_25', ['mult', ['../matlab_8c.html#ae61819567d0475f2a1136c8059922783', 1, 'mult(int n, int m, int nn, int mm, double **a, double **b, double ***out):&#160;matlab.c'], ['../matlab_8h.html#ae61819567d0475f2a1136c8059922783', 1, 'mult(int n, int m, int nn, int mm, double **a, double **b, double ***out):&#160;matlab.c']]]
     ];

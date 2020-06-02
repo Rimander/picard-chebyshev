@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
     <meta name="generator" content="Doxygen 1.8.17"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>My Project: /Users/ferminjimenezalfaro/Google Drive/Clase/Uni/Tercero/Taller
-        Transversal/Proyecto/codigo/vmpcm.h File Reference</title>
+    <title>Proyecto: codigo/src/vmpcm.h File Reference</title>
     <link href="tabs.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +22,7 @@
             <tbody>
             <tr style="height: 56px;">
                 <td id="projectalign" style="padding-left: 0.5em;">
-                    <div id="projectname">My Project
+                    <div id="projectname">Proyecto
                     </div>
                 </td>
             </tr>
@@ -66,6 +65,7 @@
     <div id="nav-path" class="navpath">
         <ul>
             <li class="navelem"><a class="el" href="dir_4d7be947362df13686123d6563352e9b.html">codigo</a></li>
+            <li class="navelem"><a class="el" href="dir_41b9fbeb69ad6f5180ac53fc1c43d38b.html">src</a></li>
         </ul>
     </div>
 </div><!-- top -->
@@ -77,32 +77,45 @@
     </div>
 </div><!--header-->
 <div class="contents">
-
+    <div class="textblock">
+        <div class="dynheader">
+            This graph shows which files directly or indirectly include this file:
+        </div>
+        <div class="dyncontent">
+            <div class="center"><img src="vmpcm_8h__dep__incl.png" border="0" usemap="#codigo_2src_2vmpcm_8hdep"
+                                     alt=""/></div>
+            <map name="codigo_2src_2vmpcm_8hdep" id="codigo_2src_2vmpcm_8hdep">
+                <area shape="rect" title=" " alt="" coords="153,5,293,32"/>
+                <area shape="rect" href="picardchebyshevdemo_8c.html" title=" " alt="" coords="5,80,232,107"/>
+                <area shape="rect" href="vmpcm_8c.html" title=" " alt="" coords="257,80,397,107"/>
+            </map>
+        </div>
+    </div>
     <p><a href="vmpcm_8h_source.html">Go to the source code of this file.</a></p>
     <table class="memberdecls">
         <tr class="heading">
             <td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
                 Functions</h2></td>
         </tr>
-        <tr class="memitem:a865e334ad626dfb8ab3089f54ba9dac4">
+        <tr class="memitem:a198b1c96734ba7198c327fa63222d48f">
             <td class="memItemLeft" align="right" valign="top">void&#160;</td>
             <td class="memItemRight" valign="bottom"><a class="el"
-                                                        href="vmpcm_8h.html#a865e334ad626dfb8ab3089f54ba9dac4">VMPCM</a>
-                (double *n, double *m, void(*ode)(int, int, double *, double **, double, double *, int *, int *), double
-                *tau, double **x_guess, double omega1, double omega2, double errTol, double varargin)
+                                                        href="vmpcm_8h.html#a198b1c96734ba7198c327fa63222d48f">VMPCM</a>
+                (void(*ode)(int, int, double *, double **, double, double ***), int n, int m, double *tau, double
+                **x_guess, double omega1, double omega2, double errTol, double varargin, double ***rvPCM)
             </td>
         </tr>
-        <tr class="separator:a865e334ad626dfb8ab3089f54ba9dac4">
+        <tr class="separator:a198b1c96734ba7198c327fa63222d48f">
             <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
-        <tr class="memitem:a285fd4cae66b78ce59ec22e72048fa96">
+        <tr class="memitem:a673c8687a7cd291c16e3fd71f9fa7c18">
             <td class="memItemLeft" align="right" valign="top">void&#160;</td>
             <td class="memItemRight" valign="bottom"><a class="el"
-                                                        href="vmpcm_8h.html#a285fd4cae66b78ce59ec22e72048fa96">ChebyshevPolynomial</a>
-                (double *n, double *m, double **k, double *tau, int *nn, int *mm)
+                                                        href="vmpcm_8h.html#a673c8687a7cd291c16e3fd71f9fa7c18">ChebyshevPolynomial</a>
+                (int n, int m, double *k, double *tau, double ***tK)
             </td>
         </tr>
-        <tr class="separator:a285fd4cae66b78ce59ec22e72048fa96">
+        <tr class="separator:a673c8687a7cd291c16e3fd71f9fa7c18">
             <td class="memSeparator" colspan="2">&#160;</td>
         </tr>
     </table>
@@ -113,10 +126,12 @@
             <dt>Author</dt>
             <dd>Fermin Jimenez</dd>
         </dl>
+
+        <p class="definition">Definition in file <a class="el" href="vmpcm_8h_source.html">vmpcm.h</a>.</p>
     </div>
     <h2 class="groupheader">Function Documentation</h2>
-    <a id="a285fd4cae66b78ce59ec22e72048fa96"></a>
-    <h2 class="memtitle"><span class="permalink"><a href="#a285fd4cae66b78ce59ec22e72048fa96">&#9670;&nbsp;</a></span>ChebyshevPolynomial()
+    <a id="a673c8687a7cd291c16e3fd71f9fa7c18"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a673c8687a7cd291c16e3fd71f9fa7c18">&#9670;&nbsp;</a></span>ChebyshevPolynomial()
     </h2>
 
     <div class="memitem">
@@ -125,19 +140,19 @@
                 <tr>
                     <td class="memname">void ChebyshevPolynomial</td>
                     <td>(</td>
-                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramtype">int&#160;</td>
                     <td class="paramname"><em>n</em>,</td>
                 </tr>
                 <tr>
                     <td class="paramkey"></td>
                     <td></td>
-                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramtype">int&#160;</td>
                     <td class="paramname"><em>m</em>,</td>
                 </tr>
                 <tr>
                     <td class="paramkey"></td>
                     <td></td>
-                    <td class="paramtype">double **&#160;</td>
+                    <td class="paramtype">double *&#160;</td>
                     <td class="paramname"><em>k</em>,</td>
                 </tr>
                 <tr>
@@ -149,14 +164,8 @@
                 <tr>
                     <td class="paramkey"></td>
                     <td></td>
-                    <td class="paramtype">int *&#160;</td>
-                    <td class="paramname"><em>nn</em>,</td>
-                </tr>
-                <tr>
-                    <td class="paramkey"></td>
-                    <td></td>
-                    <td class="paramtype">int *&#160;</td>
-                    <td class="paramname"><em>mm</em>&#160;</td>
+                    <td class="paramtype">double ***&#160;</td>
+                    <td class="paramname"><em>tK</em>&#160;</td>
                 </tr>
                 <tr>
                     <td></td>
@@ -175,37 +184,27 @@
                         <tr>
                             <td class="paramdir">[in]</td>
                             <td class="paramname">&lt;n&gt;</td>
-                            <td>int number of rows</td>
+                            <td>number of rows</td>
                         </tr>
                         <tr>
                             <td class="paramdir">[in]</td>
                             <td class="paramname">&lt;m&gt;</td>
-                            <td>int number of columns</td>
+                            <td>number of columns</td>
                         </tr>
                         <tr>
                             <td class="paramdir">[in]</td>
                             <td class="paramname">&lt;k&gt;</td>
-                            <td> double [N x 1]</td>
+                            <td>[N]</td>
                         </tr>
                         <tr>
                             <td class="paramdir">[in]</td>
                             <td class="paramname">&lt;tau&gt;</td>
-                            <td> double transformed time domain [1 x M]</td>
+                            <td>transformed time domain [M]</td>
                         </tr>
                         <tr>
                             <td class="paramdir">[out]</td>
                             <td class="paramname">&lt;Tk&gt;</td>
-                            <td> double [N x M]</td>
-                        </tr>
-                        <tr>
-                            <td class="paramdir">[out]</td>
-                            <td class="paramname">&lt;nn&gt;</td>
-                            <td>int number of rows</td>
-                        </tr>
-                        <tr>
-                            <td class="paramdir">[out]</td>
-                            <td class="paramname">&lt;mm&gt;</td>
-                            <td>int number of columns</td>
+                            <td>[N x M]</td>
                         </tr>
                     </table>
                 </dd>
@@ -218,17 +217,17 @@
                         <tr>
                             <td class="paramdir">[in]</td>
                             <td class="paramname">&lt;n&gt;</td>
-                            <td>int number of rows</td>
+                            <td>number of rows</td>
                         </tr>
                         <tr>
                             <td class="paramdir">[in]</td>
                             <td class="paramname">&lt;m&gt;</td>
-                            <td>int number of columns</td>
+                            <td>number of columns</td>
                         </tr>
                         <tr>
                             <td class="paramdir">[in]</td>
                             <td class="paramname">&lt;k&gt;</td>
-                            <td>Vctor double [N x 1]</td>
+                            <td>[N]</td>
                         </tr>
                         <tr>
                             <td class="paramdir">[in]</td>
@@ -239,10 +238,13 @@
                 </dd>
             </dl>
 
+            <p class="definition">Definition at line <a class="el" href="vmpcm_8c_source.html#l00273">273</a> of file <a
+                    class="el" href="vmpcm_8c_source.html">vmpcm.c</a>.</p>
+
         </div>
     </div>
-    <a id="a865e334ad626dfb8ab3089f54ba9dac4"></a>
-    <h2 class="memtitle"><span class="permalink"><a href="#a865e334ad626dfb8ab3089f54ba9dac4">&#9670;&nbsp;</a></span>VMPCM()
+    <a id="a198b1c96734ba7198c327fa63222d48f"></a>
+    <h2 class="memtitle"><span class="permalink"><a href="#a198b1c96734ba7198c327fa63222d48f">&#9670;&nbsp;</a></span>VMPCM()
     </h2>
 
     <div class="memitem">
@@ -251,21 +253,20 @@
                 <tr>
                     <td class="memname">void VMPCM</td>
                     <td>(</td>
-                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramtype">void(*)(int, int, double *, double **, double, double ***)&#160;</td>
+                    <td class="paramname"><em>ode</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">int&#160;</td>
                     <td class="paramname"><em>n</em>,</td>
                 </tr>
                 <tr>
                     <td class="paramkey"></td>
                     <td></td>
-                    <td class="paramtype">double *&#160;</td>
+                    <td class="paramtype">int&#160;</td>
                     <td class="paramname"><em>m</em>,</td>
-                </tr>
-                <tr>
-                    <td class="paramkey"></td>
-                    <td></td>
-                    <td class="paramtype">void(*)(int, int, double *, double **, double, double *, int *, int *)&#160;
-                    </td>
-                    <td class="paramname"><em>ode</em>,</td>
                 </tr>
                 <tr>
                     <td class="paramkey"></td>
@@ -301,7 +302,13 @@
                     <td class="paramkey"></td>
                     <td></td>
                     <td class="paramtype">double&#160;</td>
-                    <td class="paramname"><em>varargin</em>&#160;</td>
+                    <td class="paramname"><em>varargin</em>,</td>
+                </tr>
+                <tr>
+                    <td class="paramkey"></td>
+                    <td></td>
+                    <td class="paramtype">double ***&#160;</td>
+                    <td class="paramname"><em>rvPCM</em>&#160;</td>
                 </tr>
                 <tr>
                     <td></td>
@@ -320,12 +327,12 @@
                         <tr>
                             <td class="paramdir">[in]</td>
                             <td class="paramname">&lt;n&gt;</td>
-                            <td>int number of rows</td>
+                            <td>number of rows</td>
                         </tr>
                         <tr>
                             <td class="paramdir">[in]</td>
                             <td class="paramname">&lt;m&gt;</td>
-                            <td>int number of columns</td>
+                            <td>number of columns</td>
                         </tr>
                         <tr>
                             <td class="paramdir">[in]</td>
@@ -335,39 +342,46 @@
                         <tr>
                             <td class="paramdir">[in]</td>
                             <td class="paramname">&lt;tau&gt;</td>
-                            <td> double transformed time domain [1 x N]</td>
+                            <td>transformed time domain [1 x N]</td>
                         </tr>
                         <tr>
                             <td class="paramdir">[in,out]</td>
                             <td class="paramname">&lt;x_guess&gt;</td>
-                            <td> double - Input initial Guess of solution values for the Picard Chebyshev Method
-                                [N x M], Output refined solution meeting the error tolerances defined by errTol
+                            <td>- Input initial Guess of solution values for the Picard Chebyshev Method [N x M], Output
+                                refined solution meeting the error tolerances defined by errTol
                             </td>
                         </tr>
                         <tr>
                             <td class="paramdir">[in]</td>
                             <td class="paramname">&lt;omega1&gt;</td>
-                            <td>double First Omega Term</td>
+                            <td>First Omega Term</td>
                         </tr>
                         <tr>
                             <td class="paramdir">[in]</td>
                             <td class="paramname">&lt;omega2&gt;</td>
-                            <td>double Second Omega Term</td>
+                            <td>Second Omega Term</td>
                         </tr>
                         <tr>
                             <td class="paramdir">[in]</td>
                             <td class="paramname">&lt;errTol&gt;</td>
-                            <td>double Error Tolerance of solution</td>
+                            <td>Error Tolerance of solution</td>
                         </tr>
                         <tr>
                             <td class="paramdir">[in]</td>
                             <td class="paramname">&lt;varargin&gt;</td>
-                            <td>double Additional inputs which are needed to be passed to the evaluation function ode
-                            </td>
+                            <td>Additional inputs which are needed to be passed to the evaluation function ode</td>
+                        </tr>
+                        <tr>
+                            <td class="paramdir">[out]</td>
+                            <td class="paramname">&lt;rvPCM&gt;</td>
+                            <td></td>
                         </tr>
                     </table>
                 </dd>
             </dl>
+
+            <p class="definition">Definition at line <a class="el" href="vmpcm_8c_source.html#l00030">30</a> of file <a
+                    class="el" href="vmpcm_8c_source.html">vmpcm.c</a>.</p>
 
         </div>
     </div>

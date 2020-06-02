@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
     <meta name="generator" content="Doxygen 1.8.17"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>My Project: /Users/ferminjimenezalfaro/Google Drive/Clase/Uni/Tercero/Taller
-        Transversal/Proyecto/codigo/picardchebyshevdemo.h Source File</title>
+    <title>Proyecto: codigo/src/picardchebyshevdemo.h Source File</title>
     <link href="tabs.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +22,7 @@
             <tbody>
             <tr style="height: 56px;">
                 <td id="projectalign" style="padding-left: 0.5em;">
-                    <div id="projectname">My Project
+                    <div id="projectname">Proyecto
                     </div>
                 </td>
             </tr>
@@ -66,6 +65,7 @@
     <div id="nav-path" class="navpath">
         <ul>
             <li class="navelem"><a class="el" href="dir_4d7be947362df13686123d6563352e9b.html">codigo</a></li>
+            <li class="navelem"><a class="el" href="dir_41b9fbeb69ad6f5180ac53fc1c43d38b.html">src</a></li>
         </ul>
     </div>
 </div><!-- top -->
@@ -103,81 +103,83 @@
         </div>
         <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
         </div>
-        <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span><span
+        <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"></span><span
                 class="keywordtype">void</span> <a class="code"
-                                                   href="picardchebyshevdemo_8h.html#af368f83ee3c180baf4b9411a92a4113f">TwoBodyForceModel</a>(<span
+                                                   href="picardchebyshevdemo_8h.html#ad888006808409f6ee5e96378dd94c48d">TwoBodyForceModel</a>(<span
                 class="keywordtype">int</span> n, <span class="keywordtype">int</span> m, <span class="keywordtype">double</span>
             *t, <span class="keywordtype">double</span> **posvel, <span class="keywordtype">double</span> mu, <span
-                    class="keywordtype">double</span> *eta, <span class="keywordtype">int</span> *nn, <span
-                    class="keywordtype">int</span> *mm);
+                    class="keywordtype">double</span> ***eta);
         </div>
-        <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+        <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+        <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// PlotPostionAndVelocity</span>
+        </div>
         <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
         </div>
-        <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// PlotPostionAndVelocity</span>
-        </div>
-        <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
-        </div>
-        <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"></span><span
+        <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span><span
                 class="comment">//------------------------------------------------------------------------------</span>
         </div>
-        <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span
+        <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span
                 class="keywordtype">void</span> <a class="code"
-                                                   href="picardchebyshevdemo_8h.html#a259b1d7e505c27b57a885fdd81ed366a">PlotPostionAndVelocity</a>(<span
-                class="keywordtype">int</span> n, <span class="keywordtype">int</span> m, <span class="keywordtype">double</span>
-            **rvPCM, <span class="keywordtype">double</span> **rA, <span class="keywordtype">double</span> **vA, <span
-                    class="keywordtype">double</span> vMag, <span class="keywordtype">double</span> a, <span
-                    class="keywordtype">double</span> *t,
+                                                   href="picardchebyshevdemo_8h.html#af47235aaed9e0f1dfb67b2a13c898ad0">PlotPostionAndVelocity</a>(<span
+                class="keywordtype">int</span> m, <span class="keywordtype">double</span> **rvPCM, <span
+                class="keywordtype">double</span> **rA, <span class="keywordtype">double</span> **vA, <span
+                class="keywordtype">double</span> vMag, <span class="keywordtype">double</span> a, <span
+                class="keywordtype">double</span> *t,
         </div>
-        <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; <span
+        <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; <span
                 class="keywordtype">double</span> **xg);
+        </div>
+        <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+        <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
+        </div>
+        <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">// PlotMagnitudeErrors</span>
         </div>
         <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
         </div>
-        <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">// PlotMagnitudeErrors</span>
-        </div>
-        <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span>
-        </div>
-        <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"></span><span
+        <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span><span
                 class="comment">//------------------------------------------------------------------------------</span>
         </div>
-        <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span
+        <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span
                 class="keywordtype">void</span> <a class="code"
-                                                   href="picardchebyshevdemo_8h.html#ae8b9b1f97df12a7870dd1a08c91d89dd">PlotMagnitudeErrors</a>(<span
+                                                   href="picardchebyshevdemo_8h.html#a1bff8cabf4383896d2fa08ff619e74a1">PlotMagnitudeErrors</a>(<span
                 class="keywordtype">int</span> n, <span class="keywordtype">double</span> *t, <span class="keywordtype">double</span>
-            **PosErr, <span class="keywordtype">double</span> **VelErr);
+            *PosErr, <span class="keywordtype">double</span> *VelErr);
         </div>
-        <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-        <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif //CODIGO_PICARDCHEBYSHEVDEMO_H</span>
+        <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+        <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif //CODIGO_PICARDCHEBYSHEVDEMO_H</span>
         </div>
     </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="apicardchebyshevdemo_8h_html_a259b1d7e505c27b57a885fdd81ed366a">
+<div class="ttc" id="apicardchebyshevdemo_8h_html_a1bff8cabf4383896d2fa08ff619e74a1">
+    <div class="ttname"><a href="picardchebyshevdemo_8h.html#a1bff8cabf4383896d2fa08ff619e74a1">PlotMagnitudeErrors</a>
+    </div>
+    <div class="ttdeci">void PlotMagnitudeErrors(int n, double *t, double *PosErr, double *VelErr)</div>
+    <div class="ttdef"><b>Definition:</b> <a
+            href="picardchebyshevdemo_8c_source.html#l00393">picardchebyshevdemo.c:393</a></div>
+</div>
+<div class="ttc" id="apicardchebyshevdemo_8h_html_ad888006808409f6ee5e96378dd94c48d">
+    <div class="ttname"><a href="picardchebyshevdemo_8h.html#ad888006808409f6ee5e96378dd94c48d">TwoBodyForceModel</a>
+    </div>
+    <div class="ttdeci">void TwoBodyForceModel(int n, int m, double *t, double **posvel, double mu, double ***eta)</div>
+    <div class="ttdef"><b>Definition:</b> <a
+            href="picardchebyshevdemo_8c_source.html#l00248">picardchebyshevdemo.c:248</a></div>
+</div>
+<div class="ttc" id="apicardchebyshevdemo_8h_html_af47235aaed9e0f1dfb67b2a13c898ad0">
     <div class="ttname"><a
-            href="picardchebyshevdemo_8h.html#a259b1d7e505c27b57a885fdd81ed366a">PlotPostionAndVelocity</a></div>
-    <div class="ttdeci">void PlotPostionAndVelocity(int n, int m, double **rvPCM, double **rA, double **vA, double vMag,
-        double a, double *t, double **xg)
+            href="picardchebyshevdemo_8h.html#af47235aaed9e0f1dfb67b2a13c898ad0">PlotPostionAndVelocity</a></div>
+    <div class="ttdeci">void PlotPostionAndVelocity(int m, double **rvPCM, double **rA, double **vA, double vMag, double
+        a, double *t, double **xg)
     </div>
-    <div class="ttdef"><b>Definition:</b> picardchebyshevdemo.c:56</div>
-</div>
-<div class="ttc" id="apicardchebyshevdemo_8h_html_ae8b9b1f97df12a7870dd1a08c91d89dd">
-    <div class="ttname"><a href="picardchebyshevdemo_8h.html#ae8b9b1f97df12a7870dd1a08c91d89dd">PlotMagnitudeErrors</a>
-    </div>
-    <div class="ttdeci">void PlotMagnitudeErrors(int n, double *t, double **PosErr, double **VelErr)</div>
-    <div class="ttdef"><b>Definition:</b> picardchebyshevdemo.c:70</div>
-</div>
-<div class="ttc" id="apicardchebyshevdemo_8h_html_af368f83ee3c180baf4b9411a92a4113f">
-    <div class="ttname"><a href="picardchebyshevdemo_8h.html#af368f83ee3c180baf4b9411a92a4113f">TwoBodyForceModel</a>
-    </div>
-    <div class="ttdeci">void TwoBodyForceModel(int n, int m, double *t, double **posvel, double mu, double *eta, int
-        *nn, int *mm)
-    </div>
-    <div class="ttdef"><b>Definition:</b> picardchebyshevdemo.c:37</div>
+    <div class="ttdef"><b>Definition:</b> <a
+            href="picardchebyshevdemo_8c_source.html#l00301">picardchebyshevdemo.c:301</a></div>
 </div>
 <div class="ttc" id="apicardchebyshevdemo_8h_html_a855c511a04f27023c28dfe78af609994">
     <div class="ttname"><a href="picardchebyshevdemo_8h.html#a855c511a04f27023c28dfe78af609994">PicardChebyshevDemo</a>
     </div>
     <div class="ttdeci">void PicardChebyshevDemo()</div>
-    <div class="ttdef"><b>Definition:</b> picardchebyshevdemo.c:20</div>
+    <div class="ttdef"><b>Definition:</b> <a
+            href="picardchebyshevdemo_8c_source.html#l00026">picardchebyshevdemo.c:26</a></div>
 </div>
 <!-- start footer part -->
 <hr class="footer"/>

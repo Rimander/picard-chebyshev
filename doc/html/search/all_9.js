@@ -1,5 +1,7 @@
 var searchData =
     [
-        ['main_399', ['main', ['../_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97', 1, 'main(int argc, char *argv[]):&#160;CMakeCCompilerId.c'], ['../main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4', 1, 'main():&#160;main.c']]],
-        ['main_2ec_400', ['main.c', ['../main_8c.html', 1, '']]]
+        ['sign_36', ['sign', ['../matlab_8c.html#a3d06146e323d3dddcf0cb59b778ad93b', 1, 'sign(double in):&#160;matlab.c'], ['../matlab_8h.html#a3d06146e323d3dddcf0cb59b778ad93b', 1, 'sign(double in):&#160;matlab.c']]],
+        ['sum_37', ['sum', ['../matlab_8c.html#a393568015101fe5e4aa7f8c0f1f213f7', 1, 'sum(int n, int m, double **a, double **b, double ***out):&#160;matlab.c'], ['../matlab_8h.html#a393568015101fe5e4aa7f8c0f1f213f7', 1, 'sum(int n, int m, double **a, double **b, double ***out):&#160;matlab.c']]],
+        ['sumarray_38', ['sumarray', ['../matlab_8c.html#a76c4d1fbd3abef5b65b5f52685ef7f2a', 1, 'sumarray(int n, double *in):&#160;matlab.c'], ['../matlab_8h.html#a76c4d1fbd3abef5b65b5f52685ef7f2a', 1, 'sumarray(int n, double *in):&#160;matlab.c']]],
+        ['summatrix_39', ['summatrix', ['../matlab_8c.html#ad37801280bff1ffd67bee2f55c897d4a', 1, 'summatrix(int n, int m, double **in, double **out):&#160;matlab.c'], ['../matlab_8h.html#ad37801280bff1ffd67bee2f55c897d4a', 1, 'summatrix(int n, int m, double **in, double **out):&#160;matlab.c']]]
     ];

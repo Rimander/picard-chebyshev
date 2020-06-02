@@ -1,13 +1,8 @@
 var searchData =
     [
-        ['hd_781', ['hd', ['../_c_make_cache_8txt.html#a095326a40cc7e7471f1e5f90285dc33f', 1, 'CMakeCache.txt']]],
-        ['hhd_782', ['hhd', ['../_c_make_cache_8txt.html#a7f1c40aa13299bb3501d76da1e1bf618', 1, 'CMakeCache.txt']]],
-        ['hhi_783', ['hhi', ['../_c_make_cache_8txt.html#a5b9fc67fc09bc200552b44743074566c', 1, 'CMakeCache.txt']]],
-        ['hho_784', ['hho', ['../_c_make_cache_8txt.html#a91170665b324b5ff505edd9acbaf60d1', 1, 'CMakeCache.txt']]],
-        ['hhu_785', ['hhu', ['../_c_make_cache_8txt.html#a4eaa34da420438b9612ac7348d0d496d', 1, 'CMakeCache.txt']]],
-        ['hhx_786', ['hhX', ['../_c_make_cache_8txt.html#a090c47309242d6147958a5ed4fc6c5d5', 1, 'hhX():&#160;CMakeCache.txt'], ['../_c_make_cache_8txt.html#afb6395a9611918eb913c69fd542b21ed', 1, 'hhx():&#160;CMakeCache.txt']]],
-        ['hi_787', ['hi', ['../_c_make_cache_8txt.html#ae9f5713dec55d727bb35392cec6190ce', 1, 'CMakeCache.txt']]],
-        ['ho_788', ['ho', ['../_c_make_cache_8txt.html#a74d181ce69fa53e60fb588719cc404e1', 1, 'CMakeCache.txt']]],
-        ['hu_789', ['hu', ['../_c_make_cache_8txt.html#af3c2cefc1f3b082a56f52902484ca511', 1, 'CMakeCache.txt']]],
-        ['hx_790', ['hX', ['../_c_make_cache_8txt.html#a07a714dad013ffc0ebd5736cfe8bb052', 1, 'hX():&#160;CMakeCache.txt'], ['../_c_make_cache_8txt.html#a08b5eddfd7c1e9cf8bca05061b8a1d14', 1, 'hx():&#160;CMakeCache.txt']]]
+        ['figure_82', ['figure', ['../namespace_plot_magnitude_errors.html#aba8e60b793a7917979b89d6b828da955', 1, 'PlotMagnitudeErrors.figure()'], ['../namespace_plot_position_and_velocity.html#af90a9342627bb2f460b4e102cdf89e54', 1, 'PlotPositionAndVelocity.figure()']]],
+        ['file_83', ['file', ['../namespace_plot_magnitude_errors.html#a183d8e5829e2ede6524766abba6e5b55', 1, 'PlotMagnitudeErrors.file()'], ['../namespace_plot_position_and_velocity.html#af1a9027ac88d0faff09504c27437935a', 1, 'PlotPositionAndVelocity.file()']]],
+        ['file_5fname_84', ['file_name', ['../namespace_plot_magnitude_errors.html#a63bdf66b04c881b9dd2a9378adfa1502', 1, 'PlotMagnitudeErrors.file_name()'], ['../namespace_plot_position_and_velocity.html#a76755d2e3448fba224b068c30b7830c2', 1, 'PlotPositionAndVelocity.file_name()']]],
+        ['file_5fpath_85', ['file_path', ['../namespace_plot_magnitude_errors.html#acb63ceb14738e693d67a960b21d589b3', 1, 'PlotMagnitudeErrors.file_path()'], ['../namespace_plot_position_and_velocity.html#ae4f82f8dc09160c410edb374b22f502c', 1, 'PlotPositionAndVelocity.file_path()']]],
+        ['forms_86', ['forms', ['../license_8txt.html#a5f06cc8013f25a226a017a117d893f77', 1, 'license.txt']]]
     ];

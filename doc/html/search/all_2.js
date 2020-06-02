@@ -1,6 +1,5 @@
 var searchData =
     [
-        ['kepleruniversal_3', ['KeplerUniversal', ['../kepleruniversal_8c.html#a7cc43d9f36f643aa3614b59b6a0d5a5f', 1, 'KeplerUniversal(int m, double **r0, double **v0, double *t, double mu, double **r, double **v, int *mm):&#160;kepleruniversal.c'], ['../kepleruniversal_8h.html#a7cc43d9f36f643aa3614b59b6a0d5a5f', 1, 'KeplerUniversal(int m, double **r0, double **v0, double *t, double mu, double **r, double **v, int *mm):&#160;kepleruniversal.c']]],
-        ['kepleruniversal_2ec_4', ['kepleruniversal.c', ['../kepleruniversal_8c.html', 1, '']]],
-        ['kepleruniversal_2eh_5', ['kepleruniversal.h', ['../kepleruniversal_8h.html', 1, '']]]
+        ['divide_11', ['divide', ['../matlab_8c.html#a65de57eaddd57dc43e7ea88972054570', 1, 'divide(int rows, int columns, double *in, double **matrix, double ***out):&#160;matlab.c'], ['../matlab_8h.html#a65de57eaddd57dc43e7ea88972054570', 1, 'divide(int rows, int columns, double *in, double **matrix, double ***out):&#160;matlab.c']]],
+        ['dot_12', ['dot', ['../matlab_8c.html#a06fa9bf3f7ffa58541e1ed5283300305', 1, 'dot(int n, int m, double **a, double **b, double **out):&#160;matlab.c'], ['../matlab_8h.html#a06fa9bf3f7ffa58541e1ed5283300305', 1, 'dot(int n, int m, double **a, double **b, double **out):&#160;matlab.c']]]
     ];

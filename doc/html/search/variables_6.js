@@ -1,15 +1,7 @@
 var searchData =
     [
-        ['l_798', ['L', ['../_c_make_cache_8txt.html#a67824ecf84f5816f07b74fa956bdbcd2', 1, 'CMakeCache.txt']]],
-        ['ld_799', ['ld', ['../_c_make_cache_8txt.html#a52eb8ebd51523f9793a2f527790f0892', 1, 'CMakeCache.txt']]],
-        ['li_800', ['li', ['../_c_make_cache_8txt.html#a777bbb7869ae8193249f8ff7d3e59afe', 1, 'CMakeCache.txt']]],
-        ['ll_801', ['LL', ['../_c_make_cache_8txt.html#a7abc72e752576c9a9222a4a063f49379', 1, 'CMakeCache.txt']]],
-        ['lld_802', ['lld', ['../_c_make_cache_8txt.html#adf5ac00e0dcca2416679665db59239b6', 1, 'CMakeCache.txt']]],
-        ['lli_803', ['lli', ['../_c_make_cache_8txt.html#a2ffb2472c78a04be145f7cedbaf8491c', 1, 'CMakeCache.txt']]],
-        ['llo_804', ['llo', ['../_c_make_cache_8txt.html#a461be6df4fd5c89aa8175cadb58f6f1a', 1, 'CMakeCache.txt']]],
-        ['llu_805', ['llu', ['../_c_make_cache_8txt.html#a46d59c07d05445e9cf05ad5828f86fca', 1, 'CMakeCache.txt']]],
-        ['llx_806', ['llx', ['../_c_make_cache_8txt.html#a16dbaaba8873dce89d65a26f9c72d180', 1, 'llx():&#160;CMakeCache.txt'], ['../_c_make_cache_8txt.html#a6c334497f82c03a4ece8751c045b6c58', 1, 'llX():&#160;CMakeCache.txt']]],
-        ['lo_807', ['lo', ['../_c_make_cache_8txt.html#ad6581d542c7eaf801284f084478b5fcc', 1, 'CMakeCache.txt']]],
-        ['lu_808', ['lu', ['../_c_make_cache_8txt.html#a654e4dc5b90b7478671fe6448cab3f32', 1, 'CMakeCache.txt']]],
-        ['lx_809', ['lx', ['../_c_make_cache_8txt.html#af7c2dc72bb970fef4e6313293cadfe95', 1, 'lx():&#160;CMakeCache.txt'], ['../_c_make_cache_8txt.html#ab7512e393e71ce0b6d602a2ab47c9fcf', 1, 'lX():&#160;CMakeCache.txt']]]
+        ['label_90', ['label', ['../namespace_plot_magnitude_errors.html#a30b94c6b9fae24f0ac253e68793155be', 1, 'PlotMagnitudeErrors.label()'], ['../namespace_plot_position_and_velocity.html#a453d5a007c7fb9ef591973586b8600d9', 1, 'PlotPositionAndVelocity.label()']]],
+        ['liability_91', ['LIABILITY', ['../license_8txt.html#a044494a20e70a7caec7a262491a6adcd', 1, 'license.txt']]],
+        ['line_92', ['line', ['../namespace_plot_magnitude_errors.html#ac9d08ae308c232c7d0d6064bc828e73b', 1, 'PlotMagnitudeErrors.line()'], ['../namespace_plot_position_and_velocity.html#a1b81c1214b73b32662f7144beb79b849', 1, 'PlotPositionAndVelocity.line()']]],
+        ['loc_93', ['loc', ['../namespace_plot_magnitude_errors.html#af59450c371545a6fa88572ca14fdd876', 1, 'PlotMagnitudeErrors.loc()'], ['../namespace_plot_position_and_velocity.html#a94cf6494f7d844401cb9f8b4da6590b9', 1, 'PlotPositionAndVelocity.loc()']]]
     ];
